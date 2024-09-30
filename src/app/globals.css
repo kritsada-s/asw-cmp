@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-db-heavent: DBHeavent, sans-serif;
+}
+
+@font-face {
+  font-family: 'DBHeavent';
+  src: url('./fonts/DBHeavent.woff2') format('woff2'),
+       url('./fonts/DBHeavent.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-db-heavent);
+  font-size: 20px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+#form {
+  @apply bg-slate-100;
+  /* background-image: url('https://assetwise.co.th/wp-content/uploads/2022/12/w-bg.png'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
