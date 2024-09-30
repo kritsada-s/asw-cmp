@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import { dbHeavent } from './fonts'
-
-//const inter = Inter({ subsets: ['latin'] })
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: 'บุฟเฟ่ต์ 999 สุขได้ไม่อั้น',
@@ -17,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${dbHeavent.className} ${dbHeavent.variable}`}>{children}</body>
+      <body className={`${dbHeavent.className} ${dbHeavent.variable}`}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }

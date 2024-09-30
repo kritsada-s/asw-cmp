@@ -31,6 +31,27 @@ body {
   font-size: 20px;
 }
 
+#projectSelector .text-small {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+#registerForm {
+  background-image: url('./images/w-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  --foreground: #ffffff;
+}
+
+/* #registerForm .data-\[has-label\=true\]\:mt-\[calc\(theme\(fontSize\.small\)_\+_10px\)\][data-has-label="true"] {
+  margin-top: 36px;
+} */
+
+#registerForm .text-small {
+  font-size: 22px;
+  line-height: 1;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -1,10 +1,12 @@
 import type { Config } from "tailwindcss";
+const { nextui } = require("@nextui-org/react");
 
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     container: {
@@ -15,10 +17,22 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         'ci-blue': '#123F6D',
-        'ci-lightblue': '#1B93FA'
+        'ci-lightblue': '#1B93FA',
+        navy: '#000080',
       },
     },
   },
-  plugins: [],
+  plugins: [nextui({
+    layout: {
+      fontSize: {
+        small: '1.2rem'
+      },
+      radius: {
+        small: "5px", // rounded-small
+        medium: "8px", // rounded-medium
+        large: "10px", // rounded-large
+      },
+    }
+  })],
 };
 export default config;

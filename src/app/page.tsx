@@ -1,73 +1,56 @@
-'use client'
+'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Container, Box, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import ProjectSelector from './components/ProjectSelector';
-import RegisterForm from './components/RegisterForm';
-import Image from 'next/image';
+import RegistrationForm from './components/RegisterForm';
+import { FormData, Project } from './types';
 import Header from './components/Header';
-
-interface ProjectsData {
-  id: number;
-  acf: {
-    projects_group: {
-      group_name: string;
-      projects_listed: {
-        image: string;
-        project: string;
-      }[]
-    }[];
-  };
-}
+import Banner from './images/test-banner3000.webp';
+import Image from 'next/image';
+import Footer from './components/Footer';
 
 export default function Home() {
-  const [projectsData, setProjectsData] = useState<ProjectsData | null>(null);
-  const [selectedProject, setSelectedProject] = useState<string | null>(null);
-  const [formData, setFormData] = useState<any>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const router = useRouter();
 
-  useEffect(() => {
-    fetch('https://assetwise.co.th/wp-json/wp/v2/promotion/24758?_fields=title,link,acf')
-      .then((response) => response.json())
-      .then((data) => setProjectsData(data))
-      .catch((error) => console.error('Error fetching data:', error));
-  }, []);
-
-  const handleProjectSelect = (projectId: string) => {
-    setSelectedProject(projectId);
+  const handleProjectSelect = (project: Project) => {
+    //console.log(project);
+    setSelectedProject(project);
   };
 
-  const handleFormSubmit = (formValues: any) => {
-    const combinedData = {
-      ...formValues,
-      selectedProject,
-    };
-    setFormData(combinedData);
+  const handleFormSubmit = async (formData: FormData) => {
+    // console.log(formData);
+    // return
+    try {
+      const response = await fetch('/api/v1/save-other-source', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Basic YXN3X2Npc19jdXN0b21lcjphc3dfY2lzX2N1c3RvbWVyQDIwMjMh'
+        },
+        body: JSON.stringify(formData),
+      });
+
+      //router.push('/thankyou');
+
+      if (response.ok) {
+        router.push('/thankyou');
+      } else {
+        console.error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
   };
 
   return (
-    <>
+    <main>
       <Header/>
-      <Image src={require('./images/test-banner3000.webp')} alt='' width={1440} height={600} className='w-full mb-8'/>
-      <div>
-        <div className="container">
-          <h2 className='text-5xl text-center'>
-            บุฟเฟ่ต์ 999 สุขได้ไม่อั้น
-          </h2>
-          {projectsData && (
-            <ProjectSelector
-              projectsData={projectsData}
-              onSelectProject={handleProjectSelect}
-            />
-          )}
-        </div>
-        <RegisterForm onSubmit={handleFormSubmit} />
-        {formData && (
-          <Box mt={4}>
-            <Typography variant="h6">Submitted Form Data:</Typography>
-            <pre>{JSON.stringify(formData, null, 2)}</pre>
-          </Box>
-        )}
-      </div>
-    </>
+      <Image src={Banner} width={1440} height={600} alt='' className='w-full h-auto'/>
+      <ProjectSelector onSelectProject={handleProjectSelect} />
+      <RegistrationForm selectedProject={selectedProject} onSubmit={handleFormSubmit} />
+      <Footer/>
+    </main>
   );
 }

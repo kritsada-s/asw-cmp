@@ -1,111 +1,96 @@
 import React, { useState } from 'react';
-import { Box, TextField, Button, InputLabel, Select, MenuItem, FormControl, SelectChangeEvent } from '@mui/material';
+import { FormData, Project } from '../types';
+import { Input, Select, SelectItem, Button } from "@nextui-org/react";
 
-interface RegisterFormProps {
-  onSubmit: (formData: any) => void;
+interface RegistrationFormProps {
+  selectedProject: Project | null;
+  onSubmit: (formData: FormData) => void;
 }
 
-const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit }) => {
-  const [selectedTime, setSelectedTime] = useState<number>(0);
-  const [formData, setFormData] = useState({
-    name: '',
-    lastName: '',
-    phoneNumber: '',
-    email: '',
-    contact_time: '',
+const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, onSubmit }) => {
+  const [formData, setFormData] = useState<FormData>({
+    ProjectID: 1,
+    ContactChannelID: 21,
+    ContactTypeID: 35,
+    RefID: '',
+    Fname: '',
+    Lname: '',
+    Tel: '',
+    Email: '',
+    Ref: '',
+    RefDate:'',
+    FollowUpID: 42,
+    utm_source: '',
+    PriceInterest: '',
+    PurchasePurpose: '',
+    FlagPersonalAccept: true,
+    FlagContactAccept: true,
+    AppointTime: '',
+    AppointTimeEnd: '',
   });
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = event.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleTimeChange = (event: SelectChangeEvent<number>) => {
-    setSelectedTime(Number(event.target.value));
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFormData({ ...formData, AppointTime: e.target.value });
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    onSubmit(formData);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onSubmit({ ...formData, ProjectID: selectedProject?.projectId || 0 });
   };
 
   return (
-    <section id="form" className='py-14'>
+    <section id="registerForm" className='py-10'>
       <div className="container">
-        <div className="lg:w-2/3 mx-auto">
-          <Box component="form" onSubmit={handleSubmit} noValidate autoComplete="off">
-            <Box display="flex" flexDirection={{ xs: 'column', sm: 'row' }} gap={2}>
-              <Box flex={1}>
-                <TextField
-                  fullWidth
-                  margin="normal"
-                  name="name"
-                  label="Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </Box>
-              <Box flex={1}>
-                <TextField
-                  fullWidth
-                  margin="normal"
-                  name="lastName"
-                  label="Last Name"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  required
-                />
-              </Box>
-            </Box>
-            <Box mt={2}>
-              <TextField
-                fullWidth
-                margin="normal"
-                name="phoneNumber"
-                label="Phone Number"
-                value={formData.phoneNumber}
-                onChange={handleChange}
-                required
-              />
-            </Box>
-            <Box mt={2}>
-              <TextField
-                fullWidth
-                margin="normal"
-                name="email"
-                label="Email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </Box>
-            <Box mt={2}>
-              <FormControl variant="outlined" style={{ minWidth: 100 }} fullWidth>
-                <InputLabel>ช่วงเวลาที่สะดวกให้ติดต่อกลับ</InputLabel>
-                <Select
-                  value={selectedTime}
-                  onChange={handleTimeChange}
-                  label="ช่วงเวลาที่สะดวกให้ติดต่อกลับ"
-                >
-                  <MenuItem value={0}>09:00-12:00</MenuItem>
-                  <MenuItem value={1}>12:00-13:00</MenuItem>
-                  <MenuItem value={2}>13:00-15:00</MenuItem>
-                  <MenuItem value={3}>15:00-18:00</MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
-            <Box mt={2}>
-              <Button type="submit" variant="contained" color="primary" fullWidth>
+        <div className="w-full lg:w-2/3 mx-auto">
+          <h3 className='text-white text-[40px] leading-tight text-center mb-4'>ลงทะเบียน{ selectedProject?.project ? ' '+selectedProject.project : '' }</h3>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+            <div className="flex gap-4">
+              <div className='w-1/2'>
+                <Input type='text' label='ชื่อ' name='Fname' value={formData.Fname} required onChange={handleChange} radius='sm' labelPlacement='outside'/>
+              </div>
+              <div className='w-1/2'>
+                <Input type='text' label='นามสกุล' name='Lname' value={formData.Lname} required onChange={handleChange} radius='sm' labelPlacement='outside'/>
+              </div>
+            </div>
+            <div>
+              <Input type='text' label='เบอร์โทรศัพท์' name='Tel' value={formData.Tel} required onChange={handleChange} radius='sm' labelPlacement='outside'/>
+            </div>
+            <div>
+              <Input type='email' label='อีเมล' name='Email' value={formData.Email} required onChange={handleChange} radius='sm' labelPlacement='outside'/>
+            </div>
+            <div className='mb-5'>
+              <Select
+                label="ช่วงเวลาที่สะดวกให้ติดต่อกลับ"
+                onChange={handleSelectChange}
+                className="w-full"
+                radius='sm'
+                labelPlacement='outside'
+              >
+                <SelectItem key="morning" value="morning">
+                  Morning
+                </SelectItem>
+                <SelectItem key="afternoon" value="afternoon">
+                  Afternoon
+                </SelectItem>
+                <SelectItem key="evening" value="evening">
+                  Evening
+                </SelectItem>
+              </Select>
+            </div>
+            <div className="flex">
+              <button type="submit" className="w-[200px] p-2 bg-ci-blue border border-neutral-200 mx-auto text-white rounded-lg hover:bg-blue-600">
                 ลงทะเบียน
-              </Button>
-            </Box>
-          </Box>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
   );
 };
 
-export default RegisterForm;
+export default RegistrationForm;
