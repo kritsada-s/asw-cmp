@@ -26,7 +26,7 @@ export default function Home() {
   const [formData, setFormData] = useState<any>(null);
 
   useEffect(() => {
-    fetch('https://assetwise.co.th/wp-json/wp/v2/promotion/24758')
+    fetch('https://assetwise.co.th/wp-json/wp/v2/promotion/24758?_fields=title,link,acf')
       .then((response) => response.json())
       .then((data) => setProjectsData(data))
       .catch((error) => console.error('Error fetching data:', error));

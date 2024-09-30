@@ -1,21 +1,27 @@
 import React, { useState } from 'react';
-import { Box, TextField, Button } from '@mui/material';
+import { Box, TextField, Button, InputLabel, Select, MenuItem, FormControl, SelectChangeEvent } from '@mui/material';
 
 interface RegisterFormProps {
   onSubmit: (formData: any) => void;
 }
 
 const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit }) => {
+  const [selectedTime, setSelectedTime] = useState<number>(0);
   const [formData, setFormData] = useState({
     name: '',
     lastName: '',
     phoneNumber: '',
     email: '',
+    contact_time: '',
   });
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleTimeChange = (event: SelectChangeEvent<number>) => {
+    setSelectedTime(Number(event.target.value));
   };
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -74,6 +80,21 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit }) => {
                 onChange={handleChange}
                 required
               />
+            </Box>
+            <Box mt={2}>
+              <FormControl variant="outlined" style={{ minWidth: 100 }} fullWidth>
+                <InputLabel>ช่วงเวลาที่สะดวกให้ติดต่อกลับ</InputLabel>
+                <Select
+                  value={selectedTime}
+                  onChange={handleTimeChange}
+                  label="ช่วงเวลาที่สะดวกให้ติดต่อกลับ"
+                >
+                  <MenuItem value={0}>09:00-12:00</MenuItem>
+                  <MenuItem value={1}>12:00-13:00</MenuItem>
+                  <MenuItem value={2}>13:00-15:00</MenuItem>
+                  <MenuItem value={3}>15:00-18:00</MenuItem>
+                </Select>
+              </FormControl>
             </Box>
             <Box mt={2}>
               <Button type="submit" variant="contained" color="primary" fullWidth>

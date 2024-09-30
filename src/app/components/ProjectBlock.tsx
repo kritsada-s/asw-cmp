@@ -1,51 +1,46 @@
-import { useEffect, useMemo, useState } from "react";
-import ProjectLinkButton from "./ProjectLinkButton";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
-const ProjectBlock = ({ mediaId, postId, projectId, onProjectData }: {
-    mediaId: number;
-    postId: number;
-    projectId: number;
-    onProjectData: (data: any) => void; }) => {
+interface Project {
+  image: string;
+  project: string;
+}[]
 
-    const [imgUrl, setImgUrl] = useState('');
-    const [title, setTitle] = useState('');
+async function fetchMediaData(mediaId: string) {
+  const url = `https://assetwise.co.th/wp-json/wp/v2/media/${mediaId}?_fields=link`;
+  
+  try {
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    const link = data.link;
+    if (!link) {
+      throw new Error('Link not found in the response');
+    }
+    return link;
+  } catch (error) {
+    console.error("There was a problem fetching the media data:", error);
+    throw error;
+  }
+}
 
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const [mediaResponse, postResponse] = await Promise.all([
-              fetch(`https://assetwise.co.th/wp-json/wp/v2/media/${mediaId}`),
-              fetch(`https://assetwise.co.th/wp-json/wp/v2/condominium/${postId}?_fields=title,link,acf`)
-            ]);
-    
-            const mediaData = await mediaResponse.json();
-            const postData = await postResponse.json();
-    
-            setTitle(postData?.title.rendered);
-            //handleProjectId(postData?.acf.project_id);
-            setImgUrl(mediaData?.guid.rendered);
-    
-            // Send data to parent component
-            onProjectData({
-              media: mediaData,
-              post: postData
-            });
-          } catch (error) {
-            console.error('Error fetching data:', error);
-          }
-        };
-    
-        fetchData();
-    }, [mediaId, postId, onProjectData]);
-
-    return (
-        <>
-            { imgUrl && <img src={ imgUrl } alt="" width={500} height={500}/> }
-            <p>{ projectId }</p>
-            <p>{title}</p>
-            <ProjectLinkButton/>
-        </>
-    );
+const ProjectBlock = ( {data} : {data: Project}) => {
+  const [img, setImg] = useState('')
+  const [imgLoaded, setImgLoaded] = useState(true)
+  useEffect(()=>{
+    fetchMediaData(data.image).then(setImg)
+    setImgLoaded(false)
+  }, [data.image]);
+  return (
+    <>
+      <p>{ data.project }</p>
+      { imgLoaded ? 'Loading...' : <Image src={img} alt="" width={320} height={320}/> }
+    </>
+  );
 }
 
 export default ProjectBlock;
