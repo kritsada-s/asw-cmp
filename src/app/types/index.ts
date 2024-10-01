@@ -14,7 +14,7 @@ export interface Project {
     ProjectID: number;
     ContactChannelID: number;
     ContactTypeID: number;
-    RefID: string;
+    RefID: number;
     Fname: string;
     Lname: string;
     Tel: string;

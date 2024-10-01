@@ -5,6 +5,7 @@ import { Input, Select, SelectItem, Button } from "@nextui-org/react";
 interface RegistrationFormProps {
   selectedProject: Project | null;
   onSubmit: (formData: FormData) => void;
+  isSubmitting: boolean;
 }
 
 const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, onSubmit }) => {
@@ -12,15 +13,15 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
     ProjectID: 1,
     ContactChannelID: 21,
     ContactTypeID: 35,
-    RefID: '',
+    RefID: 999,
     Fname: '',
     Lname: '',
     Tel: '',
     Email: '',
-    Ref: '',
-    RefDate:'',
+    Ref: 'buffet999',
+    RefDate: '2024-10-01 09:00',
     FollowUpID: 42,
-    utm_source: '',
+    utm_source: 'buffet999',
     PriceInterest: '',
     PurchasePurpose: '',
     FlagPersonalAccept: true,
