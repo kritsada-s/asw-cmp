@@ -165,7 +165,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
                 onChange={handleChange} 
                 radius='sm' 
                 labelPlacement='outside'
-                placeholder="0812345678"
+                //placeholder="0812345678"
               />
             </div>
             <div>
