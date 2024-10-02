@@ -29,10 +29,10 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) =>
   };
 
   return (
-    <div id='projectSelector' className="container">
-      <div className="py-10">
-        <div className="flex justify-end items-center mb-4 gap-4">
-          <p>เลือกทำเลที่ต้องการ</p>
+    <div id='projectSelector' className="bg-gradient-to-b from-blue-50 to-white">
+      <div className="container py-10">
+        <div className="flex flex-col md:flex-row justify-end items-center mb-5 gap-2 md:gap-4">
+          <p className='text-[30px] md:text-[22px]'>เลือกทำเลที่ต้องการ</p>
           <Select
             className="max-w-xs"
             onChange={handleGroupChange}
@@ -64,7 +64,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) =>
                 alt={project.project} width={300} height={300} className="w-full object-cover group-[.p-selected]:opacity-20 transition" />
                 <p className="hidden text-sm">{project.project}</p>
               </div>
-              <Link href={{ pathname:'https://assetwise.co.th/condominium'+project.link, query: { 'utm_source': 'Buffet1Oct_Project' } }} target='_blank' className='flex mx-auto px-5 py-1 leading-tight border border-blue-500 hover:bg-blue-600 hover:text-white rounded text-sm w-fit'>รายละเอียดโครงการ</Link>
+              <Link href={{ pathname:'https://assetwise.co.th/condominium'+project.link, query: { 'utm_source': 'Buffet1Oct_Project' } }} target='_blank' className='flex mx-auto px-5 py-1 leading-tight border border-blue-500 hover:bg-blue-600 hover:text-white rounded text-sm w-fit bg-white'>รายละเอียดโครงการ</Link>
             </div>
           ))}
         </div>

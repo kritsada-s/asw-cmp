@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "../images/asw_logo_hr.png";
 import { metadata } from "../layout";
 
 const menus = [
@@ -28,11 +29,11 @@ const menus = [
 function Header() {
     return (
         <div className="bg-white shadow-lg z-10">
-            <div className="container min-h-20 flex items-center justify-between">
-                <Link title="AssetWise" target="_blank" href={{ pathname: 'https://assetwise.co.th', query: { utm_source: 'buffet999-MainWeb_2024' } }}>
-                    <Image src={require('../images/asw_logo_hr.png')} alt="Logo" width={200} height={22}/>
+            <div className="container min-h-[60px] lg:min-h-20 flex items-center justify-center lg:justify-between">
+                <Link title="AssetWise" target="_blank" href={{ pathname: 'https://assetwise.co.th', query: { utm_source: 'buffet999-MainWeb_2024' } }} className="max-w-36 lg:max-w-fit">
+                    <Image src={Logo} alt="Logo" width={200} height={22} />
                 </Link>
-                <ul className="flex gap-5">
+                <ul className="gap-5 hidden lg:flex">
                     {menus.map((item: any, key: number) => (
                         <Link key={key} href={item.link} className="hover:text-ci-lightblue transition">{item.label}</Link>
                     ))}

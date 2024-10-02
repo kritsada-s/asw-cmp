@@ -28,12 +28,16 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-db-heavent);
-  font-size: 20px;
+  font-size: 22px;
 }
 
 #projectSelector .text-small {
   font-size: 18px;
   line-height: 1.3;
+}
+
+#projectSelector button {
+  background-color: white;
 }
 
 #registerForm {

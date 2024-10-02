@@ -11,13 +11,20 @@ const config: Config = {
   theme: {
     container: {
       center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      }
     },
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
         'ci-blue': '#123F6D',
-        'ci-lightblue': '#1B93FA',
+        'ci-lightblue': '#009fe2',
         navy: '#000080',
       },
     },
