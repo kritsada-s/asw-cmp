@@ -27,8 +27,8 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
     PurchasePurpose: '',
     FlagPersonalAccept: true,
     FlagContactAccept: true,
-    AppointTime: '',
-    AppointTimeEnd: '',
+    AppointTime: "N/A",
+    AppointTimeEnd: "N/A",
   });
 
   const [invalidFields, setInvalidFields] = useState<Record<string, boolean>>({});
@@ -77,16 +77,14 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
         AppointTime: timeArray[0],
         AppointTimeEnd: timeArray[1]
       }));
-      setInvalidFields({ ...invalidFields, AppointTime: false });
-    } else {
-      console.error('Unexpected value format:', selectedValue);
-    }
+      //setInvalidFields({ ...invalidFields, AppointTime: false });
+    } 
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const requiredFields = ['Fname', 'Lname', 'Tel', 'Email', 'AppointTime'];
+    const requiredFields = ['Fname', 'Lname', 'Tel', 'Email'];
     const newInvalidFields: Record<string, boolean> = {};
     let isValid = true;
 
@@ -184,14 +182,14 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
             </div>
             <div className='mb-5'>
               <Select
-                isRequired
+                //isRequired
                 label="ช่วงเวลาที่สะดวกให้ติดต่อกลับ"
                 onChange={handleSelectChange}
                 className="w-full"
                 radius='sm'
                 labelPlacement='outside'
-                isInvalid={invalidFields.AppointTime}
-                errorMessage={invalidFields.AppointTime ? "กรุณาเลือกช่วงเวลา" : ""}
+                //isInvalid={invalidFields.AppointTime}
+                //errorMessage={invalidFields.AppointTime ? "กรุณาเลือกช่วงเวลา" : ""}
               >
                 <SelectItem key="09:00,12:00" value="09:00,12:00">
                   09:00 - 12:00 น.

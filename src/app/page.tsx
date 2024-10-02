@@ -10,7 +10,6 @@ import Banner from './images/buffet999-banner-d.webp';
 import BannerM from './images/buffet999-banner-m.webp';
 import Image from 'next/image';
 import Footer from './components/Footer';
-import axios from 'axios';
 import Link from 'next/link';
 import Swal from 'sweetalert2'
 
@@ -56,6 +55,10 @@ const Home = () => {
             ...formData,
             ProjectID: selectedProject?.projectId,
             utm_source: utmSource,
+            utm_campaign: searchParams.get('utm_campaign') || '',
+            utm_medium: searchParams.get('utm_medium') || '',
+            utm_term: searchParams.get('utm_term') || '',
+            utm_content: searchParams.get('utm_content') || '',
             Ref: utmSource
           }),
         });

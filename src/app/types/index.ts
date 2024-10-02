@@ -23,6 +23,10 @@ export interface Project {
     RefDate:string;
     FollowUpID: number;
     utm_source: string;
+    utm_medium?: string;
+    utm_campaign?: string;
+    utm_term?: string;
+    utm_content?: string;
     PriceInterest: string;
     PurchasePurpose: string;
     FlagPersonalAccept: boolean;
