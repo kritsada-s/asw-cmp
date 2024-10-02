@@ -4,7 +4,7 @@ import { dbHeavent } from './fonts'
 import { Providers } from "./providers";
 import Script from 'next/script';
 
-const GTM_IDS = ['GTM-MM872QW'];
+const GTM_IDS = ['GTM-MM872QW', 'GTM-N8T5FVCT'];
 
 export const metadata: Metadata = {
   title: 'บุฟเฟต์ 999 สุขไม่อั้น: 23 คอนโดพร้อมเสิร์ฟจาก AssetWise พร้อมโปรโมชั่นสุดคุ้ม!',

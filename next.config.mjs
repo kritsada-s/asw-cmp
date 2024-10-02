@@ -1,18 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    trailingSlash: true,
-    basePath: '/promotion-campaign',
-    assetPrefix: '/promotion-campaign/',
     images: {
-        unoptimized: true,
-        remotePatterns: [
-            {
-              protocol: 'https',
-              hostname: 'assetwise.co.th',
-            }
-        ]
+      unoptimized: true,
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'assetwise.co.th',
+        }
+      ]
     },
-};
-
-export default nextConfig;
+    // Conditionally apply trailingSlash, basePath, and assetPrefix
+    ...(process.env.IS_EXPORT === 'true' ? {
+      trailingSlash: true,
+      basePath: '/promotion-campaign',
+      assetPrefix: '/promotion-campaign/',
+    } : {}),
+  };
+  
+  export default nextConfig;
