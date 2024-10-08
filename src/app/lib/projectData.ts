@@ -6,7 +6,7 @@ export const projectData: ProjectGroup[] = [
         "projects_listed": [
             {
                 "projectId": 6,
-                "image": "promo-buffet999-3.jpg",
+                "image": "promo-buffet999-3-2.jpg",
                 "project": "แอทโมซ ลาดพร้าว 71",
                 "link": "/atmoz-ladprao71/"
             },
@@ -24,7 +24,7 @@ export const projectData: ProjectGroup[] = [
             },
             {
                 "projectId": 61,
-                "image": "promo-buffet999-16.jpg",
+                "image": "promo-buffet999-16-2.jpg",
                 "project": "เคฟ ซี๊ด เกษตร",
                 "link": "/kave-seed-kaset/"
             },
