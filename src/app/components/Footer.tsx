@@ -106,19 +106,19 @@ function Footer() {
                         <Image src='https://assetwise.co.th/wp-content/themes/seed-spring/img/th/logo-asw.png' alt="" width={160} height={35} />
                         <h4 className="text-white text-[30px]">ติดตามแอสเซทไวส์</h4>
                         <div className="social-listed flex w-2/3 gap-3">
-                            <Link href={{ pathname: '', query: '' }} title="https://th-th.facebook.com/AssetWiseThailand/">
+                            <Link href={{ pathname: 'https://th-th.facebook.com/AssetWiseThailand/', query: '' }} title="Facebook">
                                 <Image src={SocialIconFb} alt="Facbook"></Image>
                             </Link>
-                            <Link href={{ pathname: '', query: '' }} title="https://page.line.me/assetwise?openQrModal=true">
+                            <Link href={{ pathname: 'https://page.line.me/assetwise', query: '' }} title="Line">
                                 <Image src={SocialIconLn} alt="Line"></Image>
                             </Link>
-                            <Link href={{ pathname: '', query: '' }} title="https://www.instagram.com/assetwisethailand/">
+                            <Link href={{ pathname: 'https://www.instagram.com/assetwisethailand', query: '' }} title="Instagram">
                                 <Image src={SocialIconIg} alt="Instagram"></Image>
                             </Link>
-                            <Link href={{ pathname: '', query: '' }} title="https://www.youtube.com/c/AssetwiseChannel">
+                            <Link href={{ pathname: 'https://www.youtube.com/c/AssetwiseChannel', query: '' }} title="Youtube">
                                 <Image src={SocialIconYt} alt="Youtube"></Image>
                             </Link>
-                            <Link href={{ pathname: '', query: '' }} title="https://www.tiktok.com/@assetwise?lang=th-TH">
+                            <Link href={{ pathname: 'https://www.tiktok.com/@assetwise', query: '' }} title="Tiktok">
                                 <Image src={SocialIconTt} alt="Tiktok"></Image>
                             </Link>
                         </div>
