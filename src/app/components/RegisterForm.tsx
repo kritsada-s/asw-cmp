@@ -57,8 +57,10 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setInvalidFields({ ...invalidFields, [e.target.name]: false });
     if (name === 'Tel') {
-      if (value && !validateThaiPhoneNumber(value)) {
-        setPhoneError("กรุณากรอกเบอร์โทรศัพท์ที่ถูกต้อง (เช่น 0812345678)");
+      console.log(value);
+      
+      if (value === "") {
+        setPhoneError("กรุณากรอกเบอร์โทรศัพท์");
         setInvalidFields({ ...invalidFields, Tel: true });
       } else {
         setPhoneError("");
@@ -95,10 +97,10 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
       }
     });
 
-    if (formData.Tel && !validateThaiPhoneNumber(formData.Tel)) {
+    if (formData.Tel === "") {
       newInvalidFields.Tel = true;
       isValid = false;
-      setPhoneError("กรุณากรอกเบอร์โทรศัพท์ที่ถูกต้อง (เช่น 0812345678)");
+      setPhoneError("กรุณากรอกเบอร์โทรศัพท์");
     }
 
     setInvalidFields(newInvalidFields);
@@ -159,7 +161,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
                 value={formData.Tel} 
                 isRequired 
                 isInvalid={invalidFields.Tel}
-                errorMessage={invalidFields.Tel ? (phoneError || "กรุณากรอกเบอร์โทรศัพท์") : ""}
+                errorMessage={invalidFields.Tel ? (phoneError || "กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง") : ""}
                 onChange={handleChange} 
                 radius='sm' 
                 labelPlacement='outside'

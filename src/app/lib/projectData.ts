@@ -71,7 +71,7 @@ export const projectData: ProjectGroup[] = [
             },
             {
                 "projectId": 74,
-                "image": "promo-buffet999-12.jpg",
+                "image": "promo-buffet999-12-2.jpg",
                 "project": "เคฟ เอมบริโอ รังสิต",
                 "link": "/kave-embryo/"
             }
