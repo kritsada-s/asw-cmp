@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { dbHeavent } from './fonts'
 import { Providers } from "./providers";
+import ogImage from './images/20241104_ASW_Buffet999Banner.webp';
 import Script from 'next/script';
 
 const GTM_IDS = ['GTM-MM872QW', 'GTM-N8T5FVCT'];
@@ -35,6 +36,7 @@ export default function RootLayout({
             }}
           />
         ))}
+        <meta property="og:image" content={ogImage.src} />
       </head>
       <body className={`${dbHeavent.className} ${dbHeavent.variable}`}>
         {GTM_IDS.map((id) => (
