@@ -6,7 +6,7 @@ import ProjectSelector from './components/ProjectSelector';
 import RegistrationForm from './components/RegisterForm';
 import { FormData, Project } from './types';
 import Header from './components/Header';
-import Banner from './images/buffet999-banner-d.webp';
+import Banner from './images/20241104_ASW_Buffet999Banner.webp';
 import BannerM from './images/buffet999-banner-m.webp';
 import Image from 'next/image';
 import Footer from './components/Footer';
@@ -83,8 +83,8 @@ const Home = () => {
   return (
     <main>
       <Header/>
-      <Image src={Banner} width={1440} height={600} alt='' className='w-full h-auto hidden md:block'/>
-      <Image src={BannerM} width={640} height={640} alt='' className='w-full h-auto block md:hidden'/>
+      <Image src={Banner} width={1440} height={600} alt='' className='w-full h-auto'/>
+      {/* <Image src={BannerM} width={640} height={640} alt='' className='w-full h-auto block md:hidden'/> */}
       <ProjectSelector onSelectProject={handleProjectSelect} />
       <RegistrationForm 
         selectedProject={selectedProject} 

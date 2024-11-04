@@ -6,23 +6,23 @@ import { metadata } from "../layout";
 const menus = [
     { 
         label: 'คอนโดมิเนียม',
-        link: '',
+        link: 'https://assetwise.co.th/condominium',
     },
     { 
         label: 'ทาวน์โฮม',
-        link: '',
+        link: 'https://assetwise.co.th/house',
     },
     { 
         label: 'โปรโมชั่น',
-        link: '',
+        link: 'https://assetwise.co.th/promotion',
     },
     { 
         label: 'รู้จักแอสเซทไวส์',
-        link: '',
+        link: 'https://assetwise.co.th/about-us',
     },
     { 
         label: 'นักลงทุนสัมพันธ์',
-        link: '',
+        link: 'https://investor.assetwise.co.th/th/home',
     },
 ]
 
