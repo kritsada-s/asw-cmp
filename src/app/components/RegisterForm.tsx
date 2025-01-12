@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FormData, Project } from '../types';
-import { Input, Select, SelectItem, Button } from "@nextui-org/react";
+import { Input, Select, SelectItem, Button, Checkbox, cn } from "@nextui-org/react";
+import Link from 'next/link';
 
 interface RegistrationFormProps {
   selectedProject: Project | null;
@@ -118,11 +119,12 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
   };
 
   return (
-    <section id="registerForm" className='py-10'>
-      <div className="container">
-        <div className="w-full lg:w-2/3 mx-auto">
+    <form onSubmit={handleSubmit}>
+      <section id="registerForm" className='py-10'>
+        <div className="container">
+          <div className="w-full lg:w-2/3 mx-auto">
           <h3 className='text-white text-[30px] lg:text-[40px] leading-none lg:leading-tight text-center mb-4'>ลงทะเบียน{ selectedProject?.project ? ' '+selectedProject.project : '' }</h3>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3">
             <div className="flex gap-4">
               <div className='w-1/2'>
                 <Input 
@@ -207,20 +209,29 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
                 </SelectItem>
               </Select>
             </div>
-            <div className="flex">
-              <Button
-                type="submit"
-                className="w-[200px] p-2 bg-ci-blue border border-neutral-200 mx-auto text-white rounded-lg hover:bg-blue-600"
-                isLoading={isSubmitting}
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "กำลังลงทะเบียน..." : "ลงทะเบียน"}
-              </Button>
-            </div>
-          </form>
+            
+          </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+      <section id="terms">
+        <div className="container">
+          <div className='terms-container w-full md:w-1/2 md:mx-auto pt-7'>
+            <p className='text-[18px] text-balance leading-tight'><Checkbox isSelected={true} size='sm'/>บริษัทฯ จะจัดเก็บข้อมูลของท่าน เพื่อการติดต่อแจ้งข้อมูลข่าวสารที่เกี่ยวข้องกับ ผลิตภัณฑ์ บริการของบริษัทฯ และนำเสนอโครงการที่น่าสนใจ คลิกที่นี่เพื่อดู <Link href="https://assetwise.co.th/privacy-policy/" target='_blank' title='' className='underline text-ci-blue'>นโยบายความเป็นส่วนตัว</Link> และ <Link href={{ pathname:'https://bit.ly/3Y395fQ', query: { 'utm_source': 'Tumthung_13Jan25' } }} target='_blank' className='underline text-ci-blue'>ข้อมูลเงื่อนไขเพิ่มเติม</Link></p>
+          </div>
+          <div className='button-container flex w-full py-5 justify-center'>
+            <Button
+              type="submit"
+              className="min-w-[200px] h-auto p-2 bg-ci-blue-2 border-3 text-3xl border-[#0069BD] mx-auto text-white rounded-lg hover:bg-ci-blue-2"
+              isLoading={isSubmitting}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "กำลังลงทะเบียน..." : "ลงทะเบียน"}
+            </Button>
+          </div>
+        </div>
+      </section>
+    </form>
   );
 };
 

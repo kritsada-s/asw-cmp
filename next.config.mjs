@@ -13,8 +13,8 @@ const nextConfig = {
     // Conditionally apply trailingSlash, basePath, and assetPrefix
     ...(process.env.IS_EXPORT === 'true' ? {
       trailingSlash: true,
-      basePath: '/promotion-campaign',
-      assetPrefix: '/promotion-campaign/',
+      basePath: '/promotion-campaign-demo',
+      assetPrefix: '/promotion-campaign-demo/',
     } : {}),
   };
   

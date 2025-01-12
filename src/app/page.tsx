@@ -7,7 +7,6 @@ import RegistrationForm from './components/RegisterForm';
 import { FormData, Project } from './types';
 import Header from './components/Header';
 import Banner from './images/ThumThueng_Jan2025_AW_d.png';
-//import BannerM from './images/buffet999-banner-m.webp';
 import BannerM from './images/TumThueng_Jan2025_AW_m.webp';
 import Image from 'next/image';
 import Footer from './components/Footer';
@@ -18,14 +17,14 @@ const Home = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [utmSource, setUtmSource] = useState<string>('BUFFET_1OCT_MainWeb');
+  const [utmSource, setUtmSource] = useState<string>('Tumthung_13JAN25_MainWeb');
   const router = useRouter();
   const searchParams = useSearchParams();
 
   useEffect(() => {
     const utmFromUrl = searchParams.get('utm_source');
     if (utmFromUrl) {
-      setUtmSource(`${utmFromUrl}_BUFFET_1OCT_MainWeb`);
+      setUtmSource(`${utmFromUrl}_Tumthung_13JAN25_MainWeb`);
     }
   }, [searchParams]);
 
@@ -67,7 +66,7 @@ const Home = () => {
         router.push('/thankyou');
       } catch (error) {
         console.error('Error submitting form:', error);
-        setSubmitError(error instanceof Error ? error.message : "An unexpected error occurred.");
+        //setSubmitError(error instanceof Error ? error.message : "An unexpected error occurred.");
       } finally {
         setIsSubmitting(false);
       }
@@ -95,11 +94,6 @@ const Home = () => {
           {submitError}
         </div>
       )}
-      <section id="terms">
-        <div className="container py-5">
-          <Link href={{ pathname:'https://bit.ly/3Y395fQ', query: { 'utm_source': 'BUFFET_1OCT_Project' } }} target='_blank' className='flex mx-auto px-5 py-1 leading-tight border border-blue-500 hover:bg-blue-600 hover:text-white rounded w-fit bg-white'>ข้อมูลเงื่อนไขเพิ่มเติม</Link>
-        </div>
-      </section>
       <Footer/>
     </main>
   );

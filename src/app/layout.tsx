@@ -5,11 +5,11 @@ import { Providers } from "./providers";
 import ogImage from './images/20241104_ASW_Buffet999Banner.webp';
 import Script from 'next/script';
 
-const GTM_IDS = ['GTM-MM872QW', 'GTM-N8T5FVCT'];
+const GTM_IDS = ['GTM-MM872QW'];
 
 export const metadata: Metadata = {
-  title: 'บุฟเฟต์ 999 สุขไม่อั้น: 23 คอนโดพร้อมเสิร์ฟจาก AssetWise พร้อมโปรโมชั่นสุดคุ้ม!',
-  description: 'โปรโมชั่นสุดพิเศษจาก AssetWise! คอนโดทำเลดี 23 โครงการ เริ่ม 1.29 - 13 ล้านบาท พร้อมของแถมมูลค่าสูง เช่น iPhone 16 Pro, ผ่อนต่ำ 3,000 บาท/เดือน และลุ้นรับทองคำ 10 บาท! จองวันนี้ - 30 พ.ย. 2567',
+  title: 'แอสเซทไวส์ทำถึง ให้ทองคำทุกยูนิต แจกจริงไม่ต้องลุ้น!',
+  description: 'มอบดีลดี แจกทองคำหนักสูงสุด 22 บาท* เป็นเจ้าของคอนโด ทำเลคุณภาพ กับ 22 โครงการจาก Assetwise',
 }
 
 export default function RootLayout({

@@ -41,7 +41,7 @@ body {
 }
 
 #registerForm {
-  background-image: url('./images/w-bg.png');
+  background-image: url('./images/w-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   --foreground: #ffffff;
@@ -67,4 +67,27 @@ body {
   /* background-image: url('https://assetwise.co.th/wp-content/uploads/2022/12/w-bg.png'); */
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.project-selector-title {
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) ;
+    width: 50px;
+    height: 5px;
+    background-color: #014BB3;
+  }
+}
+
+.bottom-arrow-pane {
+  background-image: url('images/arrow-pane-white.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  background-position: bottom;
 }

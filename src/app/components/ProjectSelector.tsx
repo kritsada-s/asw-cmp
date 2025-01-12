@@ -1,19 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ProjectGroup, Project } from '../types';
 import { projectData } from '../lib/projectData';
-import { Select, SelectItem } from "@nextui-org/react";
+import { Checkbox, Radio, RadioGroup } from "@nextui-org/react";
 import ProjectLinkButton from './ProjectLinkButton';
 import CheckIcon from '../images/check-o.png';
 import Link from 'next/link';
 import Image from 'next/image';
+import { cn } from '@nextui-org/react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { CheckIconSVG, ExternalLinkIcon } from '../lib/svg';
 
 interface ProjectSelectorProps {
   onSelectProject: (project: Project) => void;
 }
 
 const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) => {
-  const [selectedGroup, setSelectedGroup] = useState<ProjectGroup>(projectData[0]);
+  const [selectedGroup, setSelectedGroup] = useState<ProjectGroup | null>(null);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isProjectSelectorOpen, setIsProjectSelectorOpen] = useState(false);
+  const projectsSelectorContainer = useRef<HTMLDivElement>(null);
+  const [projectSelectorHeight, setProjectSelectorHeight] = useState(0);
 
   const handleGroupChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newGroup = projectData.find(group => group.group_name === e.target.value);
@@ -28,43 +35,91 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) =>
     onSelectProject(project);
   };
 
+  const CustomRadio = (props: any) => {
+    const {children, ...otherProps} = props;
+    return (
+      <Radio
+        {...otherProps}
+        classNames={{
+          base: cn(
+            "inline-flex m-0 bg-content1 hover:bg-content2 items-center justify-between",
+            "flex-row-reverse max-w-[300px] cursor-pointer rounded-lg gap-4 p-4 border-3 border-neutral-200",
+            "data-[selected=true]:border-green-600 data-[selected=true]:bg-green-500 data-[selected=true]:text-white",
+          ),
+          wrapper: cn("group-data-[selected=true]:border-white"),
+          control: cn("group-data-[selected=true]:bg-white")
+        }}
+      >
+        {children}
+      </Radio>
+    );
+  };
+
+  const firstRenderRef = useRef(true);
+
+  useGSAP(() => {
+    if (firstRenderRef.current) {
+      gsap.set(projectsSelectorContainer.current, { height: 0, opacity: 0, padding: '0' });
+      firstRenderRef.current = false;
+    }
+  }, []);
+
+  useGSAP(() => {
+    if (selectedGroup) {
+      gsap.fromTo('.project-box', {
+        transform: 'translateY(-50px)',
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.out',
+        stagger: 0.1,
+      }, {
+        transform: 'translateY(0)',
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.out',
+        stagger: 0.1,
+      });
+    }
+  }, [selectedGroup]);
+
+  useGSAP(() => {
+    if (selectedGroup) {
+      gsap.to(projectsSelectorContainer.current, {
+        height: 'auto',
+        padding: '85px 0 40px',
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.out',
+      });
+    }
+  }, [selectedGroup]);
+
   return (
     <div id='projectSelector' className="bg-gradient-to-b from-blue-50 to-white">
-      <div className="container py-10">
-        <div className="flex flex-col md:flex-row justify-end items-center mb-5 gap-2 md:gap-4">
-          <p className='text-[30px] md:text-[22px]'>เลือกทำเลที่ต้องการ</p>
-          <Select
-            className="max-w-xs"
-            onChange={handleGroupChange}
-            radius='sm'
-            variant='bordered'
-            aria-labelledby='location'
-            defaultSelectedKeys={[selectedGroup.group_name]}
-          >
-            {projectData.map((group) => (
-              <SelectItem key={group.group_name} value={group.group_name}>
-                {group.group_name}
-              </SelectItem>
-            ))}
-          </Select>
+      <div className="location-selector-container bg-white relative">
+        <div className="container pt-10 px-5 pb-5">
+          <h3 className='project-selector-title relative pb-5 text-[24px] md:text-[36px] font-bold mb-7 text-center leading-none'>เลือกทำเลที่คุณสนใจ</h3>
+          <RadioGroup className='flex' orientation='horizontal' classNames={{ wrapper: cn("grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4") }}>
+            { projectData.map((group) => (
+              <CustomRadio key={group.group_name} value={group.group_name} onChange={() => setSelectedGroup(group)}>
+                <h3 className='text-2xl group-data-[selected=true]:text-white'>{group.group_name}</h3>
+              </CustomRadio>  
+            )) }
+          </RadioGroup>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {selectedGroup.projects_listed.map((project) => (
-            <div key={project.projectId}>
-              <div
-                className={`border rounded-[4px] overflow-hidden cursor-pointer mb-3 relative ${
-                  selectedProject?.projectId === project.projectId
-                    ? 'p-selected group bg-orange-500'
-                    : ''
-                }`}
-                onClick={() => handleProjectSelect(project)}
-              >
-                <Image src={CheckIcon} alt='' width={120} height={120} className='absolute left-1/2 -ml-[60px] top-1/2 -mt-[60px] transition -translate-y-[250px] group-[.p-selected]:translate-y-0 opacity-100'/>
-                <img src={`https://assetwise.co.th/promotion-campaign/medias/images/${project.image}`} 
-                alt={project.project} width={300} height={300} className="w-full object-cover group-[.p-selected]:opacity-20 transition" />
-                <p className="hidden text-sm">{project.project}</p>
+        { selectedGroup && <div className='bottom-arrow-pane'></div> }
+      </div>
+      <div className="project-selector-container" ref={projectsSelectorContainer}>
+        <div className="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {selectedGroup && selectedGroup.projects_listed.map((project) => (
+            <div key={project.projectId} className='project-box shadow-md rounded-b-md'>
+              <img src={`https://assetwise.co.th/promotion-campaign/medias/images/Tumthung/Tumthung_${project.image}`} 
+              alt={project.project} width={300} height={300} className="w-full object-cover group-[.p-selected]:opacity-20 transition" />
+              <p className="hidden text-sm">{project.project}</p>
+              <div className='flex justify-between p-4'>
+                <Link href={{ pathname:'https://assetwise.co.th/condominium'+project.link, query: { 'utm_source': 'Tumthung_13JAN25_Project' } }} target='_blank' className='text-[16px] flex items-center gap-1 underline text-neutral-600'>รายละเอียดโครงการ <ExternalLinkIcon size='12' /></Link>
+                <Checkbox isSelected={selectedProject?.projectId === project.projectId} onValueChange={() => handleProjectSelect(project)} radius='none' size='lg' icon={<CheckIconSVG />} classNames={{ wrapper: cn("w-[35px] h-[35px] mr-0 rounded-sm group-data-[selected=true]:bg-green-500"), icon: cn("w-7 h-7") }} />
               </div>
-              <Link href={{ pathname:'https://assetwise.co.th/condominium'+project.link, query: { 'utm_source': 'Buffet1Oct_Project' } }} target='_blank' className='flex mx-auto px-5 py-1 leading-tight border border-blue-500 hover:bg-blue-600 hover:text-white rounded text-sm w-fit bg-white'>รายละเอียดโครงการ</Link>
             </div>
           ))}
         </div>

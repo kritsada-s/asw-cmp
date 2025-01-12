@@ -25,6 +25,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         'ci-blue': '#123F6D',
         'ci-lightblue': '#009fe2',
+        'ci-blue-2': '#014BB3',
         navy: '#000080',
       },
     },
