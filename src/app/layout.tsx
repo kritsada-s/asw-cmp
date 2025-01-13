@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { dbHeavent } from './fonts'
 import { Providers } from "./providers";
-import ogImage from './images/20241104_ASW_Buffet999Banner.webp';
+import ogImage from './images/og.jpg';
 import Script from 'next/script';
 
 const GTM_IDS = ['GTM-MM872QW'];
