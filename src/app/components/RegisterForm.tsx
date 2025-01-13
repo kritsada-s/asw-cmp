@@ -217,7 +217,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
       <section id="terms">
         <div className="container">
           <div className='terms-container w-full md:w-1/2 md:mx-auto pt-7'>
-            <p className='text-[18px] text-balance leading-tight'><Checkbox isSelected={true} size='sm'/>บริษัทฯ จะจัดเก็บข้อมูลของท่าน เพื่อการติดต่อแจ้งข้อมูลข่าวสารที่เกี่ยวข้องกับ ผลิตภัณฑ์ บริการของบริษัทฯ และนำเสนอโครงการที่น่าสนใจ คลิกที่นี่เพื่อดู <Link href="https://assetwise.co.th/privacy-policy/" target='_blank' title='' className='underline text-ci-blue'>นโยบายความเป็นส่วนตัว</Link> และ <Link href={{ pathname:'https://bit.ly/3Y395fQ', query: { 'utm_source': 'Tumthung_13Jan25' } }} target='_blank' className='underline text-ci-blue'>ข้อมูลเงื่อนไขเพิ่มเติม</Link></p>
+            <p className='text-[18px] text-balance leading-tight'><Checkbox isSelected={true} size='sm'/>บริษัทฯ จะจัดเก็บข้อมูลของท่าน เพื่อการติดต่อแจ้งข้อมูลข่าวสารที่เกี่ยวข้องกับ ผลิตภัณฑ์ บริการของบริษัทฯ และนำเสนอโครงการที่น่าสนใจ คลิกที่นี่เพื่อดู <Link href="https://assetwise.co.th/privacy-policy/" target='_blank' title='' className='underline text-ci-blue'>นโยบายความเป็นส่วนตัว</Link> และ <Link href={{ pathname:'https://assetwise.co.th/terms-and-conditions/campaign-promotion/', query: { 'utm_source': 'Tumthung_13Jan25' } }} target='_blank' className='underline text-ci-blue'>ข้อมูลเงื่อนไขเพิ่มเติม</Link></p>
           </div>
           <div className='button-container flex w-full py-5 justify-center'>
             <Button
