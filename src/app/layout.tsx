@@ -5,7 +5,7 @@ import { Providers } from "./providers";
 import ogImage from './images/og.jpg';
 import Script from 'next/script';
 
-const GTM_IDS = ['GTM-MM872QW'];
+const GTM_IDS = ['GTM-MM872QW', 'GTM-KSL4R3B5'];
 
 export const metadata: Metadata = {
   title: 'แอสเซทไวส์ทำถึง ให้ทองคำทุกยูนิต แจกจริงไม่ต้องลุ้น!',
@@ -37,6 +37,10 @@ export default function RootLayout({
           />
         ))}
         <meta property="og:image" content={ogImage.src} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="แอสเซทไวส์ทำถึง ให้ทองคำทุกยูนิต แจกจริงไม่ต้องลุ้น!" />
       </head>
       <body className={`${dbHeavent.className} ${dbHeavent.variable}`}>
         {GTM_IDS.map((id) => (
