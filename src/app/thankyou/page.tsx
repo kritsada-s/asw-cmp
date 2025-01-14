@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import BannerM from "../images/TumThueng_Jan2025_AW_m.webp";
+import BannerM from "../images/AW_TunThueng_RV2_m.jpg";
 import Image from "next/image";
 import BackButton from "../components/BackButton";
 
