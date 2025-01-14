@@ -129,7 +129,7 @@ function Footer() {
                             <ul>
                                 { footerMenus.menu1.map((menu, key)=>(
                                     <li key={key}>
-                                        <Link href={menu.link} className="text-neutral-400 text-[18px] hover:text-white transition">{menu.name}</Link>
+                                        <Link href={menu.link} className="text-neutral-400 text-[20px] hover:text-white transition">{menu.name}</Link>
                                     </li>
                                 )) }
                             </ul>
@@ -139,7 +139,7 @@ function Footer() {
                             <ul>
                                 { footerMenus.menu2.map((menu, key)=>(
                                     <li key={key}>
-                                        <Link href={menu.link} className="text-neutral-400 text-[18px] hover:text-white transition">{menu.name}</Link>
+                                        <Link href={menu.link} className="text-neutral-400 text-[20px] hover:text-white transition">{menu.name}</Link>
                                     </li>
                                 )) }
                             </ul>
@@ -149,7 +149,7 @@ function Footer() {
                             <ul>
                                 { footerMenus.menu3.map((menu, key)=>(
                                     <li key={key}>
-                                        <Link href={menu.link} className="text-neutral-400 text-[18px] hover:text-white transition">{menu.name}</Link>
+                                        <Link href={menu.link} className="text-neutral-400 text-[20px] hover:text-white transition">{menu.name}</Link>
                                     </li>
                                 )) }
                             </ul>
@@ -159,7 +159,7 @@ function Footer() {
                             <ul>
                                 { footerMenus.menu4.map((menu, key)=>(
                                     <li key={key}>
-                                        <Link href={menu.link} className="text-neutral-400 text-[18px] hover:text-white transition">{menu.name}</Link>
+                                        <Link href={menu.link} className="text-neutral-400 text-[20px] hover:text-white transition">{menu.name}</Link>
                                     </li>
                                 )) }
                             </ul>
