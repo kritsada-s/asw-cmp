@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { ProjectGroup, Project } from '../types';
 import { projectData } from '../lib/projectData';
 import { Checkbox, Radio, RadioGroup } from "@nextui-org/react";
@@ -56,6 +56,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) =>
   };
 
   const firstRenderRef = useRef(true);
+  const v = '13012025';
 
   useGSAP(() => {
     if (firstRenderRef.current) {
@@ -113,8 +114,15 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) =>
         <div className="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {selectedGroup && selectedGroup.projects_listed.map((project) => (
             <div key={project.projectId} className='project-box shadow-md rounded-b-md'>
-              <img src={`https://assetwise.co.th/promotion-campaign/medias/images/Tumthung/Tumthung_${project.image}`} 
-              alt={project.project} width={300} height={300} className="w-full object-cover group-[.p-selected]:opacity-20 transition" />
+              <Image
+                src={`https://assetwise.co.th/promotion-campaign/medias/images/Tumthung/Tumthung_${project.image}?v=${v}`}
+                alt={project.project}
+                width={300}
+                height={300}
+                loading="lazy"
+                className="w-full object-cover group-[.p-selected]:opacity-20 transition"
+                priority={false}
+              />
               <p className="hidden text-sm">{project.project}</p>
               <div className='flex justify-between p-4'>
                 <Link href={{ pathname:'https://assetwise.co.th/condominium'+project.link, query: { 'utm_source': 'Tumthung_13JAN25_Project' } }} target='_blank' className='text-[16px] flex items-center gap-1 underline text-neutral-600'>รายละเอียดโครงการ <ExternalLinkIcon size='12' /></Link>
