@@ -9,7 +9,7 @@ const GTM_IDS = ['GTM-MM872QW', 'GTM-KSL4R3B5'];
 
 export const metadata: Metadata = {
   title: 'แอสเซทไวส์ทำถึง ให้ทองคำทุกยูนิต แจกจริงไม่ต้องลุ้น!',
-  description: 'มอบดีลดี แจกทองคำหนักสูงสุด 22 บาท* เป็นเจ้าของคอนโด ทำเลคุณภาพ กับ 22 โครงการจาก Assetwise',
+  description: 'มอบดีลดี แจกทองคำหนักสูงสุด 20 บาท* เป็นเจ้าของคอนโด ทำเลคุณภาพ กับ 23 โครงการจาก Assetwise',
 }
 
 export default function RootLayout({
