@@ -56,7 +56,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) =>
   };
 
   const firstRenderRef = useRef(true);
-  const v = '13012025';
+  const v = '15012025';
 
   useGSAP(() => {
     if (firstRenderRef.current) {

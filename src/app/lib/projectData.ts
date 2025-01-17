@@ -155,6 +155,12 @@ export const projectData: ProjectGroup[] = [
                 "link": "/kave-univers-bangsaen/"
             },
             {
+                "projectId": 81,
+                "image": "kave-coco.jpg",
+                "project": "เคฟ โคโค่ บางแสน",
+                "link": "/kave-coco-bangsaen/"
+            },
+            {
                 "projectId": 51,
                 "image": "atmoz-serene.jpg",
                 "project": "แอทโมซ ซีรีน ศรีราชา",
