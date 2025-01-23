@@ -43,7 +43,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) =>
         classNames={{
           base: cn(
             "inline-flex m-0 bg-content1 hover:bg-content2 items-center justify-between",
-            "flex-row-reverse max-w-[300px] cursor-pointer rounded-lg gap-4 px-2 py-4 md:p-4 border-3 border-neutral-200",
+            "flex-row-reverse max-w-[300px] xl:max-w-full cursor-pointer rounded-lg gap-4 px-2 py-4 md:p-4 border-3 border-neutral-200",
             "data-[selected=true]:border-green-600 data-[selected=true]:bg-green-500 data-[selected=true]:text-white",
           ),
           wrapper: cn("group-data-[selected=true]:border-white"),
@@ -104,7 +104,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) =>
           <RadioGroup className='flex' orientation='horizontal' classNames={{ wrapper: cn("grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4") }}>
             { projectData.map((group) => (
               <CustomRadio key={group.group_name} value={group.group_name} onChange={() => setSelectedGroup(group)}>
-                <h3 className='text-lg md:text-2xl group-data-[selected=true]:text-white'>{group.group_name}</h3>
+                <h3 className='md:text-lg lg:text-2xl group-data-[selected=true]:text-white'>{group.group_name}</h3>
               </CustomRadio>  
             )) }
           </RadioGroup>
