@@ -99,7 +99,8 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) =>
     <div id='projectSelector' className="bg-gradient-to-b from-blue-50 to-white">
       <div className="location-selector-container bg-white relative">
         <div className="container pt-10 px-5 pb-10">
-          <h3 className='project-selector-title relative pb-5 text-[36px] font-bold mb-7 text-center leading-none'>เลือกทำเลที่คุณสนใจ</h3>
+          <h1 className='text-center text-[36px] font-bold mb-3'>คอนโดพร้อมอยู่จาก AssetWise</h1>
+          <h3 className='project-selector-title relative pb-5 text-[28px] font-normal mb-7 text-center leading-none text-neutral-500'>เลือกทำเลที่คุณสนใจ</h3>
           <RadioGroup className='flex' orientation='horizontal' classNames={{ wrapper: cn("grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4") }}>
             { projectData.map((group) => (
               <CustomRadio key={group.group_name} value={group.group_name} onChange={() => setSelectedGroup(group)}>
