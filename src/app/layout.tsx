@@ -9,7 +9,7 @@ const GTM_IDS = ['GTM-MM872QW', 'GTM-KSL4R3B5'];
 
 export const metadata: Metadata = {
   title: 'คอนโด AssetWise ทำถึง แจกทองทุกยูนิต ฟรีส่วนกลางสูงสุด 5 ปี*',
-  description: 'Assetwise มอบดีลดี จากโครงการ Atmoz - KAVE - Modiz ทั้งหมด 23 โครงการ ไม่ว่าจะเป็นคอนโดติดรถไฟฟ้า คอนโดใกล้มหาลัย และคอนโดทำเลคุณภาพอื่นๆ  ถึง 28 กพ.นี้เท่านั้น',
+  description: 'Assetwise มอบดีลดี จากโครงการ Atmoz - KAVE - Modiz ทั้งหมด 23 โครงการ ไม่ว่าจะเป็นคอนโดติดรถไฟฟ้า คอนโดใกล้มหาลัย และคอนโดทำเลคุณภาพอื่นๆ ถึง 28 กพ.นี้เท่านั้น',
 }
 
 export default function RootLayout({
