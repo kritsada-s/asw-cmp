@@ -13,19 +13,20 @@ import Image from 'next/image';
 import Footer from './components/Footer';
 import Link from 'next/link';
 import Swal from 'sweetalert2'
+import logger from './utils/logger';
 
 const Home = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [utmSource, setUtmSource] = useState<string>('BUFFET_1OCT_MainWeb');
+  const [utmSource, setUtmSource] = useState<string>(`${process.env.NEXT_PUBLIC_UTM}`);
   const router = useRouter();
   const searchParams = useSearchParams();
 
   useEffect(() => {
     const utmFromUrl = searchParams.get('utm_source');
     if (utmFromUrl) {
-      setUtmSource(`${utmFromUrl}_BUFFET_1OCT_MainWeb`);
+      setUtmSource(`${utmFromUrl}_${process.env.NEXT_PUBLIC_UTM}`);
     }
   }, [searchParams]);
 
@@ -46,7 +47,7 @@ const Home = () => {
 
     if (selectedProject) {
       try {
-        const response = await fetch('https://node.assetwise.dev/webhook/promotion-campaign', {
+        const response = await fetch('/api/v1/save-other-source', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

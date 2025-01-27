@@ -1,0 +1,13 @@
+{"level":"info","message":"SaveOtherSource API response: Workflow was started","timestamp":"2025-01-27T04:16:19.024Z"}
+{"level":"info","message":"Status:","timestamp":"2025-01-27T04:24:21.714Z"}
+{"level":"info","message":"SaveOtherSource API response: Workflow was started","timestamp":"2025-01-27T04:25:47.174Z"}
+{"code":404,"hint":"Click the 'Test workflow' button on the canvas, then try again. (In test mode, the webhook only works for one call after you click this button)","level":"info","message":"SaveOtherSource API response: The requested webhook \"promotion-campaign\" is not registered.","timestamp":"2025-01-27T04:27:29.760Z"}
+{"code":404,"hint":"Click the 'Test workflow' button on the canvas, then try again. (In test mode, the webhook only works for one call after you click this button)","level":"info","message":"SaveOtherSource API response: The requested webhook \"promotion-campaign\" is not registered.","timestamp":"2025-01-27T04:28:48.658Z"}
+{"level":"info","message":"SaveOtherSource API response: Workflow was started","timestamp":"2025-01-27T04:30:44.681Z"}
+{"code":404,"hint":"Click the 'Test workflow' button on the canvas, then try again. (In test mode, the webhook only works for one call after you click this button)","level":"info","message":"SaveOtherSource API response: The requested webhook \"promotion-campaign\" is not registered.","timestamp":"2025-01-27T04:31:29.722Z"}
+{"level":"info","message":"Code: 404, SaveOtherSource API response:The requested webhook \"promotion-campaign\" is not registered.","timestamp":"2025-01-27T04:34:11.387Z"}
+2025-01-27T04:40:28.482Z, info: SaveOtherSource API response:
+2025-01-27T04:42:26.218Z, [info]: Workflow was started
+1/27/2025, 11:45:16 AM, [info]: Workflow was started
+27/01/2025, [info]: Workflow was started
+27/01/2025, 11:48:04, [info]: The requested webhook "promotion-campaign" is not registered.
