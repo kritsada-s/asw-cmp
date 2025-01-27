@@ -13,14 +13,24 @@ import { CheckIconSVG, ExternalLinkIcon } from '../lib/svg';
 
 interface ProjectSelectorProps {
   onSelectProject: (project: Project) => void;
+  selectedLocation: string | null;
 }
 
-const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) => {
+const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, selectedLocation }) => {
   const [selectedGroup, setSelectedGroup] = useState<ProjectGroup | null>(null);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isProjectSelectorOpen, setIsProjectSelectorOpen] = useState(false);
   const projectsSelectorContainer = useRef<HTMLDivElement>(null);
   const [projectSelectorHeight, setProjectSelectorHeight] = useState(0);
+
+  useEffect(() => {
+    if (selectedLocation) {
+      const group = projectData.find(group => group.group_key === selectedLocation);
+      if (group) {
+        setSelectedGroup(group);
+      }
+    }
+  }, [selectedLocation]);
 
   const handleGroupChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newGroup = projectData.find(group => group.group_name === e.target.value);
@@ -101,9 +111,13 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) =>
         <div className="container pt-10 px-5 pb-10">
           <h1 className='text-center text-[36px] font-bold mb-3'>คอนโดพร้อมอยู่จาก AssetWise</h1>
           <h3 className='project-selector-title relative pb-5 text-[28px] font-normal mb-7 text-center leading-none text-neutral-500'>เลือกทำเลที่คุณสนใจ</h3>
-          <RadioGroup className='flex' orientation='horizontal' classNames={{ wrapper: cn("grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4") }}>
+          <RadioGroup className='flex' value={selectedGroup?.group_key} orientation='horizontal' classNames={{ wrapper: cn("grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4") }}>
             { projectData.map((group) => (
-              <CustomRadio key={group.group_name} value={group.group_name} onChange={() => setSelectedGroup(group)}>
+              <CustomRadio 
+                key={group.group_key} 
+                value={group.group_key} 
+                onChange={() => setSelectedGroup(group)} 
+              >
                 <h3 className='md:text-lg lg:text-2xl group-data-[selected=true]:text-white'>{group.group_name}</h3>
               </CustomRadio>  
             )) }

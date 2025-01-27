@@ -7,6 +7,7 @@ export interface Project {
   
   export interface ProjectGroup {
     group_name: string;
+    group_key: string;
     projects_listed: Project[];
   }
   

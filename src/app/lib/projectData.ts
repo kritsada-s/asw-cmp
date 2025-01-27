@@ -3,6 +3,7 @@ import { ProjectGroup } from '../types';
 export const projectData: ProjectGroup[] = [
     {
         "group_name": "รัชดา-ลาดพร้าว",
+        "group_key": "ratchada-lardprao",
         "projects_listed": [
             {
                 "projectId": 19,
@@ -50,6 +51,7 @@ export const projectData: ProjectGroup[] = [
     },
     {
         "group_name": "รังสิต-ศรีสมาน",
+        "group_key": "rangsit-srisamarn",
         "projects_listed": [
             {
                 "projectId": 59,
@@ -73,6 +75,7 @@ export const projectData: ProjectGroup[] = [
     },
     {
         "group_name": "บางนา-อ่อนนุช",
+        "group_key": "bangna-onnut",
         "projects_listed": [
             {
                 "projectId": 17,
@@ -96,6 +99,7 @@ export const projectData: ProjectGroup[] = [
     },
     {
         "group_name": "ลาดกระบัง-มีนบุรี",
+        "group_key": "lardkrabang-minburi",
         "projects_listed": [
             {
                 "projectId": 63,
@@ -113,6 +117,7 @@ export const projectData: ProjectGroup[] = [
     },
     {
         "group_name": "รามคำแหง-ศรีนครินทร์",
+        "group_key": "ramkhamhaeng-srinakarin",
         "projects_listed": [
             {
                 "projectId": 31,
@@ -130,6 +135,7 @@ export const projectData: ProjectGroup[] = [
     },
     {
         "group_name": "ศาลายา-นครปฐม",
+        "group_key": "salaya-nakhonpathom",
         "projects_listed": [
             {
                 "projectId": 89,
@@ -147,6 +153,7 @@ export const projectData: ProjectGroup[] = [
     },
     {
         "group_name": "EEC",
+        "group_key": "eec",
         "projects_listed": [
             {
                 "projectId": 66,
