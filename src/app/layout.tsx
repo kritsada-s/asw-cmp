@@ -8,8 +8,8 @@ import Script from 'next/script';
 const GTM_IDS = ['GTM-MM872QW', 'GTM-N8T5FVCT'];
 
 export const metadata: Metadata = {
-  title: 'บุฟเฟต์ 999 สุขไม่อั้น: 23 คอนโดพร้อมเสิร์ฟจาก AssetWise พร้อมโปรโมชั่นสุดคุ้ม!',
-  description: 'โปรโมชั่นสุดพิเศษจาก AssetWise! คอนโดทำเลดี 23 โครงการ เริ่ม 1.29 - 13 ล้านบาท พร้อมของแถมมูลค่าสูง เช่น iPhone 16 Pro, ผ่อนต่ำ 3,000 บาท/เดือน และลุ้นรับทองคำ 10 บาท! จองวันนี้ - 30 พ.ย. 2567',
+  title: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
+  description: `${process.env.NEXT_PUBLIC_SITE_DESCRIPTION}`,
 }
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="th">
       <head>
         {GTM_IDS.map((id) => (
           <Script
