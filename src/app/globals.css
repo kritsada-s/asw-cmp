@@ -28,7 +28,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-db-heavent);
-  font-size: 22px;
+  font-size: 20px;
 }
 
 #projectSelector .text-small {

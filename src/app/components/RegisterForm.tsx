@@ -210,7 +210,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
             <div className="flex">
               <Button
                 type="submit"
-                className="w-[200px] p-2 bg-ci-blue border border-neutral-200 mx-auto text-white rounded-lg hover:bg-blue-600"
+                className="w-[200px] p-2 bg-gradient-to-br from-[#fcc902] to-[#eb5f30] border border-neutral-200 mx-auto text-white rounded-lg hover:bg-blue-600"
                 isLoading={isSubmitting}
                 disabled={isSubmitting}
               >

@@ -29,9 +29,9 @@ const menus = [
 function Header() {
     return (
         <div className="bg-white shadow-lg z-10">
-            <div className="container min-h-[60px] lg:min-h-20 flex items-center justify-center lg:justify-between">
+            <div className="container min-h-[50px] lg:min-h-16 flex items-center justify-center lg:justify-between">
                 <Link title="AssetWise" target="_blank" href={{ pathname: 'https://assetwise.co.th', query: { utm_source: 'buffet999-MainWeb_2024' } }} className="max-w-36 lg:max-w-fit">
-                    <Image src={Logo} alt="Logo" width={200} height={22} />
+                    <Image src={Logo} alt="Logo" width={160} height={17} />
                 </Link>
                 <ul className="gap-5 hidden lg:flex">
                     {menus.map((item: any, key: number) => (

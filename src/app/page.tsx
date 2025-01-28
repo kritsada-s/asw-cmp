@@ -6,9 +6,9 @@ import ProjectSelector from './components/ProjectSelector';
 import RegistrationForm from './components/RegisterForm';
 import { FormData, Project } from './types';
 import Header from './components/Header';
-import Banner from './images/20241104_ASW_Buffet999Banner.webp';
-//import BannerM from './images/buffet999-banner-m.webp';
-import BannerM from './images/20241104_ASW_Buffet999Banner_mob.webp';
+import Banner from './images/AW_ASW-EasyLife_LDP-Banner_v1.webp';
+import BannerM from './images/AW_ASW-EasyLife_LDP-M_Banner_v1.webp';
+import Info from './images/info-mockup_01.jpg';
 import Image from 'next/image';
 import Footer from './components/Footer';
 import Link from 'next/link';
@@ -84,7 +84,7 @@ const Home = () => {
       <Header/>
       <Image src={Banner} width={1440} height={600} alt='' className='w-full hidden md:block h-auto'/>
       <Image src={BannerM} width={640} height={640} alt='' className='w-full h-auto block md:hidden'/>
-      <ProjectSelector onSelectProject={handleProjectSelect} />
+      <Image src={Info} width={1440} height={600} alt='' className='w-full'/>
       <RegistrationForm 
         selectedProject={selectedProject} 
         onSubmit={handleFormSubmit}
