@@ -22,13 +22,21 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) =>
   const projectsSelectorContainer = useRef<HTMLDivElement>(null);
   const [projectSelectorHeight, setProjectSelectorHeight] = useState(0);
 
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const location = searchParams.get('loc') || searchParams.get('location');
+    if (location) {
+      console.log('Location from URL:', location);
+    }
+  }, []);
+
   const handleGroupChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newGroup = projectData.find(group => group.group_name === e.target.value);
     if (newGroup) {
       setSelectedGroup(newGroup);
       setSelectedProject(null);
     }
-  };
+  };  
 
   const handleProjectSelect = (project: Project) => {
     setSelectedProject(project);
