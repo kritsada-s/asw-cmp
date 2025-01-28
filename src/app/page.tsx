@@ -47,24 +47,25 @@ const Home = () => {
 
     if (selectedProject) {
       try {
-        const response = await fetch('/api/v1/save-other-source', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            ...formData,
-            ProjectID: selectedProject?.projectId,
-            utm_source: utmSource,
-            utm_campaign: searchParams.get('utm_campaign') || '',
-            utm_medium: searchParams.get('utm_medium') || '',
-            utm_term: searchParams.get('utm_term') || '',
-            utm_content: searchParams.get('utm_content') || '',
-            Ref: utmSource
-          }),
-        });
+        // TODO: remove this
+        // const response = await fetch('/api/v1/save-other-source', {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify({
+        //     ...formData,
+        //     ProjectID: selectedProject?.projectId,
+        //     utm_source: utmSource,
+        //     utm_campaign: searchParams.get('utm_campaign') || '',
+        //     utm_medium: searchParams.get('utm_medium') || '',
+        //     utm_term: searchParams.get('utm_term') || '',
+        //     utm_content: searchParams.get('utm_content') || '',
+        //     Ref: utmSource
+        //   }),
+        // });
     
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        // if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     
-        await response.json();
+        // await response.json();
         router.push('/thankyou');
       } catch (error) {
         console.error('Error submitting form:', error);
