@@ -1,177 +1,92 @@
-import { ProjectGroup } from '../types';
+import { Project } from '../types';
 
-export const projectData: ProjectGroup[] = [
+export const easyLifeData: Project[] = [
     {
-        "group_name": "รัชดา-ลาดพร้าว",
-        "projects_listed": [
-            {
-                "projectId": 6,
-                "image": "promo-buffet999-3-2.jpg",
-                "project": "แอทโมซ ลาดพร้าว 71",
-                "link": "/atmoz-ladprao71/"
-            },
-            {
-                "projectId": 19,
-                "image": "promo-buffet999-7.jpg",
-                "project": "แอทโมซ รัชดา-ห้วยขวาง",
-                "link": "/atmoz-rh/"
-            },
-            {
-                "projectId": 27,
-                "image": "promo-buffet999-11.jpg",
-                "project": "ไอเวอรี่ รัชดา ลาดพร้าว",
-                "link": "/ivory-ratchada-ladprao/"
-            },
-            {
-                "projectId": 61,
-                "image": "promo-buffet999-16-2.jpg",
-                "project": "เคฟ ซี๊ด เกษตร",
-                "link": "/kave-seed-kaset/"
-            },
-            {
-                "projectId": 29,
-                "image": "promo-buffet999-19.jpg",
-                "project": "โมดิซ คอลเลคชั่น บางโพ",
-                "link": "/modiz-collection-bangpho/"
-            },
-            {
-                "projectId": 71,
-                "image": "promo-buffet999-5.jpg",
-                "project": "แอทโมซ พาลาซิโอ ลาดพร้าว-วังหิน",
-                "link": "/atmoz-palacio-ladprao-wanghin/"
-            },
-            {
-                "projectId": 75,
-                "image": "promo-buffet999-18.jpg",
-                "project": "มารูน รัชดา32",
-                "link": "/maroonratchada32/"
-            },
-            {
-                "projectId": 76,
-                "image": "promo-buffet999-22.jpg",
-                "project": "โมดิซ วอลท์ เกษตร ศรีปทุม",
-                "link": "/modiz-vault-kaset-sripatum/"
-            }
-        ]
+        "projectId": 72,
+        "key": "atmoz-season-ladkrabang",
+        "image": "/2023/07/AtmozSeason.jpg",
+        "project": "แอทโมซ ซีซั่น ลาดกระบัง",
+        "link": "/atmoz-season-ladkrabang/",
+        "logo": "/2023/03/atmoz-ladkrabang_logo.png"
+    }, 
+    {
+        "projectId": 52,
+        "key": "atmoz-bangna",
+        "image": "/2022/08/atmoz-bangna.jpg",
+        "project": "แอทโมซ ทรอปิคานา บางนา",
+        "link": "/atmoz-bangna/",
+        "logo": "/2023/03/atmoz-tropicana-bangna_new_logo.png"
+    }, 
+    {
+        "projectId": 59,
+        "key": "atmoz-kanaal-rangsit",
+        "image": "/2023/03/atmoz-kanaal-thumb.jpg",
+        "project": "แอทโมซ คาแนล รังสิต",
+        "link": "/atmoz-kanaal-rangsit/",
+        "logo": "/2023/03/atmoz-kanaal_logo.png"
     },
     {
-        "group_name": "รังสิต-ศรีสมาน",
-        "projects_listed": [
-            {
-                "projectId": 59,
-                "image": "promo-buffet999-2.jpg",
-                "project": "แอทโมซ คาแนล",
-                "link": "/atmoz-kanaal-rangsit/"
-            },
-            {
-                "projectId": 62,
-                "image": "promo-buffet999-6.jpg",
-                "project": "แอทโมซ พอร์เทรต ศรีสมาน",
-                "link": "/atmoz-portrait-srisaman/"
-            },
-            {
-                "projectId": 74,
-                "image": "promo-buffet999-12-2.jpg",
-                "project": "เคฟ เอมบริโอ รังสิต",
-                "link": "/kave-embryo/"
-            }
-        ]
+        "projectId": 60,
+        "key": "atmoz-oasis-onnut",
+        "image": "/2023/03/atmoz-oasis-onnut-thumb-1.jpg",
+        "project": "แอทโมซ โอเอซิส อ่อนนุช",
+        "link": "/atmoz-oasis-onnut/",
+        "logo": "/2023/03/atmoz-onnut_logo.png"
     },
     {
-        "group_name": "บางนา-อ่อนนุช",
-        "projects_listed": [
-            {
-                "projectId": 17,
-                "image": "promo-buffet999-21.jpg",
-                "project": "โมดิซ สุขุมวิท 50",
-                "link": "/modiz-sukhumvit50/"
-            },
-            {
-                "projectId": 52,
-                "image": "promo-buffet999-10.jpg",
-                "project": "แอทโมซ ทรอปิคานา บางนา",
-                "link": "/atmoz-bangna/"
-            },
-            {
-                "projectId": 60,
-                "image": "promo-buffet999-4.jpg",
-                "project": "แอทโมซ โอเอซิส อ่อนนุช",
-                "link": "/atmoz-oasis-onnut/"
-            }
-        ]
+        "projectId": 62,
+        "key": "atmoz-portrait-srisaman",
+        "image": "/2022/11/thumb-amoz.jpg",
+        "project": "แอทโมซ พอร์เทรต ศรีสมาน",
+        "link": "/atmoz-portrait-srisaman/",
+        "logo": "/2022/08/atmoz-portrait-srisaman-logo.png"
     },
     {
-        "group_name": "ลาดกระบัง-มีนบุรี",
-        "projects_listed": [
-            {
-                "projectId": 63,
-                "image": "promo-buffet999-1.jpg",
-                "project": "แอทโมซ โฟลว์ มีนบุรี",
-                "link": "/atmoz-flow-minburi/"
-            },
-            {
-                "projectId": 72,
-                "image": "promo-buffet999-8.jpg",
-                "project": "แอทโมซ ซีซั่น ลาดกระบัง",
-                "link": "/atmoz-season-ladkrabang/"
-            }
-        ]
+        "projectId": 19,
+        "key": "atmoz-rh",
+        "image": "/2023/03/ATMOZ-RATCHADA-HUAIKWANG_Thumb.jpg",
+        "project": "แอทโมซ รัชดา-ห้วยขวาง",
+        "link": "/atmoz-rh/",
+        "logo": "/2023/03/AtmozRH-logo-1.png"
     },
     {
-        "group_name": "รามคำแหง-ศรีนครินทร์",
-        "projects_listed": [
-            {
-                "projectId": 31,
-                "image": "promo-buffet999-20.jpg",
-                "project": "โมดิซ ไรห์ม รามคำแหง",
-                "link": "/modiz-rhyme/"
-            },
-            {
-                "projectId": 49,
-                "image": "promo-buffet999-23.jpg",
-                "project": "โมดิซ โวยาจ ศรีนครินทร์",
-                "link": "/modiz-voyage-srinakarin/"
-            }
-        ]
+        "projectId": 63,
+        "key": "atmoz-flow-minburi",
+        "image": "/2023/03/Atmoz-minburi-thumb.jpg",
+        "project": "แอทโมซ โฟลว์ มีนบุรี",
+        "link": "/atmoz-flow-minburi/",
+        "logo": "/2023/03/atmoz-flow_minburi_logo.png"
     },
     {
-        "group_name": "ศาลายา-นครปฐม",
-        "projects_listed": [
-            {
-                "projectId": 89,
-                "image": "promo-buffet999-15.jpg",
-                "project": "เคฟ ป๊อป ศาลายา",
-                "link": "/kave-pop-salaya/"
-            },
-            {
-                "projectId": 46,
-                "image": "promo-buffet999-14.jpg",
-                "project": "เคฟ มิวแทนท์ ศาลายา",
-                "link": "/kave-salaya/"
-            },
-            {
-                "projectId": 99,
-                "image": "promo-buffet999-13.jpg",
-                "project": "เคฟ เจเนซิส นครปฐม",
-                "link": "/kave-genesis/"
-            }
-        ]
+        "projectId": 51,
+        "key": 'atmoz-serene-sriracha',
+        "image": "/2023/03/atmoz-sriracha-thumb.jpg",
+        "project": "แอทโมซ ซีรีน ศรีราชา",
+        "link": "/atmoz-serene-sriracha/",
+        "logo": "/2023/03/new-atmoz-sriracha_logo-2.png"
     },
     {
-        "group_name": "EEC",
-        "projects_listed": [
-            {
-                "projectId": 66,
-                "image": "promo-buffet999-17.jpg",
-                "project": "เคฟ ยูนิ.เวิร์ส บางแสน",
-                "link": "/kave-univers-bangsaen/"
-            },
-            {
-                "projectId": 51,
-                "image": "promo-buffet999-9.jpg",
-                "project": "แอทโมซ ซีรีน ศรีราชา",
-                "link": "/atmoz-serene-sriracha/"
-            }
-        ]
+        "projectId": 66,
+        "key": "kave-univers-bangsaen",
+        "image": "/2023/03/ASW-Kave-Universe_600x900.jpg",
+        "project": "เคฟ ยูนิเวอร์ส บางแสน",
+        "link": "/kave-univers-bangsaen/",
+        "logo": "/2023/06/kave-unicerse-logo_2.png"
+    },
+    {
+        "projectId": 74,
+        "key": "kave-embryo",
+        "image": "/2023/03/kave-embryo_thumb.jpg",
+        "project": "เคฟ เอมบริโอ รังสิต",
+        "link": "/kave-embryo/",
+        "logo": "/2023/03/kave-embryo_logo_rev.png"
+    },
+    {
+        "projectId": 61,
+        "key": "kave-seed-kaset",
+        "image": "/2023/06/kave-seed_thumbnail.webp",
+        "project": "เคฟ ซี๊ด เกษตร",
+        "link": "/kave-seed-kaset/",
+        "logo": "/2023/06/Logo-Seed-New.png"
     }
-];
+]

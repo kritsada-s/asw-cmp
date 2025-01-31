@@ -1,27 +1,37 @@
 import React, { useState } from 'react';
-import { ProjectGroup, Project } from '../types';
-import { projectData } from '../lib/projectData';
-import { Select, SelectItem } from "@nextui-org/react";
-import ProjectLinkButton from './ProjectLinkButton';
-import CheckIcon from '../images/check-o.png';
+import { Project } from '../types';
+import { easyLifeData } from '../lib/projectData';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaCheck } from 'react-icons/fa';
 
 interface ProjectSelectorProps {
   onSelectProject: (project: Project) => void;
+  utmSource: string;
 }
 
-const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) => {
-  const [selectedGroup, setSelectedGroup] = useState<ProjectGroup>(projectData[0]);
+const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, utmSource }) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const handleGroupChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newGroup = projectData.find(group => group.group_name === e.target.value);
-    if (newGroup) {
-      setSelectedGroup(newGroup);
-      setSelectedProject(null);
-    }
-  };
+  const ProjectBlock = ({ project }: { project: Project }) => {
+    return (
+      <div key={project.projectId} className={`rounded shadow-md border border-transparent hover:border-orange-500 transition-all duration-300 ${selectedProject?.projectId === project.projectId ? 'border-green-600' : ''}`}>
+        <div className='flex bg-white rounded w-full'>
+          <Image src={`https://assetwise.co.th/wp-content/uploads${project.image}`} alt={project.project} width={100} height={100} className='w-1/2 h-auto bg-neutral-200 aspect-square object-cover' />
+          <div className='flex flex-col gap-2 p-4 w-full justify-between'>
+            <div className="top">
+              <Image src={`https://assetwise.co.th/wp-content/uploads${project.logo}`} alt={project.project} width={100} height={100} className='w-20 h-auto' />
+              <h3 className='font-bold text-neutral-800'>{project.project}</h3>
+            </div>
+            <div className="bottom flex items-center gap-3">
+              <button onClick={() => handleProjectSelect(project)} className={`${selectedProject?.projectId === project.projectId ? 'bg-green-600' : 'bg-ci-blue'} text-white w-20 h-8 rounded font-lighter text-base`}>{selectedProject?.projectId === project.projectId ? <FaCheck className='w-5 h-auto mx-auto' /> : 'จองเลย'}</button>
+              <Link href={{ pathname: `/project/${project.key}`, query: { 'utm_source': utmSource } }} target='_blank' className='text-sm text-neutral-500'>ดูรายละเอียด</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   const handleProjectSelect = (project: Project) => {
     setSelectedProject(project);
@@ -30,42 +40,11 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject }) =>
 
   return (
     <div id='projectSelector' className="bg-gradient-to-b from-blue-50 to-white">
-      <div className="container py-10">
-        <div className="flex flex-col md:flex-row justify-end items-center mb-5 gap-2 md:gap-4">
-          <p className='text-[30px] md:text-[22px]'>เลือกทำเลที่ต้องการ</p>
-          <Select
-            className="max-w-xs"
-            onChange={handleGroupChange}
-            radius='sm'
-            variant='bordered'
-            aria-labelledby='location'
-            defaultSelectedKeys={[selectedGroup.group_name]}
-          >
-            {projectData.map((group) => (
-              <SelectItem key={group.group_name} value={group.group_name}>
-                {group.group_name}
-              </SelectItem>
-            ))}
-          </Select>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {selectedGroup.projects_listed.map((project) => (
-            <div key={project.projectId}>
-              <div
-                className={`border rounded-[4px] overflow-hidden cursor-pointer mb-3 relative ${
-                  selectedProject?.projectId === project.projectId
-                    ? 'p-selected group bg-orange-500'
-                    : ''
-                }`}
-                onClick={() => handleProjectSelect(project)}
-              >
-                <Image src={CheckIcon} alt='' width={120} height={120} className='absolute left-1/2 -ml-[60px] top-1/2 -mt-[60px] transition -translate-y-[250px] group-[.p-selected]:translate-y-0 opacity-100'/>
-                <img src={`https://assetwise.co.th/promotion-campaign/medias/images/${project.image}`} 
-                alt={project.project} width={300} height={300} className="w-full object-cover group-[.p-selected]:opacity-20 transition" />
-                <p className="hidden text-sm">{project.project}</p>
-              </div>
-              <Link href={{ pathname:'https://assetwise.co.th/condominium'+project.link, query: { 'utm_source': 'Buffet1Oct_Project' } }} target='_blank' className='flex mx-auto px-5 py-1 leading-tight border border-blue-500 hover:bg-blue-600 hover:text-white rounded text-sm w-fit bg-white'>รายละเอียดโครงการ</Link>
-            </div>
+      <div className="container py-10 flex flex-col gap-4">
+        <h1 className='text-[32px] md:text-[46px] text-center'>เลือกโครงการที่คุณสนใจ</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {easyLifeData.map((project) => (
+            <ProjectBlock key={project.projectId} project={project} />
           ))}
         </div>
       </div>

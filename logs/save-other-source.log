@@ -1,13 +1,22 @@
-{"level":"info","message":"SaveOtherSource API response: Workflow was started","timestamp":"2025-01-27T04:16:19.024Z"}
-{"level":"info","message":"Status:","timestamp":"2025-01-27T04:24:21.714Z"}
-{"level":"info","message":"SaveOtherSource API response: Workflow was started","timestamp":"2025-01-27T04:25:47.174Z"}
-{"code":404,"hint":"Click the 'Test workflow' button on the canvas, then try again. (In test mode, the webhook only works for one call after you click this button)","level":"info","message":"SaveOtherSource API response: The requested webhook \"promotion-campaign\" is not registered.","timestamp":"2025-01-27T04:27:29.760Z"}
-{"code":404,"hint":"Click the 'Test workflow' button on the canvas, then try again. (In test mode, the webhook only works for one call after you click this button)","level":"info","message":"SaveOtherSource API response: The requested webhook \"promotion-campaign\" is not registered.","timestamp":"2025-01-27T04:28:48.658Z"}
-{"level":"info","message":"SaveOtherSource API response: Workflow was started","timestamp":"2025-01-27T04:30:44.681Z"}
-{"code":404,"hint":"Click the 'Test workflow' button on the canvas, then try again. (In test mode, the webhook only works for one call after you click this button)","level":"info","message":"SaveOtherSource API response: The requested webhook \"promotion-campaign\" is not registered.","timestamp":"2025-01-27T04:31:29.722Z"}
-{"level":"info","message":"Code: 404, SaveOtherSource API response:The requested webhook \"promotion-campaign\" is not registered.","timestamp":"2025-01-27T04:34:11.387Z"}
-2025-01-27T04:40:28.482Z, info: SaveOtherSource API response:
-2025-01-27T04:42:26.218Z, [info]: Workflow was started
-1/27/2025, 11:45:16 AM, [info]: Workflow was started
-27/01/2025, [info]: Workflow was started
-27/01/2025, 11:48:04, [info]: The requested webhook "promotion-campaign" is not registered.
+31/01/2025, 11:30:09 - [info]: The requested webhook "promotion-campaign" is not registered.
+31/01/2025, 11:47:53 - [info]: Workflow was started
+31/01/2025, 11:54:37 - [info]: start api req: 
+31/01/2025, 11:54:37 - [info]: return data:  Workflow was started
+31/01/2025, 11:57:32 - [info]: START API REQUEST: 
+31/01/2025, 11:57:33 - [error]: Error: Unexpected token 's', "success" is not valid JSON
+31/01/2025, 11:58:28 - [info]: START API REQUEST: 
+31/01/2025, 11:58:28 - [error]: Error: Unexpected end of JSON input
+31/01/2025, 11:59:07 - [info]: START API REQUEST: 
+31/01/2025, 11:59:08 - [error]: Error: Unexpected end of JSON input
+31/01/2025, 11:59:43 - [info]: START API REQUEST: 
+31/01/2025, 11:59:43 - [info]: RESPONSE:  Workflow was started
+31/01/2025, 12:00:52 - [info]: START API REQUEST: 
+31/01/2025, 12:00:52 - [error]: Error: Unexpected token 's', "success: 1" is not valid JSON
+31/01/2025, 12:01:19 - [info]: START API REQUEST: 
+31/01/2025, 12:01:20 - [info]: RESPONSE:  Workflow was started
+31/01/2025, 12:05:31 - [info]: START API REQUEST: 
+31/01/2025, 12:05:32 - [info]: RESPONSE:  Workflow was started
+31/01/2025, 12:11:09 - [info]: START API REQUEST: 51 Kritsada Sangkhatad
+31/01/2025, 12:11:10 - [info]: RESPONSE:  Workflow was started
+31/01/2025, 12:13:30 - [info]: START API REQUEST: {"ProjectID":72,"ContactChannelID":21,"ContactTypeID":35,"RefID":20250201,"Fname":"Kritsada","Lname":"Sangkhatad","Tel":"0899999999","Email":"jokerdez13@gmail.com","Ref":"TESTutm_ASW_EASYLIFE_WEB","RefDate":"2025-01-31 12:13","FollowUpID":42,"utm_source":"TESTutm_ASW_EASYLIFE_WEB","PriceInterest":"","PurchasePurpose":"","FlagPersonalAccept":true,"FlagContactAccept":true,"AppointTime":"09:00","AppointTimeEnd":"12:00","utm_campaign":"TEST3","utm_medium":"TEST2","utm_term":"TEST_5","utm_content":"TEST4"}
+31/01/2025, 12:13:31 - [info]: RESPONSE:  Workflow was started

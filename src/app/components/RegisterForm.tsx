@@ -14,13 +14,13 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
     ProjectID: 1,
     ContactChannelID: 21,
     ContactTypeID: 35,
-    RefID: 999,
+    RefID: 25201,
     Fname: '',
     Lname: '',
     Tel: '',
     Email: '',
     Ref: utmSource,
-    RefDate: '2024-10-01 09:00',
+    RefDate: '2025-02-01 09:00',
     FollowUpID: 42,
     utm_source: utmSource,
     PriceInterest: '',
@@ -57,7 +57,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setInvalidFields({ ...invalidFields, [e.target.name]: false });
     if (name === 'Tel') {
-      console.log(value);
+      //console.log(value);
       
       if (value === "") {
         setPhoneError("กรุณากรอกเบอร์โทรศัพท์");
@@ -121,7 +121,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
     <section id="registerForm" className='py-10'>
       <div className="container">
         <div className="w-full lg:w-2/3 mx-auto">
-          <h3 className='text-white text-[30px] lg:text-[40px] leading-none lg:leading-tight text-center mb-4'>ลงทะเบียน{ selectedProject?.project ? ' '+selectedProject.project : '' }</h3>
+          <h3 className='text-white text-shadow-lg header-shadow text-[32px] lg:text-[42px] leading-none lg:leading-tight text-center mb-2'>ลงทะเบียน{ selectedProject?.project ? ' '+selectedProject.project : '' }</h3>
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
             <div className="flex gap-4">
               <div className='w-1/2'>

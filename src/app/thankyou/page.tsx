@@ -10,8 +10,8 @@ export default function ThankYou() {
     <>
       <Header/>
       <section id="thankyouBody" className="min-h-[60vh] py-10 bg-gradient-to-b from-blue-50 to-white">
-        <div className="container">
-          <div className="flex flex-col md:flex-row justify-between shadow">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row justify-between shadow max-w-[920px] mx-auto">
             <Image src={BannerM} alt="" width={500} height={500}/>
             <div className="box flex flex-col items-center bg-white w-full p-5 justify-center">
               <h2 className="text-[28px] lg:text-[36px]">ขอบคุณสำหรับการลงทะเบียน</h2>

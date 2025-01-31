@@ -1,5 +1,7 @@
 export interface Project {
     projectId: number;
+    key: string;
+    logo: string;
     image: string;
     project: string;
     link: string;

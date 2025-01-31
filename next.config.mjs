@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    //output: 'export',
+    output: 'export',
     images: {
       unoptimized: true,
       remotePatterns: [
@@ -13,8 +13,8 @@ const nextConfig = {
     // Conditionally apply trailingSlash, basePath, and assetPrefix
     ...(process.env.IS_EXPORT === 'true' ? {
       trailingSlash: true,
-      basePath: '/promotion-campaign',
-      assetPrefix: '/promotion-campaign/',
+      basePath: '/easylife',
+      assetPrefix: '/easylife/',
     } : {}),
   };
   
