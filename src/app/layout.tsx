@@ -5,7 +5,7 @@ import { Providers } from "./providers";
 import ogImage from './images/og.jpg';
 import Script from 'next/script';
 
-const GTM_IDS = ['GTM-MM872QW', 'GTM-N8T5FVCT'];
+const GTM_IDS = ['GTM-MM872QW'];
 
 export const metadata: Metadata = {
   title: `${process.env.NEXT_PUBLIC_SITE_TITLE}`,
