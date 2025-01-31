@@ -101,7 +101,7 @@ const Home = () => {
       )}
       <section id="terms">
         <div className="container py-5">
-          <Link href={{ pathname:'https://bit.ly/3Y395fQ', query: { 'utm_source': utmSource } }} target='_blank' className='flex mx-auto px-5 py-1 leading-tight border border-blue-500 hover:bg-blue-600 hover:text-white rounded w-fit bg-white'>ข้อมูลเงื่อนไขเพิ่มเติม</Link>
+          <Link href={{ pathname:'https://assetwise.co.th/terms-and-conditions/easylife/', query: { 'utm_source': utmSource } }} target='_blank' className='flex mx-auto px-5 py-1 leading-tight border border-blue-500 hover:bg-blue-600 hover:text-white rounded w-fit bg-white'>ข้อมูลเงื่อนไขเพิ่มเติม</Link>
         </div>
       </section>
       <Footer/>

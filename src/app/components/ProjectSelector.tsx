@@ -25,7 +25,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, utmS
             </div>
             <div className="bottom flex items-center gap-3">
               <button onClick={() => handleProjectSelect(project)} className={`${selectedProject?.projectId === project.projectId ? 'bg-green-600' : 'bg-ci-blue'} text-white w-20 h-8 rounded font-lighter text-base`}>{selectedProject?.projectId === project.projectId ? <FaCheck className='w-5 h-auto mx-auto' /> : 'จองเลย'}</button>
-              <Link href={{ pathname: `/project/${project.key}`, query: { 'utm_source': utmSource } }} target='_blank' className='text-sm text-neutral-500'>ดูรายละเอียด</Link>
+              <Link href={{ pathname: `https://assetwise.co.th/condominium/${project.key}`, query: { 'utm_source': utmSource } }} target='_blank' className='text-sm text-neutral-500'>ดูรายละเอียด</Link>
             </div>
           </div>
         </div>
