@@ -24,8 +24,8 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, utmS
               <h3 className='font-bold text-neutral-800'>{project.project}</h3>
             </div>
             <div className="bottom flex items-center gap-3">
-              <button onClick={() => handleProjectSelect(project)} className={`${selectedProject?.projectId === project.projectId ? 'bg-green-600' : 'bg-ci-blue'} text-white w-20 h-8 rounded font-lighter text-base`}>{selectedProject?.projectId === project.projectId ? <FaCheck className='w-5 h-auto mx-auto' /> : 'จองเลย'}</button>
-              <Link href={{ pathname: `https://assetwise.co.th/condominium/${project.key}`, query: { 'utm_source': utmSource } }} target='_blank' className='text-sm text-neutral-500'>ดูรายละเอียด</Link>
+              <button onClick={() => handleProjectSelect(project)} className={`${selectedProject?.projectId === project.projectId ? 'bg-green-600' : 'bg-ci-blue'} text-white rounded w-20 2xl:w-24 font-lighter text-[1.2rem] 2xl:text-[1.5rem]`}>{selectedProject?.projectId === project.projectId ? <FaCheck className='w-5 h-auto mx-auto' /> : 'จองเลย'}</button>
+              <Link href={{ pathname: `https://assetwise.co.th/condominium/${project.key}`, query: { 'utm_source': utmSource } }} target='_blank' className='text-[0.9rem] lg:text-[1rem] 2xl:text-[1.3rem] text-neutral-500'>ดูรายละเอียด</Link>
             </div>
           </div>
         </div>

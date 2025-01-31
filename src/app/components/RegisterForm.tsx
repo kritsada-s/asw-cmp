@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { FormData, Project } from '../types';
-import { Input, Select, SelectItem, Button } from "@nextui-org/react";
+import { Input, Select, SelectItem, Button, Checkbox } from "@nextui-org/react";
 
 interface RegistrationFormProps {
   selectedProject: Project | null;
@@ -123,8 +124,8 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
         <div className="w-full lg:w-2/3 mx-auto">
           <h3 className='text-white text-shadow-lg header-shadow text-[32px] lg:text-[42px] leading-none lg:leading-tight text-center mb-2'>ลงทะเบียน{ selectedProject?.project ? ' '+selectedProject.project : '' }</h3>
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-            <div className="flex gap-4">
-              <div className='w-1/2'>
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className='w-full md:w-1/2'>
                 <Input 
                   type='text' 
                   label='ชื่อ' 
@@ -138,7 +139,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
                   labelPlacement='outside'
                 />
               </div>
-              <div className='w-1/2'>
+              <div className='w-full md:w-1/2'>
                 <Input 
                   type='text' 
                   label='นามสกุล' 
@@ -207,10 +208,13 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
                 </SelectItem>
               </Select>
             </div>
+            <div className='terms-container w-full md:w-2/3 md:mx-auto mb-6'>
+              <p className='text-[16px] leading-tight'><Checkbox isSelected={true} size='sm'/>บริษัทฯ จะจัดเก็บข้อมูลของท่าน เพื่อการติดต่อแจ้งข้อมูลข่าวสารที่เกี่ยวข้องกับ ผลิตภัณฑ์ บริการของบริษัทฯ และนำเสนอโครงการที่น่าสนใจ คลิกที่นี่เพื่อดู <Link href="https://assetwise.co.th/privacy-policy/" target='_blank' title='' className='underline text-ci-blue'>นโยบายความเป็นส่วนตัว</Link> และ <Link href={{ pathname:'https://assetwise.co.th/terms-and-conditions/easylife/', query: { 'utm_source': 'ASW_EASYLIFE_FORM_BOTTOM'} }} target='_blank' className='underline text-ci-blue'>ข้อมูลเงื่อนไขเพิ่มเติม</Link></p>
+            </div>
             <div className="flex">
               <Button
                 type="submit"
-                className="w-[200px] p-2 bg-gradient-to-br from-[#fcc902] to-[#eb5f30] border border-neutral-200 mx-auto text-white rounded-lg hover:bg-blue-600"
+                className="min-w-[200px] h-auto p-2 bg-gradient-to-br from-[#fcc902] to-[#eb5f30] border border-neutral-200 mx-auto text-white rounded-lg hover:bg-blue-600 text-[32px]"
                 isLoading={isSubmitting}
                 disabled={isSubmitting}
               >
