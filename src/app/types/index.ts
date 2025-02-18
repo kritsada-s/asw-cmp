@@ -5,6 +5,7 @@ export interface Project {
     image: string;
     project: string;
     link: string;
+    price: string;
   }
   
   export interface ProjectGroup {

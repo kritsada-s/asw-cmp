@@ -6,24 +6,27 @@ export const easyLifeData: Project[] = [
         "key": "atmoz-season-ladkrabang",
         "image": "/2023/07/AtmozSeason.jpg",
         "project": "แอทโมซ ซีซั่น ลาดกระบัง",
-        "link": "/atmoz-season-ladkrabang/",
-        "logo": "/2023/03/atmoz-ladkrabang_logo.png"
+        "link": "/atmoz-season-ladkrabang-easylife/",
+        "logo": "/2023/03/atmoz-ladkrabang_logo.png",
+        "price": "1.49"
     }, 
     {
         "projectId": 52,
         "key": "atmoz-bangna",
         "image": "/2022/08/atmoz-bangna.jpg",
         "project": "แอทโมซ ทรอปิคานา บางนา",
-        "link": "/atmoz-bangna/",
-        "logo": "/2023/03/atmoz-tropicana-bangna_new_logo.png"
+        "link": "/atmoz-tropicana-bangna_easylife/",
+        "logo": "/2023/03/atmoz-tropicana-bangna_new_logo.png",
+        "price": "1.49"
     }, 
     {
         "projectId": 59,
         "key": "atmoz-kanaal-rangsit",
         "image": "/2023/03/atmoz-kanaal-thumb.jpg",
         "project": "แอทโมซ คาแนล รังสิต",
-        "link": "/atmoz-kanaal-rangsit/",
-        "logo": "/2023/03/atmoz-kanaal_logo.png"
+        "link": "/atmoz-kanaal-rangsit-easylife/",
+        "logo": "/2023/03/atmoz-kanaal_logo.png",
+        "price": "1.69"
     },
     {
         "projectId": 60,
@@ -31,7 +34,8 @@ export const easyLifeData: Project[] = [
         "image": "/2023/03/atmoz-oasis-onnut-thumb-1.jpg",
         "project": "แอทโมซ โอเอซิส อ่อนนุช",
         "link": "/atmoz-oasis-onnut/",
-        "logo": "/2023/03/atmoz-onnut_logo.png"
+        "logo": "/2023/03/atmoz-onnut_logo.png",
+        "price": "1.79"
     },
     {
         "projectId": 62,
@@ -39,7 +43,8 @@ export const easyLifeData: Project[] = [
         "image": "/2022/11/thumb-amoz.jpg",
         "project": "แอทโมซ พอร์เทรต ศรีสมาน",
         "link": "/atmoz-portrait-srisaman/",
-        "logo": "/2022/08/atmoz-portrait-srisaman-logo.png"
+        "logo": "/2022/08/atmoz-portrait-srisaman-logo.png",
+        "price": "1.59"
     },
     {
         "projectId": 19,
@@ -47,7 +52,8 @@ export const easyLifeData: Project[] = [
         "image": "/2023/03/ATMOZ-RATCHADA-HUAIKWANG_Thumb.jpg",
         "project": "แอทโมซ รัชดา-ห้วยขวาง",
         "link": "/atmoz-rh/",
-        "logo": "/2023/03/AtmozRH-logo-1.png"
+        "logo": "/2023/03/AtmozRH-logo-1.png",
+        "price": "2.19"
     },
     {
         "projectId": 63,
@@ -55,7 +61,8 @@ export const easyLifeData: Project[] = [
         "image": "/2023/03/Atmoz-minburi-thumb.jpg",
         "project": "แอทโมซ โฟลว์ มีนบุรี",
         "link": "/atmoz-flow-minburi/",
-        "logo": "/2023/03/atmoz-flow_minburi_logo.png"
+        "logo": "/2023/03/atmoz-flow_minburi_logo.png",
+        "price": "1.59"
     },
     {
         "projectId": 51,
@@ -63,7 +70,8 @@ export const easyLifeData: Project[] = [
         "image": "/2023/03/atmoz-sriracha-thumb.jpg",
         "project": "แอทโมซ ซีรีน ศรีราชา",
         "link": "/atmoz-serene-sriracha/",
-        "logo": "/2023/03/new-atmoz-sriracha_logo-2.png"
+        "logo": "/2023/03/new-atmoz-sriracha_logo-2.png",
+        "price": "1.79"
     },
     {
         "projectId": 66,
@@ -71,7 +79,8 @@ export const easyLifeData: Project[] = [
         "image": "/2023/03/ASW-Kave-Universe_600x900.jpg",
         "project": "เคฟ ยูนิเวอร์ส บางแสน",
         "link": "/kave-univers-bangsaen/",
-        "logo": "/2023/06/kave-unicerse-logo_2.png"
+        "logo": "/2023/06/kave-unicerse-logo_2.png",
+        "price": "1.89"
     },
     {
         "projectId": 74,
@@ -79,7 +88,8 @@ export const easyLifeData: Project[] = [
         "image": "/2023/03/kave-embryo_thumb.jpg",
         "project": "เคฟ เอมบริโอ รังสิต",
         "link": "/kave-embryo/",
-        "logo": "/2023/03/kave-embryo_logo_rev.png"
+        "logo": "/2023/03/kave-embryo_logo_rev.png",
+        "price": "1.49"
     },
     {
         "projectId": 61,
@@ -87,6 +97,7 @@ export const easyLifeData: Project[] = [
         "image": "/2023/06/kave-seed_thumbnail.webp",
         "project": "เคฟ ซี๊ด เกษตร",
         "link": "/kave-seed-kaset/",
-        "logo": "/2023/06/Logo-Seed-New.png"
+        "logo": "/2023/06/Logo-Seed-New.png",
+        "price": "2.29"
     }
 ]
