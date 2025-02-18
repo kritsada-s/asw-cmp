@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import ProjectSelector from './components/ProjectSelector';
 import RegistrationForm from './components/RegisterForm';
@@ -13,7 +13,13 @@ import Image from 'next/image';
 import Footer from './components/Footer';
 import Link from 'next/link';
 import Swal from 'sweetalert2'
-import logger from './utils/logger';
+//import logger from './utils/logger';
+import gsap from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { useGSAP } from '@gsap/react';
+
+// Register the ScrollToPlugin
+gsap.registerPlugin(ScrollToPlugin);
 
 const Home = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -81,9 +87,36 @@ const Home = () => {
     }
   };
 
+  useGSAP(() => {
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest('a');
+      
+      if (anchor?.hash) {
+        e.preventDefault();
+        const targetElement = document.querySelector(anchor.hash);
+        
+        if (targetElement) {
+          gsap.to(window, {
+            duration: 0.8,
+            scrollTo: { y: targetElement, offsetY: 65 },
+            ease: "power2.inOut"
+          });
+        }
+      }
+    };
+
+    document.addEventListener('click', handleAnchorClick);
+    
+    return () => {
+      document.removeEventListener('click', handleAnchorClick);
+    };
+  });
+
   return (
     <main>
       <Header/>
+      <div className='h-[65px]'></div>
       <Image src={Banner} width={1440} height={600} alt='' className='w-full hidden md:block h-auto'/>
       <Image src={BannerM} width={640} height={640} alt='' className='w-full h-auto block md:hidden'/>
       <Info/>
