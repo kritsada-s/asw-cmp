@@ -15,17 +15,18 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, utmS
 
   const ProjectBlock = ({ project }: { project: Project }) => {
     return (
-      <div key={project.projectId} className={`rounded shadow-md border border-transparent hover:border-orange-500 transition-all duration-300 ${selectedProject?.projectId === project.projectId ? 'border-green-600' : ''}`}>
+      <div key={project.projectId} className={`rounded shadow-md border hover:border-orange-500 transition-all duration-300 ${selectedProject?.projectId === project.projectId ? 'border-green-600' : 'border-transparent'}`}>
         <div className='flex bg-white rounded w-full'>
           <Image src={`https://assetwise.co.th/wp-content/uploads${project.image}`} alt={project.project} width={100} height={100} className='w-1/2 h-auto bg-neutral-200 aspect-square object-cover' />
           <div className='flex flex-col gap-2 p-4 w-full justify-between'>
             <div className="top">
               <Image src={`https://assetwise.co.th/wp-content/uploads${project.logo}`} alt={project.project} width={100} height={100} className='w-20 h-auto' />
               <h3 className='font-bold text-neutral-800'>{project.project}</h3>
+              <p className='text-neutral-500'>เริ่มต้น {project.price} ล้านบาท</p>
             </div>
             <div className="bottom flex items-center gap-3">
-              <button onClick={() => handleProjectSelect(project)} className={`${selectedProject?.projectId === project.projectId ? 'bg-green-600' : 'bg-ci-blue'} text-white rounded w-20 2xl:w-24 font-lighter text-[1.2rem] 2xl:text-[1.5rem]`}>{selectedProject?.projectId === project.projectId ? <FaCheck className='w-5 h-auto mx-auto' /> : 'จองเลย'}</button>
-              <Link href={{ pathname: `https://assetwise.co.th/condominium/${project.key}`, query: { 'utm_source': utmSource } }} target='_blank' className='text-[0.9rem] lg:text-[1rem] 2xl:text-[1.3rem] text-neutral-500'>ดูรายละเอียด</Link>
+              <button onClick={() => handleProjectSelect(project)} className={`${selectedProject?.projectId === project.projectId ? 'bg-green-600' : 'bg-ci-blue'} text-white rounded w-20 2xl:w-24 font-lighter text-[1.2rem] 2xl:text-[1.5rem] min-h-[30px]`}>{selectedProject?.projectId === project.projectId ? <FaCheck className='w-5 h-auto mx-auto' /> : 'เลือก'}</button>
+              <Link href={{ pathname: `https://assetwise.co.th/condominium${project.link}`, query: { 'utm_source': utmSource } }} target='_blank' className='text-[0.9rem] lg:text-[1rem] 2xl:text-[1.3rem] text-neutral-500'>ดูรายละเอียด</Link>
             </div>
           </div>
         </div>
