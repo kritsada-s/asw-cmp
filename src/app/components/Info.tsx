@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Info01D from '../images/info01-d.webp';
 import Info01M from '../images/info01-m.webp';
-import Info02D from '../images/why_asw-easylife_d_01.webp';
-import Info02M from '../images/why_asw-easylife_m_01.webp';
+import Info02D from '../images/why-easylife_d_new-key_25-feb.png';
+import Info02M from '../images/why-easylife_m_new-key_25-feb.png';
 import Info03D from '../images/easy-life_steps_desktop.png';
 import Info03M from '../images/easy-life_steps_mobile.png';
 
