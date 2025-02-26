@@ -33,7 +33,7 @@ export const easyLifeData: Project[] = [
         "key": "atmoz-oasis-onnut",
         "image": "/2023/03/atmoz-oasis-onnut-thumb-1.jpg",
         "project": "แอทโมซ โอเอซิส อ่อนนุช",
-        "link": "/atmoz-oasis-onnut/",
+        "link": "/atmoz-oasis-onnut-easylife/",
         "logo": "/2023/03/atmoz-onnut_logo.png",
         "price": "1.79"
     },
@@ -42,7 +42,7 @@ export const easyLifeData: Project[] = [
         "key": "atmoz-portrait-srisaman",
         "image": "/2022/11/thumb-amoz.jpg",
         "project": "แอทโมซ พอร์เทรต ศรีสมาน",
-        "link": "/atmoz-portrait-srisaman/",
+        "link": "/atmoz-portrait-srisaman-easylife/",
         "logo": "/2022/08/atmoz-portrait-srisaman-logo.png",
         "price": "1.59"
     },
@@ -51,7 +51,7 @@ export const easyLifeData: Project[] = [
         "key": "atmoz-rh",
         "image": "/2023/03/ATMOZ-RATCHADA-HUAIKWANG_Thumb.jpg",
         "project": "แอทโมซ รัชดา-ห้วยขวาง",
-        "link": "/atmoz-rh/",
+        "link": "/atmoz-ratchada-huaikwang-easylife/",
         "logo": "/2023/03/AtmozRH-logo-1.png",
         "price": "2.19"
     },
@@ -60,7 +60,7 @@ export const easyLifeData: Project[] = [
         "key": "atmoz-flow-minburi",
         "image": "/2023/03/Atmoz-minburi-thumb.jpg",
         "project": "แอทโมซ โฟลว์ มีนบุรี",
-        "link": "/atmoz-flow-minburi/",
+        "link": "/atmoz-flow-minburi-easylife/",
         "logo": "/2023/03/atmoz-flow_minburi_logo.png",
         "price": "1.59"
     },
@@ -69,7 +69,7 @@ export const easyLifeData: Project[] = [
         "key": 'atmoz-serene-sriracha',
         "image": "/2023/03/atmoz-sriracha-thumb.jpg",
         "project": "แอทโมซ ซีรีน ศรีราชา",
-        "link": "/atmoz-serene-sriracha/",
+        "link": "/atmoz-serene-sriracha-easylife-2/",
         "logo": "/2023/03/new-atmoz-sriracha_logo-2.png",
         "price": "1.79"
     },
@@ -78,7 +78,7 @@ export const easyLifeData: Project[] = [
         "key": "kave-univers-bangsaen",
         "image": "/2023/03/ASW-Kave-Universe_600x900.jpg",
         "project": "เคฟ ยูนิเวอร์ส บางแสน",
-        "link": "/kave-univers-bangsaen/",
+        "link": "/kave-universe-bangsaen-easylife/",
         "logo": "/2023/06/kave-unicerse-logo_2.png",
         "price": "1.89"
     },
@@ -87,7 +87,7 @@ export const easyLifeData: Project[] = [
         "key": "kave-embryo",
         "image": "/2023/03/kave-embryo_thumb.jpg",
         "project": "เคฟ เอมบริโอ รังสิต",
-        "link": "/kave-embryo/",
+        "link": "/kave-embryo-rangsit-easylife/",
         "logo": "/2023/03/kave-embryo_logo_rev.png",
         "price": "1.49"
     },
@@ -96,7 +96,7 @@ export const easyLifeData: Project[] = [
         "key": "kave-seed-kaset",
         "image": "/2023/06/kave-seed_thumbnail.webp",
         "project": "เคฟ ซี๊ด เกษตร",
-        "link": "/kave-seed-kaset/",
+        "link": "/kave-seed-kaset-easylife/",
         "logo": "/2023/06/Logo-Seed-New.png",
         "price": "2.29"
     }
