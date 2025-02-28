@@ -119,7 +119,6 @@ const Home = () => {
       <div className='h-[65px]'></div>
       <Image src={Banner} width={1440} height={600} alt='' className='w-full hidden md:block h-auto'/>
       <Image src={BannerM} width={640} height={640} alt='' className='w-full h-auto block md:hidden'/>
-      <Info/>
       <ProjectSelector onSelectProject={handleProjectSelect} utmSource={utmSource}/>
       <RegistrationForm 
         selectedProject={selectedProject} 
