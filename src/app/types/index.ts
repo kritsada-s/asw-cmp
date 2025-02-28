@@ -2,6 +2,7 @@ export interface Project {
     projectId: number;
     image: string;
     thumb?: string;
+    logo?: string;
     project?: string;
     nameTH?: string;
     nameEN?: string;

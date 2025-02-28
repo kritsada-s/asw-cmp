@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { dbHeavent } from './fonts'
 import { Providers } from "./providers";
-import ogImage from './images/og.jpg';
+import ogImage from './images/no-banner_d.png';
 import Script from 'next/script';
 
-const GTM_IDS = ['GTM-MM872QW', 'GTM-KSL4R3B5'];
+const GTM_IDS = ['GTM-MM872QW'];
 
 export const metadata: Metadata = {
   title: 'คอนโด AssetWise ทำถึง แจกทองทุกยูนิต ฟรีส่วนกลางสูงสุด 5 ปี*',

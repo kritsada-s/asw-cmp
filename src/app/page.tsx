@@ -6,11 +6,10 @@ import ProjectSelector from './components/ProjectSelector';
 import RegistrationForm from './components/RegisterForm';
 import { FormData, Project } from './types';
 import Header from './components/Header';
-import Banner from './images/AW_TunThueng_RV2_d.png';
-import BannerM from './images/AW_TunThueng_RV2_m.jpg';
+import Banner from './images/no-banner_d.png';
+import BannerM from './images/no-banner_m.png';
 import Image from 'next/image';
 import Footer from './components/Footer';
-import Link from 'next/link';
 import Swal from 'sweetalert2'
 
 const Home = () => {
@@ -18,7 +17,7 @@ const Home = () => {
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [utmSource, setUtmSource] = useState<string>('Tumthung_13JAN25_MainWeb');
+  const [utmSource, setUtmSource] = useState<string>(process.env.UTM_TEXT || '');
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -27,7 +26,7 @@ const Home = () => {
     const location = searchParams.get('location') || searchParams.get('loc');
     
     if (utmFromUrl) {
-      setUtmSource(`${utmFromUrl}_Tumthung_13JAN25_MainWeb`);
+      setUtmSource(`${utmFromUrl}_${process.env.UTM_TEXT}`);
     }
 
     if (location) {
@@ -53,7 +52,7 @@ const Home = () => {
 
     if (selectedProject) {
       try {
-        const response = await fetch('https://node.assetwise.dev/webhook/promotion-campaign', {
+        const response = await fetch('https://node.assetwise.dev/webhook/houseandcondo2025', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -88,6 +87,7 @@ const Home = () => {
   return (
     <main>
       <Header/>
+      <div className='h-[70px]'></div>
       <Image src={Banner} width={1440} height={600} alt='' className='w-full hidden md:block h-auto'/>
       <Image src={BannerM} width={640} height={640} alt='' className='w-full h-auto block md:hidden'/>
       <ProjectSelector onSelectProject={handleProjectSelect} selectedLocation={selectedLocation} />

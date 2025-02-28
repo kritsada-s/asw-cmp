@@ -1,7 +1,12 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../images/asw_logo_hr.png";
-import { metadata } from "../layout";
+import gsap from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const menus = [
     { 
@@ -27,17 +32,34 @@ const menus = [
 ]
 
 function Header() {
+    const handleRegisterClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        const targetSection = document.querySelector('#registerForm');
+        if (targetSection) {
+            gsap.to(window, {
+                duration: 0.6,
+                scrollTo: { 
+                    y: targetSection,
+                    offsetY: 70
+                },
+                ease: "power2.inOut"
+            });
+        }
+    };
     return (
-        <div className="bg-white shadow-lg z-10">
-            <div className="container min-h-[60px] lg:min-h-20 flex items-center justify-center lg:justify-between">
-                <Link title="AssetWise" target="_blank" href={{ pathname: 'https://assetwise.co.th', query: { utm_source: 'Tumthung-13Jan25-MainWeb_2024' } }} className="max-w-36 lg:max-w-fit">
+        <div className="bg-white shadow-lg z-10 fixed top-0 left-0 right-0 w-full">
+            <div className="container h-fit flex items-center justify-between py-4">
+                <Link title="AssetWise" target="_blank" href={{ pathname: 'https://assetwise.co.th', query: { utm_source: process.env.UTM_TEXT } }} className="max-w-36 lg:max-w-fit">
                     <Image src={Logo} alt="Logo" width={200} height={22} />
                 </Link>
-                <ul className="gap-5 hidden lg:flex">
-                    {menus.map((item: any, key: number) => (
-                        <Link key={key} href={item.link} className="hover:text-ci-lightblue transition">{item.label}</Link>
-                    ))}
-                </ul>
+                <div className="menu-right flex gap-4 items-center">
+                    <ul className="gap-5 hidden lg:flex">
+                        {menus.map((item: any, key: number) => (
+                            <Link key={key} href={item.link} className="text-neutral-700 hover:text-[#004ab3] transition">{item.label}</Link>
+                        ))}
+                    </ul>
+                    <button className="bg-gradient-to-br from-[#004ab3] to-[#0167bc] text-white px-4 py-1 rounded-md" onClick={handleRegisterClick}>ลงทะเบียน</button>
+                </div>
             </div>
         </div>
     );

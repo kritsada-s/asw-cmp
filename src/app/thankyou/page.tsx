@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import BannerM from "../images/AW_TunThueng_RV2_m.jpg";
+import BannerM from "../images/no-banner_m.png";
 import Image from "next/image";
 import BackButton from "../components/BackButton";
 
@@ -9,7 +9,7 @@ export default function ThankYou() {
   return (
     <>
       <Header/>
-      <section id="thankyouBody" className="min-h-[60vh] py-10 bg-gradient-to-b from-blue-50 to-white">
+      <section id="thankyouBody" className="min-h-[60vh] py-10 bg-gradient-to-b from-blue-50 to-white mt-[70px]">
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between shadow">
             <Image src={BannerM} alt="" width={500} height={500}/>

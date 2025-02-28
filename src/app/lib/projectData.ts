@@ -5,6 +5,7 @@ export const projectsData: Project[] = [
         "projectId": 6,
         "image": "atmoz-71",
         "thumb": "/2023/03/atmoz-ladprao71-thumb.jpg",
+        "logo": "/2023/03/LOGO-ATMOZ-LADPRAO-71-1.png",
         "project": "แอทโมซ ลาดพร้าว 71",
         "link": "/atmoz-ladprao71/",
         "nameTH": "แอทโมซ ลาดพร้าว 71",
@@ -15,6 +16,7 @@ export const projectsData: Project[] = [
         "projectId": 17,
         "image": "modiz-50.jpg",
         "thumb": "/2023/03/Modiz-Sukhumvit.jpg",
+        "logo": "/2023/03/logo_modiz-sukumvit50-rev.png",
         "project": "โมดิซ สุขุมวิท 50",
         "link": "/modiz-sukhumvit50/",
         "nameTH": "โมดิซ สุขุมวิท 50",
@@ -25,6 +27,7 @@ export const projectsData: Project[] = [
         "projectId": 19,
         "image": "atmoz-rh.jpg",
         "thumb": "/2023/03/ATMOZ-RATCHADA-HUAIKWANG_Thumb.jpg",
+        "logo": "/2023/03/AtmozRH-logo-1.png",
         "project": "แอทโมซ รัชดา-ห้วยขวาง",
         "link": "/atmoz-rh/",
         "nameTH": "แอทโมซ รัชดา-ห้วยขวาง",
@@ -35,6 +38,7 @@ export const projectsData: Project[] = [
         "projectId": 27,
         "image": "ivory.jpg",
         "thumb": "2022/08/ivory-ratchadaladprao.jpg",
+        "logo": "/2022/08/Ivory_logo.png",
         "project": "ไอเวอรี่ รัชดา ลาดพร้าว",
         "link": "/ivory-ratchada-ladprao/",
         "nameTH": "ไอเวอรี่ รัชดา ลาดพร้าว",
@@ -44,8 +48,9 @@ export const projectsData: Project[] = [
     {
         "projectId": 29,
         "image": "modiz-bangpho.jpg",
-        "project": "โมดิซ คอลเล็คชั่น บางโพ",
         "thumb": "/2023/03/Modiz-Collection-BangPho-Thumb.jpg",
+        "logo": "/2023/03/modiz-bangpho_logo-2.png",
+        "project": "โมดิซ คอลเล็คชั่น บางโพ",
         "link": "/modiz-bangpho/",
         "nameTH": "โมดิซ คอลเล็คชั่น บางโพ",
         "nameEN": "Modiz Collection Bangpho",
@@ -55,6 +60,7 @@ export const projectsData: Project[] = [
         "projectId": 31,
         "image": "modiz-rhyme.jpg",
         "thumb": "/2023/03/Modiz-Rhyme-Ramkhamhaeng-thumb.jpg",
+        "logo": "/2023/03/modiz-rhyme_logo-1.png",
         "project": "โมดิซ ไรห์ม รามคำแหง",
         "link": "/modiz-rhyme/",
         "nameTH": "โมดิซ ไรห์ม รามคำแหง",
@@ -72,9 +78,43 @@ export const projectsData: Project[] = [
         "price": "X.XX ล้าน"
     },
     {
+        "projectId": 46,
+        "image": "kave-mutant-salaya.jpg",
+        "thumb": "/2023/03/kave-salaya_thumb.jpg",
+        "logo": "/2023/03/kave-salaya_logo_rev.png",
+        "project": "เคฟ มิวแทนต์ ศาลายา",
+        "link": "/kave-mutant-salaya/",
+        "nameTH": "เคฟ มิวแทนต์ ศาลายา",
+        "nameEN": "Kave Mutant Salaya",
+        "price": "X.XX ล้าน"
+    },
+    {
+        "projectId": 47,
+        "image": "kave-town-colony.jpg",
+        "thumb": "/2023/03/kave-town-thumb.jpg",
+        "logo": "/2023/03/kave-colony_logo-2.png",
+        "project": "เคฟ ทาวน์ โคโลนี่",
+        "link": "/kave-town-colony/",
+        "nameTH": "เคฟ ทาวน์ โคโลนี่",
+        "nameEN": "Kave Town Colony",
+        "price": "X.XX ล้าน"
+    },
+    {
+        "projectId": 48,
+        "image": "kave-town-island.jpg",
+        "thumb": "/2023/05/AW-ISLAND-320-x-472.jpg",
+        "logo": "/2023/05/kave-island-logo.png",
+        "project": "เคฟ ทาวน์ ไอส์แลนด์",
+        "link": "/kave-town-island/",
+        "nameTH": "เคฟ ทาวน์ ไอส์แลนด์",
+        "nameEN": "Kave Town Island",
+        "price": "X.XX ล้าน"
+    },
+    {
         "projectId": 49,
         "image": "modiz-voyage.jpg",
         "thumb": "/2023/08/1080x1593-pixel.png",
+        "logo": "/2023/08/modiz-voyage_logo-2.png",
         "project": "โมดิซ โวยาจ ศรีนครินทร์",
         "link": "/modiz-voyage-srinakarin/",
         "nameTH": "โมดิซ โวยาจ ศรีนครินทร์",
@@ -85,6 +125,7 @@ export const projectsData: Project[] = [
         "projectId": 51,
         "image": "atmoz-serene.jpg",
         "thumb": "/2023/03/atmoz-sriracha-thumb.jpg",
+        "logo": "/2023/03/new-atmoz-sriracha_logo-2.png",
         "project": "แอทโมซ ซีรีน ศรีราชา",
         "link": "/atmoz-serene-sriracha/",
         "nameTH": "แอทโมซ ซีรีน ศรีราชา",
@@ -95,6 +136,7 @@ export const projectsData: Project[] = [
         "projectId": 52,
         "image": "atmoz-tropicana.jpg",
         "thumb": "/2022/08/atmoz-bangna.jpg",
+        "logo": "/2023/03/atmoz-tropicana-bangna_new_logo.png",
         "project": "แอทโมซ ทรอปิคานา บางนา",
         "link": "/atmoz-bangna/",
         "nameTH": "แอทโมซ ทรอปิคานา บางนา",
@@ -105,6 +147,7 @@ export const projectsData: Project[] = [
         "projectId": 59,
         "image": "atmoz-kanaal.jpg",
         "thumb": "/2023/03/atmoz-kanaal-thumb.jpg",
+        "logo": "/2023/03/atmoz-kanaal_logo.png",
         "project": "แอทโมซ คาแนล",
         "link": "/atmoz-kanaal-rangsit/",
         "nameTH": "แอทโมซ คาแนล",
@@ -115,6 +158,7 @@ export const projectsData: Project[] = [
         "projectId": 60,
         "image": "atmoz-oasis.jpg",
         "thumb": "/2023/03/atmoz-oasis-onnut-thumb-1.jpg",
+        "logo": "/2023/03/atmoz-onnut_logo.png",
         "project": "แอทโมซ โอเอซิส อ่อนนุช",
         "link": "/atmoz-oasis-onnut/",
         "nameTH": "แอทโมซ โอเอซิส อ่อนนุช",
@@ -125,6 +169,7 @@ export const projectsData: Project[] = [
         "projectId": 61,
         "image": "kave-seed.jpg",
         "thumb": "/2023/06/kave-seed_thumbnail.webp",
+        "logo": "/2023/06/Logo-Seed-New.png",
         "project": "เคฟ ซี๊ด เกษตร",
         "link": "/kave-seed-kaset/",
         "nameTH": "เคฟ ซี๊ด เกษตร",
@@ -135,6 +180,7 @@ export const projectsData: Project[] = [
         "projectId": 62,
         "image": "atmoz-portrait.jpg",
         "thumb": "/2022/11/thumb-amoz.jpg",
+        "logo": "/2022/08/atmoz-portrait-srisaman-logo.png",
         "project": "แอทโมซ พอร์เทรต ศรีสมาน",
         "link": "/atmoz-portrait-srisaman/",
         "nameTH": "แอทโมซ พอร์เทรต ศรีสมาน",
@@ -145,6 +191,7 @@ export const projectsData: Project[] = [
         "projectId": 63,
         "image": "atmoz-flow.jpg",
         "thumb": "/2023/03/Atmoz-minburi-thumb.jpg",
+        "logo": "/2023/03/atmoz-flow_minburi_logo.png",
         "project": "แอทโมซ โฟลว์ มีนบุรี",
         "link": "/atmoz-flow-minburi/",
         "nameTH": "แอทโมซ โฟลว์ มีนบุรี",
@@ -165,6 +212,7 @@ export const projectsData: Project[] = [
         "projectId": 66,
         "image": "kave-universe.jpg",
         "thumb": "/2023/03/ASW-Kave-Universe_600x900.jpg",
+        "logo": "/2023/06/kave-unicerse-logo_2.png",
         "project": "เคฟ ยูนิ.เวิร์ส บางแสน",
         "link": "/kave-univers-bangsaen/",
         "nameTH": "เคฟ ยูนิ.เวิร์ส บางแสน",
@@ -175,6 +223,7 @@ export const projectsData: Project[] = [
         "projectId": 71,
         "image": "atmoz-palacio.jpg",
         "thumb": "/2023/07/palacio_thumbnail.webp",
+        "logo": "/2023/05/atmoz-palacio_logo_rev.png",
         "project": "แอทโมซ พาลาซิโอ ลาดพร้าว-วังหิน",
         "link": "/atmoz-palacio-ladprao-wanghin/",
         "nameTH": "แอทโมซ พาลาซิโอ ลาดพร้าว-วังหิน",
@@ -185,6 +234,7 @@ export const projectsData: Project[] = [
         "projectId": 72,
         "image": "atmoz-season.jpg",
         "thumb": "/2023/07/AtmozSeason.jpg",
+        "logo": "/2023/03/atmoz-ladkrabang_logo.png",
         "project": "แอทโมซ ซีซั่น ลาดกระบัง",
         "link": "/atmoz-season-ladkrabang/",
         "nameTH": "แอทโมซ ซีซั่น ลาดกระบัง",
@@ -195,6 +245,7 @@ export const projectsData: Project[] = [
         "projectId": 74,
         "image": "kave-embryo.jpg",
         "thumb": "/2023/03/kave-embryo_thumb.jpg",
+        "logo": "/2023/03/kave-embryo_logo_rev.png",
         "project": "เคฟ เอมบริโอ รังสิต",
         "link": "/kave-embryo/",
         "nameTH": "เคฟ เอมบริโอ รังสิต",
@@ -205,6 +256,7 @@ export const projectsData: Project[] = [
         "projectId": 75,
         "image": "maroon.jpg",
         "thumb": "/2024/05/Maroon.jpg",
+        "logo": "/2023/11/maroon32_logo_2.png",
         "project": "มารูน รัชดา32",
         "link": "/maroonratchada32/",
         "nameTH": "มารูน รัชดา32",
@@ -215,6 +267,7 @@ export const projectsData: Project[] = [
         "projectId": 76,
         "image": "modiz-vault.jpg",
         "thumb": "/2023/05/modiz-vault-kaset-thumbnail.png",
+        "logo": "/2023/05/modiz-vault-kaset_logo2-1.png",
         "project": "โมดิซ วอลท์ เกษตร ศรีปทุม",
         "link": "/modiz-vault-kaset-sripatum/",
         "nameTH": "โมดิซ วอลท์ เกษตร ศรีปทุม",
@@ -225,6 +278,7 @@ export const projectsData: Project[] = [
         "projectId": 79,
         "image": "atmoz-canvas.jpg",
         "thumb": "/2023/08/ASW-Atmoz-Canvas-Rayong-WebBanner_320x472.jpg",
+        "logo": "/2023/08/atmoz-canvas_logo-2.png",
         "project": "แอทโมซ แคนวาส ระยอง",
         "link": "/atmoz-canvas-rayong/",
         "nameTH": "แอทโมซ แคนวาส ระยอง",
@@ -235,6 +289,7 @@ export const projectsData: Project[] = [
         "projectId": 81,
         "image": "kave-coco.jpg",
         "thumb": "/2023/05/Kave-Coco-3.jpg",
+        "logo": "/2023/05/Kave-coco-logo.png",
         "project": "เคฟ โคโค่ บางแสน",
         "link": "/kave-coco-bangsaen/",
         "nameTH": "เคฟ โคโค่ บางแสน",
@@ -265,6 +320,7 @@ export const projectsData: Project[] = [
         "projectId": 89,
         "image": "kave-pop.jpg",
         "thumb": "/2023/05/thumbnail-kave-pop-salaya-min.jpg",
+        "logo": "/2023/05/kave-pop-salaya_logo.png",
         "project": "เคฟ ป๊อป ศาลายา",
         "link": "/kave-pop-salaya/",
         "nameTH": "เคฟ ป๊อป ศาลายา",
@@ -295,6 +351,7 @@ export const projectsData: Project[] = [
         "projectId": 93,
         "image": "kave-wonderland",
         "thumb": "/2023/10/Kave-wonderland.jpg",
+        "logo": "/2023/10/kave-wonderland-logo-1.png",
         "project": "เคฟ วันเดอร์แลนด์",
         "link": "/kave-wonderland/",
         "nameTH": "เคฟ วันเดอร์แลนด์",
@@ -305,6 +362,7 @@ export const projectsData: Project[] = [
         "projectId": 94,
         "image": "modiz-avantgard",
         "thumb": "/2023/06/New-Project-84.jpg",
+        "logo": "/2023/05/Modiz-Avant-Garde-logo.png",
         "project": "โมดิซ อาวองการ์ด",
         "link": "/modiz-avantgard/",
         "nameTH": "โมดิซ อาวองการ์ด",
@@ -315,6 +373,7 @@ export const projectsData: Project[] = [
         "projectId": 97,
         "image": "aquarious-jomtien.jpg",
         "thumb": "/2024/07/Web-banner_Aquarous-Jomtien-Pattaya_Dec2024-03.jpeg",
+        "logo": "/2024/06/AQJT_logo-1.png",
         "project": "อควารัส จอมเทียน พัทยา",
         "link": "/aquarous-jomtien-pattaya/",
         "nameTH": "อควารัส จอมเทียน พัทยา",
@@ -325,6 +384,7 @@ export const projectsData: Project[] = [
         "projectId": 99,
         "image": "kave-genesis.jpg",
         "thumb": "/2024/02/Kave-Genesis2.jpg",
+        "logo": "/2024/02/Kave-Genesis-Logo.png",
         "project": "เคฟ เจเนซิส นครปฐม",
         "link": "/kave-genesis/",
         "nameTH": "เคฟ เจเนซิส นครปฐม",
@@ -335,6 +395,7 @@ export const projectsData: Project[] = [
         "projectId": 101,
         "image": "kave-luminous",
         "thumb": "/2024/01/Untitled-design-1.jpg",
+        "logo": "/2024/01/kave-luminous_logo-color-2.png",
         "project": "เคฟ ลูมินัส บางมด",
         "link": "/kave-luminous-bangmod/",
         "nameTH": "เคฟ ลูมินัส บางมด",
@@ -342,183 +403,6 @@ export const projectsData: Project[] = [
         "price": "X.XX ล้าน"
     }
 ]
-
-export const projectData: ProjectGroup[] = [
-    {
-        "group_name": "รัชดา-ลาดพร้าว",
-        "group_key": "ratchada-lardprao",
-        "projects_listed": [
-            {
-                "projectId": 19,
-                "image": "atmoz-rh.jpg",
-                "project": "แอทโมซ รัชดา-ห้วยขวาง",
-                "link": "/atmoz-rh/"
-            },
-            {
-                "projectId": 27,
-                "image": "ivory.jpg",
-                "project": "ไอเวอรี่ รัชดา ลาดพร้าว",
-                "link": "/ivory-ratchada-ladprao/"
-            },
-            {
-                "projectId": 29,
-                "image": "modiz-bangpho.jpg",
-                "project": "โมดิซ คอลเลคชั่น บางโพ",
-                "link": "/modiz-collection-bangpho/"
-            },
-            {
-                "projectId": 71,
-                "image": "atmoz-palacio.jpg",
-                "project": "แอทโมซ พาลาซิโอ ลาดพร้าว-วังหิน",
-                "link": "/atmoz-palacio-ladprao-wanghin/"
-            },
-            {
-                "projectId": 75,
-                "image": "maroon.jpg",
-                "project": "มารูน รัชดา32",
-                "link": "/maroonratchada32/"
-            },
-            {
-                "projectId": 76,
-                "image": "modiz-vault.jpg",
-                "project": "โมดิซ วอลท์ เกษตร ศรีปทุม",
-                "link": "/modiz-vault-kaset-sripatum/"
-            }
-        ]
-    },
-    {
-        "group_name": "รังสิต-ศรีสมาน",
-        "group_key": "rangsit-srisamarn",
-        "projects_listed": [
-            {
-                "projectId": 59,
-                "image": "atmoz-kanaal.jpg",
-                "project": "แอทโมซ คาแนล",
-                "link": "/atmoz-kanaal-rangsit/"
-            },
-            {
-                "projectId": 62,
-                "image": "atmoz-portrait.jpg",
-                "project": "แอทโมซ พอร์เทรต ศรีสมาน",
-                "link": "/atmoz-portrait-srisaman/"
-            },
-            {
-                "projectId": 74,
-                "image": "kave-embryo.jpg",
-                "project": "เคฟ เอมบริโอ รังสิต",
-                "link": "/kave-embryo/"
-            }
-        ]
-    },
-    {
-        "group_name": "บางนา-อ่อนนุช",
-        "group_key": "bangna-onnut",
-        "projects_listed": [
-            {
-                "projectId": 17,
-                "image": "modiz-50.jpg",
-                "project": "โมดิซ สุขุมวิท 50",
-                "link": "/modiz-sukhumvit50/"
-            },
-            {
-                "projectId": 52,
-                "image": "atmoz-tropicana.jpg",
-                "project": "แอทโมซ ทรอปิคานา บางนา",
-                "link": "/atmoz-bangna/"
-            },
-            {
-                "projectId": 60,
-                "image": "atmoz-oasis.jpg",
-                "project": "แอทโมซ โอเอซิส อ่อนนุช",
-                "link": "/atmoz-oasis-onnut/"
-            }
-        ]
-    },
-    {
-        "group_name": "ลาดกระบัง-มีนบุรี",
-        "group_key": "lardkrabang-minburi",
-        "projects_listed": [
-            {
-                "projectId": 63,
-                "image": "atmoz-flow.jpg",
-                "project": "แอทโมซ โฟลว์ มีนบุรี",
-                "link": "/atmoz-flow-minburi/"
-            },
-            {
-                "projectId": 72,
-                "image": "atmoz-season.jpg",
-                "project": "แอทโมซ ซีซั่น ลาดกระบัง",
-                "link": "/atmoz-season-ladkrabang/"
-            }
-        ]
-    },
-    {
-        "group_name": "รามคำแหง-ศรีนครินทร์",
-        "group_key": "ramkhamhaeng-srinakarin",
-        "projects_listed": [
-            {
-                "projectId": 31,
-                "image": "modiz-rhyme.jpg",
-                "project": "โมดิซ ไรห์ม รามคำแหง",
-                "link": "/modiz-rhyme/"
-            },
-            {
-                "projectId": 49,
-                "image": "modiz-voyage.jpg",
-                "project": "โมดิซ โวยาจ ศรีนครินทร์",
-                "link": "/modiz-voyage-srinakarin/"
-            }
-        ]
-    },
-    {
-        "group_name": "ศาลายา-นครปฐม",
-        "group_key": "salaya-nakhonpathom",
-        "projects_listed": [
-            {
-                "projectId": 89,
-                "image": "kave-pop.jpg",
-                "project": "เคฟ ป๊อป ศาลายา",
-                "link": "/kave-pop-salaya/"
-            },
-            {
-                "projectId": 99,
-                "image": "kave-genesis.jpg",
-                "project": "เคฟ เจเนซิส นครปฐม",
-                "link": "/kave-genesis/"
-            }
-        ]
-    },
-    {
-        "group_name": "EEC",
-        "group_key": "eec",
-        "projects_listed": [
-            {
-                "projectId": 66,
-                "image": "kave-universe.jpg",
-                "project": "เคฟ ยูนิ.เวิร์ส บางแสน",
-                "link": "/kave-univers-bangsaen/"
-            },
-            {
-                "projectId": 81,
-                "image": "kave-coco.jpg",
-                "project": "เคฟ โคโค่ บางแสน",
-                "link": "/kave-coco-bangsaen/"
-            },
-            {
-                "projectId": 51,
-                "image": "atmoz-serene.jpg",
-                "project": "แอทโมซ ซีรีน ศรีราชา",
-                "link": "/atmoz-serene-sriracha/"
-            },
-            {
-                "projectId": 79,
-                "image": "atmoz-canvas.jpg",
-                "project": "แอทโมซ แคนวาส ระยอง",
-                "link": "/atmoz-canvas-rayong/"
-            }
-        ]
-    }
-];
 
 export const projectData_HouseCondo25 = [
     {
@@ -537,7 +421,7 @@ export const projectData_HouseCondo25 = [
         "projects_listed": [66, 81, 79, 81, 51, 79, 97]
     },
     {
-        "group_name": "Housing",
+        "group_name": "โครงการบ้าน",
         "group_key": "housing",
         "projects_listed": [65, 83, 82, 90, 91, 33]
     }
