@@ -1,7 +1,11 @@
 export interface Project {
     projectId: number;
     image: string;
-    project: string;
+    thumb?: string;
+    project?: string;
+    nameTH?: string;
+    nameEN?: string;
+    price?: string;
     link: string;
   }
   

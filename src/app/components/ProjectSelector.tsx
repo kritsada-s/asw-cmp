@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { ProjectGroup, Project } from '../types';
-import { projectData } from '../lib/projectData';
+import { projectData_HouseCondo25, projectsData } from '../lib/projectData';
 import { Checkbox, Radio, RadioGroup } from "@nextui-org/react";
 import ProjectLinkButton from './ProjectLinkButton';
 import CheckIcon from '../images/check-o.png';
@@ -32,9 +32,10 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
   }, []);
 
   const handleGroupChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newGroup = projectData.find(group => group.group_name === e.target.value);
+    const newGroup = projectData_HouseCondo25.find(group => group.group_name === e.target.value);
     if (newGroup) {
-      setSelectedGroup(newGroup);
+      const projects = projectsData.filter(p => newGroup.projects_listed.includes(p.projectId));
+      setSelectedGroup({...newGroup, projects_listed: projects});
       setSelectedProject(null);
     }
   };  
@@ -109,13 +110,15 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
       <div className="location-selector-container bg-white relative">
         <div className="container pt-10 px-5 pb-10">
           <h1 className='text-center text-[36px] font-bold mb-3'>คอนโดพร้อมอยู่จาก AssetWise</h1>
-          <h3 className='project-selector-title relative pb-5 text-[28px] font-normal mb-7 text-center leading-none text-neutral-500'>เลือกทำเลที่คุณสนใจ</h3>
           <RadioGroup className='flex' value={selectedGroup?.group_key} orientation='horizontal' classNames={{ wrapper: cn("grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4") }}>
-            { projectData.map((group) => (
+            { projectData_HouseCondo25.map((group) => (
               <CustomRadio 
                 key={group.group_key} 
                 value={group.group_key} 
-                onChange={() => setSelectedGroup(group)} 
+                onChange={() => {
+                  const projects = projectsData.filter(p => group.projects_listed.includes(p.projectId));
+                  setSelectedGroup({...group, projects_listed: projects});
+                }}
               >
                 <h3 className='md:text-lg lg:text-2xl group-data-[selected=true]:text-white'>{group.group_name}</h3>
               </CustomRadio>  
@@ -125,22 +128,16 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
         { selectedGroup && <div className='bottom-arrow-pane'></div> }
       </div>
       <div className="project-selector-container" ref={projectsSelectorContainer}>
-        <div className="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {selectedGroup && selectedGroup.projects_listed.map((project) => (
-            <div key={project.projectId} className='project-box shadow-md rounded-b-md'>
-              <Image
-                src={`https://assetwise.co.th/promotion-campaign/medias/images/Tumthung/Tumthung_${project.image}?v=${v}`}
-                alt={project.project}
-                width={300}
-                height={300}
-                loading="lazy"
-                className="w-full object-cover group-[.p-selected]:opacity-20 transition"
-                priority={false}
-              />
-              <p className="hidden text-sm">{project.project}</p>
-              <div className='flex justify-between p-4'>
-                <Link href={{ pathname:'https://assetwise.co.th/condominium'+project.link, query: { 'utm_source': 'Tumthung_13JAN25_Project' } }} target='_blank' className='text-[16px] flex items-center gap-1 underline text-neutral-600'>รายละเอียดโครงการ <ExternalLinkIcon size='12' /></Link>
-                <Checkbox isSelected={selectedProject?.projectId === project.projectId} onValueChange={() => handleProjectSelect(project)} radius='none' size='lg' icon={<CheckIconSVG />} classNames={{ wrapper: cn("w-[35px] h-[35px] mr-0 rounded-sm group-data-[selected=true]:bg-green-500"), icon: cn("w-7 h-7") }} />
+            <div key={project.projectId} className='project-box shadow-md rounded-b-md bg-white'>
+              <div className='thumbnail aspect-[3/4] bg-cover bg-bottom' style={{ backgroundImage: `url(https://assetwise.co.th/wp-content/uploads/${project.thumb})` }}></div>
+              <div className='flex flex-col justify-between p-4'>
+                <p className="text-sm">{project.nameTH}</p>
+                <div className="flex justify-between">
+                  <Link href={{ pathname:'https://assetwise.co.th/condominium'+project.link, query: { 'utm_source': 'Tumthung_13JAN25_Project' } }} target='_blank' className='text-[16px] flex items-center gap-1 underline text-neutral-600'>รายละเอียดโครงการ <ExternalLinkIcon size='12' /></Link>
+                  <Checkbox isSelected={selectedProject?.projectId === project.projectId} onValueChange={() => handleProjectSelect(project)} radius='none' size='lg' icon={<CheckIconSVG />} classNames={{ wrapper: cn("w-[35px] h-[35px] mr-0 rounded-sm group-data-[selected=true]:bg-green-500"), icon: cn("w-7 h-7") }} />
+                </div>
               </div>
             </div>
           ))}
