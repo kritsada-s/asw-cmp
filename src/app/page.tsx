@@ -15,6 +15,7 @@ import Swal from 'sweetalert2'
 
 const Home = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [utmSource, setUtmSource] = useState<string>('Tumthung_13JAN25_MainWeb');
@@ -23,9 +24,16 @@ const Home = () => {
 
   useEffect(() => {
     const utmFromUrl = searchParams.get('utm_source');
+    const location = searchParams.get('location') || searchParams.get('loc');
+    
     if (utmFromUrl) {
       setUtmSource(`${utmFromUrl}_Tumthung_13JAN25_MainWeb`);
     }
+
+    if (location) {
+      setSelectedLocation(location);
+    }
+
   }, [searchParams]);
 
   const handleProjectSelect = (project: Project) => {
@@ -82,7 +90,7 @@ const Home = () => {
       <Header/>
       <Image src={Banner} width={1440} height={600} alt='' className='w-full hidden md:block h-auto'/>
       <Image src={BannerM} width={640} height={640} alt='' className='w-full h-auto block md:hidden'/>
-      <ProjectSelector onSelectProject={handleProjectSelect} />
+      <ProjectSelector onSelectProject={handleProjectSelect} selectedLocation={selectedLocation} />
       <RegistrationForm 
         selectedProject={selectedProject} 
         onSubmit={handleFormSubmit}
