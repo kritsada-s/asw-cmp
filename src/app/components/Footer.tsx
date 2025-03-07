@@ -166,7 +166,7 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-                <p className="text-neutral-400 text-sm text-center pt-4 mt-4 border-t border-t-neutral-400">© สงวนลิขสิทธิ์ พ.ศ. 2567 บริษัท แอสเซทไวส์ จำกัด (มหาชน)</p>
+                <p className="text-neutral-400 text-sm text-center pt-4 mt-4 border-t border-t-neutral-400">© สงวนลิขสิทธิ์ พ.ศ. 2568 บริษัท แอสเซทไวส์ จำกัด (มหาชน)</p>
             </div>
         </footer>
     );

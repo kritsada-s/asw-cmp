@@ -10,7 +10,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-ladprao71/",
         "nameTH": "แอทโมซ ลาดพร้าว 71",
         "nameEN": "Atmoz Ladprao 71",
-        "price": "X.XX ล้าน"
+        "price": "2.99"
     },
     {
         "projectId": 17,
@@ -21,7 +21,7 @@ export const projectsData: Project[] = [
         "link": "/modiz-sukhumvit50/",
         "nameTH": "โมดิซ สุขุมวิท 50",
         "nameEN": "Modiz Sukhumvit 50",
-        "price": "X.XX ล้าน"
+        "price": "3.99"
     },
     {
         "projectId": 19,
@@ -32,7 +32,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-rh/",
         "nameTH": "แอทโมซ รัชดา-ห้วยขวาง",
         "nameEN": "Atmoz Rachada-Huai Khwang",
-        "price": "X.XX ล้าน"
+        "price": "2.19"
     },
     {
         "projectId": 27,
@@ -43,7 +43,7 @@ export const projectsData: Project[] = [
         "link": "/ivory-ratchada-ladprao/",
         "nameTH": "ไอเวอรี่ รัชดา ลาดพร้าว",
         "nameEN": "Ivory Rachada Ladprao",
-        "price": "X.XX ล้าน"
+        "price": "2.39"
     },
     {
         "projectId": 29,
@@ -54,7 +54,7 @@ export const projectsData: Project[] = [
         "link": "/modiz-bangpho/",
         "nameTH": "โมดิซ คอลเล็คชั่น บางโพ",
         "nameEN": "Modiz Collection Bangpho",
-        "price": "X.XX ล้าน"
+        "price": "3.59"
     },
     {
         "projectId": 31,
@@ -65,7 +65,7 @@ export const projectsData: Project[] = [
         "link": "/modiz-rhyme/",
         "nameTH": "โมดิซ ไรห์ม รามคำแหง",
         "nameEN": "Modiz Rhyme Ramkhamhaeng",
-        "price": "X.XX ล้าน"
+        "price": "2.69"
     },
     {
         "projectId": 33,
@@ -75,7 +75,7 @@ export const projectsData: Project[] = [
         "link": "/the-honor/",
         "nameTH": "ดิ ออเนอร์",
         "nameEN": "The Honor",
-        "price": "X.XX ล้าน"
+        "price": "40-60"
     },
     {
         "projectId": 46,
@@ -86,7 +86,7 @@ export const projectsData: Project[] = [
         "link": "/kave-mutant-salaya/",
         "nameTH": "เคฟ มิวแทนต์ ศาลายา",
         "nameEN": "Kave Mutant Salaya",
-        "price": "X.XX ล้าน"
+        "price": "X.XX"
     },
     {
         "projectId": 47,
@@ -97,7 +97,7 @@ export const projectsData: Project[] = [
         "link": "/kave-town-colony/",
         "nameTH": "เคฟ ทาวน์ โคโลนี่",
         "nameEN": "Kave Town Colony",
-        "price": "X.XX ล้าน"
+        "price": "X.XX"
     },
     {
         "projectId": 48,
@@ -108,7 +108,7 @@ export const projectsData: Project[] = [
         "link": "/kave-town-island/",
         "nameTH": "เคฟ ทาวน์ ไอส์แลนด์",
         "nameEN": "Kave Town Island",
-        "price": "X.XX ล้าน"
+        "price": "X.XX"
     },
     {
         "projectId": 49,
@@ -119,7 +119,7 @@ export const projectsData: Project[] = [
         "link": "/modiz-voyage-srinakarin/",
         "nameTH": "โมดิซ โวยาจ ศรีนครินทร์",
         "nameEN": "Modiz Voyage Srinakarin",
-        "price": "X.XX ล้าน"
+        "price": "2.39"
     },
     {
         "projectId": 51,
@@ -130,7 +130,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-serene-sriracha/",
         "nameTH": "แอทโมซ ซีรีน ศรีราชา",
         "nameEN": "Atmoz Serene Sriracha",
-        "price": "X.XX ล้าน"
+        "price": "1.79"
     },
     {
         "projectId": 52,
@@ -141,7 +141,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-bangna/",
         "nameTH": "แอทโมซ ทรอปิคานา บางนา",
         "nameEN": "Atmoz Tropicana Bangna",
-        "price": "X.XX ล้าน"
+        "price": "1.69"
     },
     {
         "projectId": 59,
@@ -152,7 +152,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-kanaal-rangsit/",
         "nameTH": "แอทโมซ คาแนล",
         "nameEN": "Atmoz Kanaal Rangsit",
-        "price": "X.XX ล้าน"
+        "price": "1.59"
     },
     {
         "projectId": 60,
@@ -163,7 +163,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-oasis-onnut/",
         "nameTH": "แอทโมซ โอเอซิส อ่อนนุช",
         "nameEN": "Atmoz Oasis Onnut",
-        "price": "X.XX ล้าน"
+        "price": "1.79"
     },
     {
         "projectId": 61,
@@ -174,7 +174,7 @@ export const projectsData: Project[] = [
         "link": "/kave-seed-kaset/",
         "nameTH": "เคฟ ซี๊ด เกษตร",
         "nameEN": "Kave Seed Kaset",
-        "price": "X.XX ล้าน"
+        "price": "2.29"
     },
     {
         "projectId": 62,
@@ -185,7 +185,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-portrait-srisaman/",
         "nameTH": "แอทโมซ พอร์เทรต ศรีสมาน",
         "nameEN": "Atmoz Portrait Srisaman",
-        "price": "X.XX ล้าน"
+        "price": "1.59"
     },
     {
         "projectId": 63,
@@ -196,7 +196,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-flow-minburi/",
         "nameTH": "แอทโมซ โฟลว์ มีนบุรี",
         "nameEN": "Atmoz Flow Minburi",
-        "price": "X.XX ล้าน"
+        "price": "1.59"
     },
     {
         "projectId": 65,
@@ -206,7 +206,7 @@ export const projectsData: Project[] = [
         "link": "/esta-rangsit-klong2/",
         "nameTH": "เอสต้า รังสิต คลอง 2",
         "nameEN": "Esta Rangsit Khlong 2",
-        "price": "X.XX ล้าน"
+        "price": "4.69 - 7"
     },
     {
         "projectId": 66,
@@ -217,7 +217,7 @@ export const projectsData: Project[] = [
         "link": "/kave-univers-bangsaen/",
         "nameTH": "เคฟ ยูนิ.เวิร์ส บางแสน",
         "nameEN": "Kave Universe Bangsaen",
-        "price": "X.XX ล้าน"
+        "price": "1.89"
     },
     {
         "projectId": 71,
@@ -228,7 +228,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-palacio-ladprao-wanghin/",
         "nameTH": "แอทโมซ พาลาซิโอ ลาดพร้าว-วังหิน",
         "nameEN": "Atmoz Palacio Ladprao Wanghin",
-        "price": "X.XX ล้าน"
+        "price": "1.89"
     },
     {
         "projectId": 72,
@@ -239,7 +239,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-season-ladkrabang/",
         "nameTH": "แอทโมซ ซีซั่น ลาดกระบัง",
         "nameEN": "Atmoz Season Ladkrabang",
-        "price": "X.XX ล้าน"
+        "price": "1.49"
     },
     {
         "projectId": 74,
@@ -250,7 +250,7 @@ export const projectsData: Project[] = [
         "link": "/kave-embryo/",
         "nameTH": "เคฟ เอมบริโอ รังสิต",
         "nameEN": "Kave Embryo Rangsit",
-        "price": "X.XX ล้าน"
+        "price": "1.29"
     },
     {
         "projectId": 75,
@@ -261,7 +261,7 @@ export const projectsData: Project[] = [
         "link": "/maroonratchada32/",
         "nameTH": "มารูน รัชดา32",
         "nameEN": "Maroon Rachada32",
-        "price": "X.XX ล้าน"
+        "price": "2.39"
     },
     {
         "projectId": 76,
@@ -272,7 +272,7 @@ export const projectsData: Project[] = [
         "link": "/modiz-vault-kaset-sripatum/",
         "nameTH": "โมดิซ วอลท์ เกษตร ศรีปทุม",
         "nameEN": "Modiz Vault Kaset Sripatum",
-        "price": "X.XX ล้าน"
+        "price": "2.89"
     },
     {
         "projectId": 79,
@@ -283,7 +283,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-canvas-rayong/",
         "nameTH": "แอทโมซ แคนวาส ระยอง",
         "nameEN": "Atmoz Canvas Rayong",
-        "price": "X.XX ล้าน"
+        "price": "1.69"
     },
     {
         "projectId": 81,
@@ -294,7 +294,7 @@ export const projectsData: Project[] = [
         "link": "/kave-coco-bangsaen/",
         "nameTH": "เคฟ โคโค่ บางแสน",
         "nameEN": "Kave Coco Bangsaen",
-        "price": "X.XX ล้าน"
+        "price": "1.79"
     },
     {
         "projectId": 82,
@@ -304,7 +304,7 @@ export const projectsData: Project[] = [
         "link": "/the-arbor-ramintra/",
         "nameTH": "ดิ อาเบอร์ รามอินทรา-วัชรพล",
         "nameEN": "The Arbor Ramintra Watcharapol",
-        "price": "X.XX ล้าน"
+        "price": "16.79"
     },
     {
         "projectId": 83,
@@ -314,7 +314,7 @@ export const projectsData: Project[] = [
         "link": "/the-arbor-donmuang/",
         "nameTH": "ดิ อาเบอร์ ดอนเมือง-แจ้งวัฒนะ",
         "nameEN": "The Arbor Donmuang",
-        "price": "X.XX ล้าน"
+        "price": "10.99 - 20"
     },
     {
         "projectId": 89,
@@ -325,7 +325,7 @@ export const projectsData: Project[] = [
         "link": "/kave-pop-salaya/",
         "nameTH": "เคฟ ป๊อป ศาลายา",
         "nameEN": "Kave Pop Salaya",
-        "price": "X.XX ล้าน"
+        "price": "1.89"
     },
     {
         "projectId": 90,
@@ -335,7 +335,7 @@ export const projectsData: Project[] = [
         "link": "/esta-serenity-boromratchachonnani/",
         "nameTH": "เอสต้า เซรีนิตี้ บรมราชชนนี",
         "nameEN": "Esta Serenity Boromratchachonnani",
-        "price": "X.XX ล้าน"
+        "price": "4.69 - 9"
     },
     {
         "projectId": 91,
@@ -345,7 +345,7 @@ export const projectsData: Project[] = [
         "link": "/chann-theriverside/",
         "nameTH": "ฌาน เดอะ ริเวอร์ไซด์ บรมราชชนนี",
         "nameEN": "Chann The Riverside Boromratchachonnani",
-        "price": "X.XX ล้าน"
+        "price": "15 - 35"
     },
     {
         "projectId": 93,
@@ -356,7 +356,7 @@ export const projectsData: Project[] = [
         "link": "/kave-wonderland/",
         "nameTH": "เคฟ วันเดอร์แลนด์",
         "nameEN": "Kave Wonderland",
-        "price": "X.XX ล้าน"
+        "price": "1.69"
     },
     {
         "projectId": 94,
@@ -367,7 +367,7 @@ export const projectsData: Project[] = [
         "link": "/modiz-avantgard/",
         "nameTH": "โมดิซ อาวองการ์ด",
         "nameEN": "Modiz Avantgard",
-        "price": "X.XX ล้าน"
+        "price": "1.99"
     },
     {
         "projectId": 97,
@@ -378,7 +378,7 @@ export const projectsData: Project[] = [
         "link": "/aquarous-jomtien-pattaya/",
         "nameTH": "อควารัส จอมเทียน พัทยา",
         "nameEN": "Aquarious Jomtien Pattaya",
-        "price": "X.XX ล้าน"
+        "price": "4.21"
     },
     {
         "projectId": 99,
@@ -389,7 +389,7 @@ export const projectsData: Project[] = [
         "link": "/kave-genesis/",
         "nameTH": "เคฟ เจเนซิส นครปฐม",
         "nameEN": "Kave Genesis Nakhonpathom",
-        "price": "X.XX ล้าน"
+        "price": "1.79"
     },
     {
         "projectId": 101,
@@ -400,7 +400,7 @@ export const projectsData: Project[] = [
         "link": "/kave-luminous-bangmod/",
         "nameTH": "เคฟ ลูมินัส บางมด",
         "nameEN": "Kave Luminous Bangmod",
-        "price": "X.XX ล้าน"
+        "price": "2.39"
     }
 ]
 

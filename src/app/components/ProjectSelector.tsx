@@ -137,7 +137,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
                     setSelectedGroup({...group, projects_listed: projects});
                   }}
                 >
-                  <h3 className='md:text-lg lg:text-2xl group-data-[selected=true]:text-white'>{group.group_name}</h3>
+                  <h3 className='text-2xl group-data-[selected=true]:text-white'>{group.group_name}</h3>
                 </CustomRadio>  
               )) }
             </RadioGroup>
@@ -154,7 +154,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
                 <div className='project-info'>
                   { project.logo && <Image src={`https://assetwise.co.th/wp-content/uploads/${project.logo}`} alt={project.nameTH || ''} width={80} height={40} className='h-[42px] w-auto mb-2' /> }
                   <p className="text-[24px] md:text-2xl font-medium leading-none">{project.nameTH}</p>
-                  <p className='text-[16px] md:text-lg text-neutral-500'>เริ่มต้น {project.price} บาท<span className='text-red-700'>*</span></p>
+                  <p className='text-[16px] md:text-xl text-neutral-500'>เริ่มต้น {project.price} ลบ.<span className='text-red-700'>*</span></p>
                 </div>
                 <div className="flex justify-between pt-4 md:pt-0">
                   {/* <Link href={{ pathname:'https://assetwise.co.th/condominium'+project.link, query: { 'utm_source': process.env.UTM_TEXT } }} target='_blank' className='text-[16px] flex items-center gap-1 underline text-neutral-600'>รายละเอียดโครงการ <ExternalLinkIcon size='12' /></Link> */}
