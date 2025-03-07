@@ -123,7 +123,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
       <div className="location-selector-container bg-white relative">
         <div className="container pt-10 px-5 pb-5">
           <div className="project-selection-title text-center mb-5">
-            <h1 className='text-[36px] font-bold leading-none'>AssetWise Grand Sales</h1>
+            <h1 className='text-[28px] md:text-[36px] font-bold leading-tight text-[#0167bc]'>𝗔𝘀𝘀𝗲𝘁𝗪𝗶𝘀𝗲 <br className='md:hidden' />𝗙𝗮𝘀𝘁𝗖𝗼𝗺𝗲 𝗙𝗮𝘀𝘁𝗦𝗲𝗿𝘃𝗲𝗱</h1>
             <p className="text-neutral-500">มหกรรมบ้านและคอนโดครั้งที่ 47</p>
           </div>
           <div className="w-full lg:w-2/3 mx-auto">
@@ -157,7 +157,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
                   <p className='text-[16px] md:text-xl text-neutral-500'>เริ่มต้น {project.price} ลบ.<span className='text-red-700'>*</span></p>
                 </div>
                 <div className="flex justify-between pt-4 md:pt-0">
-                  {/* <Link href={{ pathname:'https://assetwise.co.th/condominium'+project.link, query: { 'utm_source': process.env.UTM_TEXT } }} target='_blank' className='text-[16px] flex items-center gap-1 underline text-neutral-600'>รายละเอียดโครงการ <ExternalLinkIcon size='12' /></Link> */}
+                  {/* <Link href={{ pathname:'https://assetwise.co.th/condominium'+project.link, query: { 'utm_source': HouseCondo68_WEB_Direct } }} target='_blank' className='text-[16px] flex items-center gap-1 underline text-neutral-600'>รายละเอียดโครงการ <ExternalLinkIcon size='12' /></Link> */}
                   <Checkbox isSelected={selectedProject?.projectId === project.projectId} onValueChange={() => handleProjectSelect(project)} radius='none' size='lg' icon={<CheckIconSVG />} classNames={{ wrapper: cn("w-[35px] h-[35px] mr-0 rounded-sm group-data-[selected=true]:bg-green-500"), icon: cn("w-7 h-7") }} />
                 </div>
               </div>

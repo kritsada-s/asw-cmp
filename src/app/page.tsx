@@ -17,7 +17,7 @@ const Home = () => {
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [utmSource, setUtmSource] = useState<string>(process.env.UTM_TEXT || '');
+  const [utmSource, setUtmSource] = useState<string>('HouseCondo68_WEB_Direct');
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -26,7 +26,9 @@ const Home = () => {
     const location = searchParams.get('location') || searchParams.get('loc');
     
     if (utmFromUrl) {
-      setUtmSource(`${utmFromUrl}_${process.env.UTM_TEXT}`);
+      setUtmSource(`${utmFromUrl}`);
+    } else {
+      setUtmSource('HouseCondo68_WEB_Direct');
     }
 
     if (location) {

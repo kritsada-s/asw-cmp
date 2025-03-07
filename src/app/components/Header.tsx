@@ -49,7 +49,7 @@ function Header() {
     return (
         <div className="bg-white shadow-lg z-10 fixed top-0 left-0 right-0 w-full">
             <div className="container h-fit flex items-center justify-between py-4">
-                <Link title="AssetWise" target="_blank" href={{ pathname: 'https://assetwise.co.th', query: { utm_source: process.env.UTM_TEXT } }} className="max-w-36 lg:max-w-fit">
+                <Link title="AssetWise" target="_blank" href={{ pathname: 'https://assetwise.co.th', query: { utm_source: 'HouseCondo68_WEB_Direct' } }} className="max-w-36 lg:max-w-fit">
                     <Image src={Logo} alt="Logo" width={200} height={22} />
                 </Link>
                 <div className="menu-right flex gap-4 items-center">
