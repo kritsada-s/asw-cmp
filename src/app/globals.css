@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  --ci-main: #123F6D;
+  --ci-main-light: #195897;
   --background: #ffffff;
   --foreground: #171717;
   --font-db-heavent: DBHeavent, sans-serif;
@@ -41,8 +43,8 @@ body {
 }
 
 #registerForm {
-  background-image: url('./images/w-bg.jpg');
-  background-size: cover;
+  background: url('./images/w-bg.svg'), linear-gradient(to bottom, var(--ci-main-light), var(--ci-main));
+  background-size: 70%, cover;
   background-repeat: no-repeat;
   --foreground: #ffffff;
 }
@@ -78,7 +80,7 @@ body {
     transform: translateX(-50%) ;
     width: 50px;
     height: 5px;
-    background-color: #014BB3;
+    background-color: var(--ci-main);
   }
 }
 
