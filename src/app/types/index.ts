@@ -7,6 +7,7 @@ export interface Project {
     nameTH?: string;
     nameEN?: string;
     price?: string;
+    university?: string;
     link: string;
   }
   

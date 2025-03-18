@@ -64,13 +64,13 @@ const footerMenus = {
       },
       {
         "id": 2,
-        "name": "เสนอขายสินค้าและบริการ",
-        "link": "https://procurement.assetwise.co.th/"
+        "name": "ฝากขาย-ฝากเช่า",
+        "link": "https://www.assetaplus.com/"
       },
       {
         "id": 3,
-        "name": "ฝากขาย-ฝากเช่า",
-        "link": "https://www.assetaplus.com/"
+        "name": "ร่วมงานกับเรา",
+        "link": "https://careers.assetwise.co.th/"
       }
     ],
     "menu4": [

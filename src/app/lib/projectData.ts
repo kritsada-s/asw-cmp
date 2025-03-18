@@ -152,7 +152,8 @@ export const projectsData: Project[] = [
         "link": "/atmoz-kanaal-rangsit/",
         "nameTH": "แอทโมซ คาแนล",
         "nameEN": "Atmoz Kanaal Rangsit",
-        "price": "1.59"
+        "price": "1.59",
+        "university": "rsu"
     },
     {
         "projectId": 60,
@@ -174,7 +175,8 @@ export const projectsData: Project[] = [
         "link": "/kave-seed-kaset/",
         "nameTH": "เคฟ ซี๊ด เกษตร",
         "nameEN": "Kave Seed Kaset",
-        "price": "2.29"
+        "price": "2.29",
+        "university": "ku"
     },
     {
         "projectId": 62,
@@ -239,7 +241,8 @@ export const projectsData: Project[] = [
         "link": "/atmoz-season-ladkrabang/",
         "nameTH": "แอทโมซ ซีซั่น ลาดกระบัง",
         "nameEN": "Atmoz Season Ladkrabang",
-        "price": "1.49"
+        "price": "1.49",
+        "university": "kmitl"
     },
     {
         "projectId": 74,
@@ -250,7 +253,8 @@ export const projectsData: Project[] = [
         "link": "/kave-embryo/",
         "nameTH": "เคฟ เอมบริโอ รังสิต",
         "nameEN": "Kave Embryo Rangsit",
-        "price": "1.29"
+        "price": "1.29",
+        "university": "rsu"
     },
     {
         "projectId": 75,
@@ -272,7 +276,8 @@ export const projectsData: Project[] = [
         "link": "/modiz-vault-kaset-sripatum/",
         "nameTH": "โมดิซ วอลท์ เกษตร ศรีปทุม",
         "nameEN": "Modiz Vault Kaset Sripatum",
-        "price": "2.89"
+        "price": "2.89",
+        "university": "ku"
     },
     {
         "projectId": 79,
@@ -325,7 +330,8 @@ export const projectsData: Project[] = [
         "link": "/kave-pop-salaya/",
         "nameTH": "เคฟ ป๊อป ศาลายา",
         "nameEN": "Kave Pop Salaya",
-        "price": "1.89"
+        "price": "1.89",
+        "university": "mu"
     },
     {
         "projectId": 90,
@@ -356,7 +362,8 @@ export const projectsData: Project[] = [
         "link": "/kave-wonderland/",
         "nameTH": "เคฟ วันเดอร์แลนด์",
         "nameEN": "Kave Wonderland",
-        "price": "1.69"
+        "price": "1.69",
+        "university": "rsu"
     },
     {
         "projectId": 94,
@@ -367,7 +374,8 @@ export const projectsData: Project[] = [
         "link": "/modiz-avantgard/",
         "nameTH": "โมดิซ อาวองการ์ด",
         "nameEN": "Modiz Avantgard",
-        "price": "1.99"
+        "price": "1.99",
+        "university": "rsu"
     },
     {
         "projectId": 97,
@@ -389,7 +397,8 @@ export const projectsData: Project[] = [
         "link": "/kave-genesis/",
         "nameTH": "เคฟ เจเนซิส นครปฐม",
         "nameEN": "Kave Genesis Nakhonpathom",
-        "price": "1.79"
+        "price": "1.79",
+        "university": "mu"
     },
     {
         "projectId": 101,
@@ -400,7 +409,8 @@ export const projectsData: Project[] = [
         "link": "/kave-luminous-bangmod/",
         "nameTH": "เคฟ ลูมินัส บางมด",
         "nameEN": "Kave Luminous Bangmod",
-        "price": "2.39"
+        "price": "2.39",
+        "university": "kmutt"
     }
 ]
 
