@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { ProjectGroup, Project } from '../types';
-import { projectData_HouseCondo25, projectsData } from '../lib/projectData';
+import { projectData_BigMatchBigMove, projectData_HouseCondo25, projectsData } from '../lib/projectData';
 import { Radio, RadioGroup } from "@nextui-org/react";
 import { cn } from '@nextui-org/react';
 import gsap from 'gsap';
@@ -120,42 +120,16 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
       <div className="location-selector-container bg-white relative">
         <div className="container pt-10 px-5 pb-5">
           <div className="project-selection-title text-center mb-5">
-            <h1 className='text-[28px] md:text-[36px] font-bold leading-tight text-[#0167bc]'>𝗔𝘀𝘀𝗲𝘁𝗪𝗶𝘀𝗲 <br className='md:hidden' />𝗙𝗮𝘀𝘁𝗖𝗼𝗺𝗲 𝗙𝗮𝘀𝘁𝗦𝗲𝗿𝘃𝗲𝗱</h1>
-            <p className="text-neutral-500">มหกรรมบ้านและคอนโดครั้งที่ 47</p>
+            <h1 className='text-[28px] md:text-[36px] font-bold leading-tight text-[#0167bc]'>ASSETWISE <br className='md:hidden' />BIG MATCH BIG MOVE</h1>
           </div>
-          <div className="w-full lg:w-2/3 mx-auto">
-            <RadioGroup className='flex' value={selectedGroup?.group_key} orientation='horizontal' classNames={{ wrapper: cn("grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4") }}>
-              { projectData_HouseCondo25.map((group) => (
-                <CustomRadio 
-                  key={group.group_key} 
-                  value={group.group_key} 
-                  onChange={() => {
-                    const projects = projectsData.filter(p => group.projects_listed.includes(p.projectId));
-                    setSelectedGroup({...group, projects_listed: projects});
-                  }}
-                >
-                  <h3 className='text-2xl group-data-[selected=true]:text-white'>{group.group_name}</h3>
-                </CustomRadio>  
-              )) }
-            </RadioGroup>
-          </div>
-        </div>
-        { selectedGroup && <div className='bottom-arrow-pane'></div> }
-      </div>
-      <div className="project-selector-container" ref={projectsSelectorContainer}>
-          {selectedGroup?.group_key === 'life-near-mo' ? (
-            <LifeNearUni 
-              selectedGroup={selectedGroup} 
-              selectedProject={selectedProject}
-              handleProjectSelect={handleProjectSelect}
-            />
-          ) : (
-            <div className="container grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-              {selectedGroup && selectedGroup.projects_listed.map((project) => (
-                <ProjectBox key={project.projectId} project={project} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+          <div className="w-full mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+              {projectData_BigMatchBigMove.map((project) => (
+                <ProjectBox key={project} project={projectsData.find(p => p.projectId === project)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
               ))}
             </div>
-          )}
+          </div>
+        </div>
       </div>
     </div>
   );

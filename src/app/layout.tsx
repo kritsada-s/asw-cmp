@@ -8,8 +8,8 @@ import Script from 'next/script';
 const GTM_IDS = ['GTM-MM872QW'];
 
 export const metadata: Metadata = {
-  title: 'มหกรรมดีลแรงแห่งปี 𝗔𝘀𝘀𝗲𝘁𝗪𝗶𝘀𝗲𝗙𝗮𝘀𝘁𝗖𝗼𝗺𝗲𝗙𝗮𝘀𝘁𝗦𝗲𝗿𝘃𝗲𝗱 คว้าก่อน คุ้มก่อน รวมส่วนลดจัดหนักกว่า 20 ล้าน!*',
-  description: 'ยกทัพคอนโดและบ้าน 38 โครงการ ทุกทำเลคุณภาพมาพร้อมเสิร์ฟ',
+  title: 'ASSETWISE BIG MATCH BIG MOVE',
+  description: '',
 }
 
 export default function RootLayout({
@@ -36,11 +36,11 @@ export default function RootLayout({
             }}
           />
         ))}
-        <meta property="og:image" content={ogImage.src} />
+        <meta property="og:image" content='' />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:alt" content="มหกรรมดีลแรงแห่งปี 𝗔𝘀𝘀𝗲𝘁𝗪𝗶𝘀𝗲𝗙𝗮𝘀𝘁𝗖𝗼𝗺𝗲𝗙𝗮𝘀𝘁𝗦𝗲𝗿𝘃𝗲𝗱 คว้าก่อน คุ้มก่อน รวมส่วนลดจัดหนักกว่า 20 ล้าน!*" />
+        <meta property="og:image:alt" content="ASSETWISE BIG MATCH BIG MOVE" />
       </head>
       <body className={`${dbHeavent.className} ${dbHeavent.variable}`}>
         {GTM_IDS.map((id) => (
