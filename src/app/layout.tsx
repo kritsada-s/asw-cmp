@@ -5,7 +5,7 @@ import { Providers } from "./providers";
 import ogImage from './images/og.png';
 import Script from 'next/script';
 
-const GTM_IDS = ['GTM-MM872QW'];
+const GTM_IDS = ['GTM-MM872QW','GTM-WG7KXF64'];
 
 export const metadata: Metadata = {
   title: 'ASSETWISE BIG MATCH BIG MOVE',
