@@ -92,7 +92,7 @@ const Home = () => {
       <div className='h-[70px]'></div>
       {/* <Image src={Banner} width={1440} height={600} alt='' className='w-full hidden md:block h-auto'/>
       <Image src={BannerM} width={640} height={640} alt='' className='w-full h-auto block md:hidden'/> */}
-      <section id="banner" className='min-h-[600px] bg-neutral-600 flex items-center justify-center'>
+      <section id="banner" className='min-h-[300px] aspect-square md:aspect-auto md:min-h-[600px] bg-neutral-600 flex items-center justify-center'>
         <span className='text-white text-4xl font-bold hidden md:block'>Banner 1600x800 px</span>
         <span className='text-white text-2xl font-bold block md:hidden'>Banner 640x640 px</span>
       </section>
