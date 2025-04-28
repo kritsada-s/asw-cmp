@@ -9,7 +9,7 @@ function ProjectBox(props: any) {
     return (
       <div key={project.projectId} className='project-box shadow-md rounded-b-md bg-white flex md:flex-col'>
         <div className='thumbnail w-1/2 md:w-full aspect-[3/4] bg-cover bg-top' style={{ backgroundImage: `url(https://assetwise.co.th/wp-content/uploads/${project.thumb})` }}></div>
-        <div className='flex w-auto flex-col md:flex-row justify-center md:justify-between p-4 gap-2'>
+        <div className='flex w-1/2 md:w-auto flex-col md:flex-row justify-center md:justify-between p-4 gap-2'>
           <div className='project-info'>
             { project.logo && <Image src={`https://assetwise.co.th/wp-content/uploads/${project.logo}`} alt={project.nameTH || ''} width={80} height={40} className='h-[42px] w-auto mb-2' /> }
             <p className="text-[24px] md:text-2xl font-medium leading-none">{project.nameTH}</p>
