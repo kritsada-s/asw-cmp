@@ -437,6 +437,39 @@ export const projectData_HouseCondo25 = [
     }
 ]
 
+export const projectData_promotionQ2 = [
+    {
+        "group_name": "รัชดา-ลาดพร้าว",
+        "group_key": "ratchada-ladprao",
+        "projects_listed": [61, 71, 19, 27, 29]
+    },
+    {
+        "group_name": "รังสิต-ศรีสมาน",
+        "group_key": "rangsit-srisaman",
+        "projects_listed": [74, 59, 62]
+    },
+    {
+        "group_name": "สุขุมวิท-บางนา-อ่อนนุช",
+        "group_key": "sukhumvit-bangna-onnut",
+        "projects_listed": [52, 60, 17]
+    },
+    {
+        "group_name": "ศาลายา",
+        "group_key": "salaya",
+        "projects_listed": [89]
+    },
+    {
+        "group_name": "รามคำแหง-ลาดกระบัง-มีนบุรี",
+        "group_key": "ramkhamhaeng-ladkrabang-minburi",
+        "projects_listed": [72, 63, 31]
+    },
+    {
+        "group_name": "ชลบุรี-บางแสน",
+        "group_key": "chonburi-bangsaen",
+        "projects_listed": [81, 66, 51]
+    }
+]
+
 export const projectData_BigMatchBigMove = [
     61, 71, 19, 27, 29, 74, 59, 62, 52, 60, 72, 63, 31, 81, 66, 51
 ]
