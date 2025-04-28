@@ -5,7 +5,6 @@ import { Radio, RadioGroup } from "@nextui-org/react";
 import { cn } from '@nextui-org/react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import LifeNearUni from './LifeNearUni';
 import ProjectBox from './ProjectBox';
 
 interface ProjectSelectorProps {
@@ -117,17 +116,76 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
 
   return (
     <div id='projectSelector' className="bg-gradient-to-b from-blue-50 to-white">
-      <div className="location-selector-container bg-white relative">
-        <div className="container pt-10 px-5 pb-5">
-          <div className="project-selection-title text-center mb-5">
-            <h1 className='text-[28px] md:text-[36px] font-bold leading-tight text-[#0167bc]'>ASSETWISE <br className='md:hidden' />BIG MATCH BIG MOVE</h1>
-          </div>
-          <div className="w-full mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-              {projectData_BigMatchBigMove.map((project) => (
-                <ProjectBox key={project} project={projectsData.find(p => p.projectId === project)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
-              ))}
+      <div className='container px-4 md:px-5 py-10'>
+        <h2 className='text-[36px] md:text-[48px] font-bold leading-tight text-[#014bb3] text-center mb-2'> ASSETWISE <br className='md:hidden'/> BIG MATCH BIG MOVE</h2>
+        <div className='row-1 mb-10'>
+          <div className="row-header grid grid-cols-1 md:grid-cols-4">
+            <div className="col-1">
+              <h4 className='text-[28px] md:text-[34px] font-bold leading-tight text-neutral-800 mb-2'>รัชดา-ลาดพร้าว</h4>
             </div>
+          </div>
+          <div className="row-content grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+            <ProjectBox project={projectsData.find(p => p.projectId === 61)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+            <ProjectBox project={projectsData.find(p => p.projectId === 71)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+            <ProjectBox project={projectsData.find(p => p.projectId === 19)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+            <ProjectBox project={projectsData.find(p => p.projectId === 27)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+            <ProjectBox project={projectsData.find(p => p.projectId === 29)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+          </div>
+        </div>
+        <div className="row-2 mb-10">
+          <div className="row-header grid grid-cols-1 md:grid-cols-4">
+            <div className="col-1">
+              <h4 className='text-[28px] md:text-[34px] font-bold leading-tight text-neutral-800 mb-2'>รังสิต-ศรีสมาน</h4>
+            </div>
+          </div>
+          <div className="row-content grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+            <ProjectBox project={projectsData.find(p => p.projectId === 74)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+            <ProjectBox project={projectsData.find(p => p.projectId === 59)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+            <ProjectBox project={projectsData.find(p => p.projectId === 62)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+          </div>
+        </div>
+        <div className="row-3 mb-10">
+          <div className="row-header grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-5">
+            <div className="col-1 col-span-3">
+              <h4 className='text-[28px] md:text-[34px] font-bold leading-tight text-neutral-800 mb-2'>สุขุมวิท-บางนา-อ่อนนุช</h4>
+            </div>
+            <div className="col-2 hidden lg:block">
+              <h4 className='text-[28px] md:text-[34px] font-bold leading-tight text-neutral-800 mb-2'>ศาลายา</h4>
+            </div>
+          </div>
+          <div className="row-content grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+            <ProjectBox project={projectsData.find(p => p.projectId === 52)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+            <ProjectBox project={projectsData.find(p => p.projectId === 60)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+            <ProjectBox project={projectsData.find(p => p.projectId === 17)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+            <div className="">
+              <h4 className='text-[28px] md:text-[34px] font-bold leading-tight text-neutral-800 mb-2 lg:hidden'>ศาลายา</h4>
+              <ProjectBox project={projectsData.find(p => p.projectId === 89)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+            </div>
+          </div>
+        </div>
+        <div className="row-4 mb-10">
+          <div className="row-header grid grid-cols-1">
+            <div className="col-1">
+              <h4 className='text-[28px] md:text-[34px] font-bold leading-tight text-neutral-800 mb-2'>รามคำแหง-ลาดกระบัง-มีนบุรี</h4>
+            </div>
+          </div>
+          <div className="row-content grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+            <ProjectBox project={projectsData.find(p => p.projectId === 72)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+            <ProjectBox project={projectsData.find(p => p.projectId === 63)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+            <ProjectBox project={projectsData.find(p => p.projectId === 31)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+          </div>
+        </div>
+
+        <div className="row-5 mb-10">
+          <div className="row-header grid grid-cols-1 md:grid-cols-4">
+            <div className="col-1">
+              <h4 className='text-[28px] md:text-[34px] font-bold leading-tight text-neutral-800 mb-2'>ชลบุรี-บางแสน</h4>
+            </div>
+          </div>
+          <div className="row-content grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+            <ProjectBox project={projectsData.find(p => p.projectId === 81)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+            <ProjectBox project={projectsData.find(p => p.projectId === 66)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
+            <ProjectBox project={projectsData.find(p => p.projectId === 51)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect} />
           </div>
         </div>
       </div>
