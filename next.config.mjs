@@ -11,8 +11,8 @@ const nextConfig = {
       ]
     },
     trailingSlash: true,
-    basePath: '/big-match-big-move',
-    assetPrefix: '/big-match-big-move/',
+    basePath: '/readytoMOVE-readytoMATCH',
+    assetPrefix: '/readytoMOVE-readytoMATCH/',
   };
   
   export default nextConfig;

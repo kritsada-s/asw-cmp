@@ -117,7 +117,9 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
   return (
     <div id='projectSelector' className="bg-gradient-to-b from-blue-50 to-white">
       <div className='container px-4 md:px-5 py-10'>
-        <h2 className='text-[36px] md:text-[48px] font-bold leading-tight text-[#014bb3] text-center mb-2'> ASSETWISE <br className='md:hidden'/> BIG MATCH BIG MOVE</h2>
+        <div className='headline text-center text-[22px] md:text-[34px] font-light leading-tight text-neutral-800 mb-5'>
+          <span className='text-orange-600 font-bold text-[1.4em]'>พร้อมMOVEพร้อมMATCH</span> <br className='md:hidden'/>อยู่เองก็ลงตัว ปล่อยเช่าก็ตอบโจทย์<br/>พร้อมแมทช์ผู้เช่าได้ทันใจ <span className='text-orange-600 font-bold'>18 คอนโด</span> ทำเลทอง ดีลแรง<br/>พร้อมเสิร์ฟชีวิตใหม่ให้คุณ <span className='text-red-600 font-bold text-[1.5em]'>ลดสูงสุด 1.5 ล้าน*</span> พัก(ช่วย)ผ่อนนาน 2 ปี*<br className='hidden md:block'/>ฟรีแพ็คเกจแต่งครบ*
+        </div>
         <div className='row-1 mb-10'>
           <div className="row-header grid grid-cols-1 md:grid-cols-4">
             <div className="col-1">
