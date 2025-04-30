@@ -17,7 +17,7 @@ const Home = () => {
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [utmSource, setUtmSource] = useState<string>('BigMatchBigMove_WEB_Direct');
+  const [utmSource, setUtmSource] = useState<string>('readytoMOVE_readytoMATCH_WEB_Direct');
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -28,7 +28,7 @@ const Home = () => {
     if (utmFromUrl) {
       setUtmSource(`${utmFromUrl}`);
     } else {
-      setUtmSource('BigMatchBigMove_WEB_Direct');
+      setUtmSource('readytoMOVE_readytoMATCH_WEB_Direct');
     }
 
     if (location) {
@@ -54,7 +54,7 @@ const Home = () => {
 
     if (selectedProject) {
       try {
-        const response = await fetch('https://node.assetwise.dev/webhook/big-match-big-move', {
+        const response = await fetch('https://node.assetwise.dev/webhook-test/big-match-big-move', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -90,12 +90,8 @@ const Home = () => {
     <main>
       <Header/>
       <div className='h-[70px]'></div>
-      {/* <Image src={Banner} width={1440} height={600} alt='' className='w-full hidden md:block h-auto'/>
-      <Image src={BannerM} width={640} height={640} alt='' className='w-full h-auto block md:hidden'/> */}
-      <section id="banner" className='min-h-[300px] aspect-square md:aspect-auto md:min-h-[600px] bg-neutral-600 flex items-center justify-center'>
-        <span className='text-white text-4xl font-bold hidden md:block'>Banner 1600x800 px</span>
-        <span className='text-white text-2xl font-bold block md:hidden'>Banner 640x640 px</span>
-      </section>
+      <Image src={Banner} width={1440} height={600} alt='' className='w-full hidden md:block h-auto'/>
+      <Image src={BannerM} width={640} height={640} alt='' className='w-full h-auto block md:hidden'/>
       <ProjectSelector onSelectProject={handleProjectSelect} selectedLocation={selectedLocation} />
       <RegistrationForm 
         selectedProject={selectedProject} 

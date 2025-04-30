@@ -12,9 +12,7 @@ export default function ThankYou() {
       <section id="thankyouBody" className="min-h-[60vh] py-10 bg-gradient-to-b from-blue-50 to-white mt-[70px]">
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between shadow">
-            <div className="hidden md:flex h-[500px] aspect-square bg-neutral-500 justify-center items-center">
-              <span className="text-white text-4xl font-bold">Banner 640x640 px</span>
-            </div>
+            <Image src={BannerM} alt="Banner" className="w-full md:w-1/2 h-auto object-cover" />
             <div className="box flex flex-col items-center bg-white w-full p-5 justify-center">
               <h2 className="text-[28px] lg:text-[36px]">ขอบคุณสำหรับการลงทะเบียน</h2>
               <p className="text-neutral-600 text-[18px]">เจ้าหน้าที่จะติดต่อท่านกลับเพื่อแจ้งสิทธิพิเศษ</p>

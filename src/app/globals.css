@@ -33,6 +33,11 @@ body {
   font-size: 22px;
 }
 
+.headline span.campaign-name {
+  color: #16369d;
+  text-shadow: 2px 2px 0 #e4b312;
+}
+
 #projectSelector .text-small {
   font-size: 18px;
   line-height: 1.3;

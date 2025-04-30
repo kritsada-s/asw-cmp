@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { dbHeavent } from './fonts'
 import { Providers } from "./providers";
-import ogImage from './images/og.png';
+import ogImage from './images/move-match_og.jpg';
 import Script from 'next/script';
 
 const GTM_IDS = ['GTM-MM872QW','GTM-WG7KXF64'];
 
 export const metadata: Metadata = {
-  title: 'ASSETWISE BIG MATCH BIG MOVE',
-  description: '',
+  title: 'พร้อมMOVEพร้อมMATCH by AssetWise',
+  description: 'อยู่เองก็ลงตัว ปล่อยเช่าก็ตอบโจทย์ พร้อมแมทช์ผู้เช่าได้ทันใจ 18 คอนโด ทำเลทอง ดีลแรง พร้อมเสิร์ฟชีวิตใหม่ให้คุณ ลดสูงสุด 1.5 ล้าน* พัก(ช่วย)ผ่อนนาน 2 ปี* ฟรีแพ็คเกจแต่งครบ*',
 }
 
 export default function RootLayout({
@@ -36,11 +36,11 @@ export default function RootLayout({
             }}
           />
         ))}
-        <meta property="og:image" content='' />
+        <meta property="og:image" content={ogImage.src} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:alt" content="ASSETWISE BIG MATCH BIG MOVE" />
+        <meta property="og:image:alt" content="พร้อมMOVEพร้อมMATCH by AssetWise" />
       </head>
       <body className={`${dbHeavent.className} ${dbHeavent.variable}`}>
         {GTM_IDS.map((id) => (
