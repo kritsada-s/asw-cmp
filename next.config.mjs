@@ -11,8 +11,8 @@ const nextConfig = {
       ]
     },
     trailingSlash: true,
-    basePath: '/readytoMOVE-readytoMATCH',
-    assetPrefix: '/readytoMOVE-readytoMATCH/',
+    basePath: '/campus-is-calling',
+    assetPrefix: '/campus-is-calling/',
   };
   
   export default nextConfig;

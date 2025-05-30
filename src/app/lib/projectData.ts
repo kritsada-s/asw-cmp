@@ -32,7 +32,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-rh/",
         "nameTH": "แอทโมซ รัชดา-ห้วยขวาง",
         "nameEN": "Atmoz Rachada-Huai Khwang",
-        "price": "2.19"
+        "price": "2.29"
     },
     {
         "projectId": 27,
@@ -152,7 +152,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-kanaal-rangsit/",
         "nameTH": "แอทโมซ คาแนล",
         "nameEN": "Atmoz Kanaal Rangsit",
-        "price": "1.59",
+        "price": "1.49",
         "university": "rsu"
     },
     {
@@ -374,7 +374,7 @@ export const projectsData: Project[] = [
         "link": "/modiz-avantgard/",
         "nameTH": "โมดิซ อาวองการ์ด",
         "nameEN": "Modiz Avantgard",
-        "price": "1.99",
+        "price": "2.19",
         "university": "rsu"
     },
     {
@@ -387,6 +387,17 @@ export const projectsData: Project[] = [
         "nameTH": "อควารัส จอมเทียน พัทยา",
         "nameEN": "Aquarious Jomtien Pattaya",
         "price": "4.21"
+    },
+    {
+        "projectId": 98,
+        "image": "aquarious-jomtien.jpg",
+        "thumb": "/2023/12/kaveplayground.png",
+        "logo": "/2023/12/LOGO-PNG.png",
+        "project": "เคฟ เพลย์กราวด์",
+        "link": "/kave-playground/",
+        "nameTH": "เคฟ เพลย์กราวด์",
+        "nameEN": "Kave Playground",
+        "price": "2.39"
     },
     {
         "projectId": 99,
@@ -411,65 +422,29 @@ export const projectsData: Project[] = [
         "nameEN": "Kave Luminous Bangmod",
         "price": "2.39",
         "university": "kmutt"
+    },
+    {
+        "projectId": 103,
+        "image": "atmoz-de-sol",
+        "thumb": "/2024/03/600x800Atmoz-De-Sol-VIP-Day-22Edit_0.jpg",
+        "logo": "/2024/08/Logo-Atmoz-De-Sol.png",
+        "project": "แอทโมซ เดอ โซล",
+        "link": "/kave-luminous-bangmod/",
+        "nameTH": "แอทโมซ เดอ โซล",
+        "nameEN": "Atmoz De Sol",
+        "price": "1.7",
+        "university": "kmutt"
+    },
+    {
+        "projectId": 104,
+        "image": "kavalon",
+        "thumb": "/2024/08/kavalon.jpg",
+        "logo": "/2024/08/kavalon-logo_190x100.png",
+        "project": "เควาลอน",
+        "link": "/kavalon/",
+        "nameTH": "เควาลอน",
+        "nameEN": "Kavalon",
+        "price": "1.69",
+        "university": "rsu"
     }
-]
-
-export const projectData_HouseCondo25 = [
-    {
-        "group_name": "ชีวิตติดมอ",
-        "group_key": "life-near-mo",
-        "projects_listed": [61, 74, 89, 93, 99, 59, 76, 101, 72, 94]
-    },
-    {
-        "group_name": "ชีวิตติดเมือง",
-        "group_key": "life-near-city",
-        "projects_listed": [27, 29, 62, 19, 63, 60, 52, 31, 71, 49, 75, 17, 6]
-    },
-    {
-        "group_name": "ชีวิตติดทะเล",
-        "group_key": "life-near-sea",
-        "projects_listed": [66, 81, 79, 81, 51, 79, 97]
-    },
-    {
-        "group_name": "โครงการบ้าน",
-        "group_key": "housing",
-        "projects_listed": [65, 83, 82, 90, 91, 33]
-    }
-]
-
-export const projectData_promotionQ2 = [
-    {
-        "group_name": "รัชดา-ลาดพร้าว",
-        "group_key": "ratchada-ladprao",
-        "projects_listed": [61, 71, 19, 27, 29]
-    },
-    {
-        "group_name": "รังสิต-ศรีสมาน",
-        "group_key": "rangsit-srisaman",
-        "projects_listed": [74, 59, 62]
-    },
-    {
-        "group_name": "สุขุมวิท-บางนา-อ่อนนุช",
-        "group_key": "sukhumvit-bangna-onnut",
-        "projects_listed": [52, 60, 17]
-    },
-    {
-        "group_name": "ศาลายา",
-        "group_key": "salaya",
-        "projects_listed": [89]
-    },
-    {
-        "group_name": "รามคำแหง-ลาดกระบัง-มีนบุรี",
-        "group_key": "ramkhamhaeng-ladkrabang-minburi",
-        "projects_listed": [72, 63, 31]
-    },
-    {
-        "group_name": "ชลบุรี-บางแสน",
-        "group_key": "chonburi-bangsaen",
-        "projects_listed": [81, 66, 51]
-    }
-]
-
-export const projectData_BigMatchBigMove = [
-    61, 71, 19, 27, 29, 74, 59, 62, 52, 60, 72, 63, 31, 81, 66, 51
 ]

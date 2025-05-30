@@ -192,26 +192,6 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
                 labelPlacement='outside'
               />
             </div>
-
-            <div>
-              <Select
-                //isRequired
-                label="เหตุผลในการซื้อ"
-                onChange={handlePurposeChange}
-                className="w-full"
-                radius='sm'
-                labelPlacement='outside'
-                //isInvalid={invalidFields.AppointTime}
-                //errorMessage={invalidFields.AppointTime ? "กรุณาเลือกช่วงเวลา" : ""}
-              >
-                <SelectItem key="investment" value="investment">
-                  ลงทุน
-                </SelectItem>
-                <SelectItem key="own_live" value="own_live">
-                  อยู่เอง
-                </SelectItem>
-              </Select>
-            </div>
             
             <div className='mb-5'>
               <Select
@@ -246,7 +226,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
       <section id="terms">
         <div className="container">
           <div className='terms-container w-full md:w-1/2 md:mx-auto pt-7'>
-            <p className='text-[18px] text-balance leading-tight'><Checkbox isSelected={true} size='sm'/>บริษัทฯ จะจัดเก็บข้อมูลของท่าน เพื่อการติดต่อแจ้งข้อมูลข่าวสารที่เกี่ยวข้องกับ ผลิตภัณฑ์ บริการของบริษัทฯ และนำเสนอโครงการที่น่าสนใจ คลิกที่นี่เพื่อดู <Link href="https://assetwise.co.th/privacy-policy/" target='_blank' title='' className='underline text-ci-blue'>นโยบายความเป็นส่วนตัว</Link> และ <Link href={{ pathname:'https://assetwise.co.th/terms-and-conditions/readytomove-readytomatch/', query: { 'utm_source': 'readytoMOVE-readytoMATCH_website' } }} target='_blank' className='underline text-ci-blue'>ข้อมูลเงื่อนไขเพิ่มเติม</Link></p>
+            <p className='text-[18px] text-balance leading-tight'><Checkbox isSelected={true} size='sm'/>บริษัทฯ จะจัดเก็บข้อมูลของท่าน เพื่อการติดต่อแจ้งข้อมูลข่าวสารที่เกี่ยวข้องกับ ผลิตภัณฑ์ บริการของบริษัทฯ และนำเสนอโครงการที่น่าสนใจ คลิกที่นี่เพื่อดู <Link href="https://assetwise.co.th/privacy-policy/" target='_blank' title='' className='underline text-ci-blue'>นโยบายความเป็นส่วนตัว</Link> และ <Link href={{ pathname:'https://assetwise.co.th/terms-and-conditions/campus-is-calling/', query: { 'utm_source': 'campus_is_calling_website' } }} target='_blank' className='underline text-ci-blue'>ข้อมูลเงื่อนไขเพิ่มเติม</Link></p>
           </div>
           <div className='button-container flex w-full py-5 justify-center'>
             <Button

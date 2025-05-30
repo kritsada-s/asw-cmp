@@ -17,7 +17,7 @@ const Home = () => {
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [utmSource, setUtmSource] = useState<string>('readytoMOVE_readytoMATCH_WEB_Direct');
+  const [utmSource, setUtmSource] = useState<string>('campus_is_calling_WEB_Direct');
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -28,7 +28,7 @@ const Home = () => {
     if (utmFromUrl) {
       setUtmSource(`${utmFromUrl}`);
     } else {
-      setUtmSource('readytoMOVE_readytoMATCH_WEB_Direct');
+      setUtmSource('campus_is_calling_WEB_Direct');
     }
 
     if (location) {
@@ -52,9 +52,12 @@ const Home = () => {
     setIsSubmitting(true);
     setSubmitError(null);
 
+    const prodUrl = 'https://node.assetwise.dev/webhook/campus-is-calling';
+    const devUrl = 'https://node.assetwise.dev/webhook-test/campus-is-calling';
+
     if (selectedProject) {
       try {
-        const response = await fetch('https://node.assetwise.dev/webhook-test/big-match-big-move', {
+        const response = await fetch(prodUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
