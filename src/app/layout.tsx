@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { dbHeavent } from './fonts'
 import { Providers } from "./providers";
-import ogImage from './images/move-match_og.jpg';
+const ogImage = 'https://assetwise.co.th/campus-is-calling/images/og.jpg';
 import Script from 'next/script';
 
-const GTM_IDS = ['GTM-MM872QW','GTM-WG7KXF64'];
+const GTM_IDS = ['GTM-MM872QW'];
 
 export const metadata: Metadata = {
   title: 'Assetwise CAMPUS IS CALLING',
@@ -36,11 +36,17 @@ export default function RootLayout({
             }}
           />
         ))}
-        <meta property="og:image" content={ogImage.src} />
+        <meta property="og:title" content="AssetWise Campus is Calling" />
+        <meta property="og:description" content="AssetWise Campus is Calling" />
+        <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:alt" content="พร้อมMOVEพร้อมMATCH by AssetWise" />
+        <meta property="og:image:alt" content="AssetWise Campus is Calling" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="AssetWise Campus is Calling" />
+        <meta property="twitter:description" content="AssetWise Campus is Calling" />
+        <meta property="twitter:image" content={ogImage} />
       </head>
       <body className={`${dbHeavent.className} ${dbHeavent.variable}`}>
         {GTM_IDS.map((id) => (

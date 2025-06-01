@@ -6,8 +6,6 @@ import ProjectSelector from './components/ProjectSelector';
 import RegistrationForm from './components/RegisterForm';
 import { FormData, Project } from './types';
 import Header from './components/Header';
-import Banner from './images/banner_d.jpg';
-import BannerM from './images/banner_m.jpg';
 import Image from 'next/image';
 import Footer from './components/Footer';
 import Swal from 'sweetalert2'
@@ -20,6 +18,9 @@ const Home = () => {
   const [utmSource, setUtmSource] = useState<string>('campus_is_calling_WEB_Direct');
   const router = useRouter();
   const searchParams = useSearchParams();
+
+  const Banner = 'https://assetwise.co.th/campus-is-calling/images/campus-is-calling_desktop_banner.jpg';
+  const BannerM = 'https://assetwise.co.th/campus-is-calling/images/campus-is-calling_mobile_banner.jpg';
 
   useEffect(() => {
     const utmFromUrl = searchParams.get('utm_source');
