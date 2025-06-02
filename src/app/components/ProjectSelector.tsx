@@ -109,7 +109,10 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
     <div id='projectSelector' className="bg-gradient-to-b from-blue-50 to-white">
       <div className='container px-4 md:px-5 py-10'>
         <div className='headline text-center text-[22px] md:text-[34px] font-light leading-tight text-neutral-800 mb-5'>
-          Headline
+          <h1>𝗖𝗔𝗠𝗣𝗨𝗦 𝗶𝘀 𝗖𝗔𝗟𝗟𝗜𝗡𝗚 🎉 <br className='md:hidden' />เทอมใหม่ อยู่คอนโดใกล้มหาลัย…ชีวิตดีกว่าที่คิด</h1>
+          <h2>18 คอนโด จาก AssetWise ทำเลดี ใกล้มหาลัยชั้นนำ</h2>
+          <h3>ช่วงเวลาที่คุ้มที่สุดมาถึงแล้ว !</h3>
+          <h4>✨ ฟรี Apple Set* <br className='md:hidden' />✨ อยู่ฟรีสูงสุด 𝟐 ปี* <br className='md:hidden' />✨ เริ่ม 𝟏.𝟐𝟗 ล้าน*</h4>
         </div>
         <div className='row-1 mb-10'>
           <div className="row-header grid grid-cols-1 md:grid-cols-4">

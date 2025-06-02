@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import BannerM from "../images/banner_m.jpg";
 import Image from "next/image";
 import BackButton from "../components/BackButton";
 
 export default function ThankYou() {
+  const BannerM = 'https://assetwise.co.th/campus-is-calling/images/campus-is-calling_mobile_banner.jpg';
   return (
     <>
       <Header/>
