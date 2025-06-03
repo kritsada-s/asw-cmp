@@ -5,7 +5,7 @@ import { Providers } from "./providers";
 const ogImage = 'https://assetwise.co.th/campus-is-calling/images/og.jpg';
 import Script from 'next/script';
 
-const GTM_IDS = ['GTM-MM872QW'];
+const GTM_IDS = ['GTM-MM872QW', 'GTM-T8P8QDVC'];
 
 export const metadata: Metadata = {
   title: '𝗖𝗔𝗠𝗣𝗨𝗦 𝗶𝘀 𝗖𝗔𝗟𝗟𝗜𝗡𝗚 เทอมใหม่ คอนโดใหม่ ใกล้มหาลัย 18 คอนโด จาก AssetWise',
