@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import Image from 'next/image';
+import { useState } from 'react';
 
 const hotdeals = [
   {
@@ -120,27 +121,38 @@ const hotdeals = [
 
 const HotdealSlider = () => {
   return (
-    <Swiper
-      spaceBetween={20}
-      slidesPerView={4}
-      centeredSlides={true}
-      freeMode={true}
-      loop={true}
-      speed={10000}
-      modules={[Autoplay, FreeMode, Pagination]}
-      autoplay={{
-        delay: 0,
-        disableOnInteraction: false,
-      }}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-    { hotdeals.map((hotdeal) => (
-      <SwiperSlide key={hotdeal.id} className='cursor-grab'>
-        <Image src={hotdeal.image} alt={hotdeal.title} width={1000} height={1000} />
-      </SwiperSlide>
-    ))}
-    </Swiper>
+    <div id="hotdealSlider" className='py-10 lg:py-14 bg-gradient-to-tr from-[#eeb031] to-[#ffd16f] shadow-[0_5px_-5px_#000,0_-5px_-5px_#000]'>
+      <Swiper
+        spaceBetween={15}
+        slidesPerView={1.5}
+        centeredSlides={true}
+        loop={true}
+        speed={1500}
+        modules={[Autoplay, Pagination]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        breakpoints={{
+          768: {
+            slidesPerView: 2.5,
+          },
+          1280: {
+            slidesPerView: 3.5,
+          }
+        }}
+        //onInit={() => setIsSwiperReady(true)}
+        // onSlideChange={() => console.log('slide change')}
+        // onSwiper={(swiper) => console.log(swiper)}
+      >
+      { hotdeals.map((hotdeal) => (
+        <SwiperSlide key={hotdeal.id} className='cursor-grab'>
+          <Image src={hotdeal.image} alt={hotdeal.title} width={600} height={600} className='border-2 border-white' />
+        </SwiperSlide>
+      ))}
+      </Swiper>
+    </div>
   )
 }
 
