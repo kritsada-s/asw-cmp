@@ -241,7 +241,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-season-ladkrabang/",
         "nameTH": "แอทโมซ ซีซั่น ลาดกระบัง",
         "nameEN": "Atmoz Season Ladkrabang",
-        "price": "1.39",
+        "price": "1.49",
         "university": "kmitl"
     },
     {
