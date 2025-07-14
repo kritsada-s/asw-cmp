@@ -11,8 +11,8 @@ const nextConfig = {
       ]
     },
     trailingSlash: true,
-    basePath: '/readytoMOVE-readytoMATCH',
-    assetPrefix: '/readytoMOVE-readytoMATCH/',
+    basePath: '/superdeal',
+    assetPrefix: '/superdeal/',
   };
   
   export default nextConfig;

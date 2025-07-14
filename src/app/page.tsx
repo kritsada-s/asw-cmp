@@ -17,7 +17,7 @@ const Home = () => {
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [utmSource, setUtmSource] = useState<string>('readytoMOVE_readytoMATCH_WEB_Direct');
+  const [utmSource, setUtmSource] = useState<string>('ASW_SuperDeals_website_Direct');
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -28,7 +28,7 @@ const Home = () => {
     if (utmFromUrl) {
       setUtmSource(`${utmFromUrl}`);
     } else {
-      setUtmSource('readytoMOVE_readytoMATCH_WEB_Direct');
+      setUtmSource('ASW_SuperDeals_website_Direct');
     }
 
     if (location) {
@@ -54,9 +54,12 @@ const Home = () => {
 
     if (selectedProject) {
       try {
-        const response = await fetch('https://node.assetwise.dev/webhook-test/big-match-big-move', {
+        const response = await fetch('https://api.assetwise.co.th/cis/api/Customer/SaveOtherSource', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 
+            'Content-Type': 'application/json',
+            'Authorization': 'Basic YXN3X2Npc19jdXN0b21lcjphc3dfY2lzX2N1c3RvbWVyQDIwMjMh'
+          },
           body: JSON.stringify({
             ...formData,
             ProjectID: selectedProject?.projectId,
@@ -75,7 +78,7 @@ const Home = () => {
         router.push('/thankyou');
       } catch (error) {
         console.error('Error submitting form:', error);
-        //setSubmitError(error instanceof Error ? error.message : "An unexpected error occurred.");
+        setSubmitError(error instanceof Error ? error.message : "An unexpected error occurred.");
       } finally {
         setIsSubmitting(false);
       }

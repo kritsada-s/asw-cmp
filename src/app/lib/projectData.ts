@@ -21,7 +21,7 @@ export const projectsData: Project[] = [
         "link": "/modiz-sukhumvit50/",
         "nameTH": "โมดิซ สุขุมวิท 50",
         "nameEN": "Modiz Sukhumvit 50",
-        "price": "3.99"
+        "price": "4.29"
     },
     {
         "projectId": 19,
@@ -130,7 +130,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-serene-sriracha/",
         "nameTH": "แอทโมซ ซีรีน ศรีราชา",
         "nameEN": "Atmoz Serene Sriracha",
-        "price": "1.79"
+        "price": "1.59"
     },
     {
         "projectId": 52,
@@ -141,7 +141,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-bangna/",
         "nameTH": "แอทโมซ ทรอปิคานา บางนา",
         "nameEN": "Atmoz Tropicana Bangna",
-        "price": "1.69"
+        "price": "1.49"
     },
     {
         "projectId": 59,
@@ -241,7 +241,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-season-ladkrabang/",
         "nameTH": "แอทโมซ ซีซั่น ลาดกระบัง",
         "nameEN": "Atmoz Season Ladkrabang",
-        "price": "1.49",
+        "price": "1.39",
         "university": "kmitl"
     },
     {
@@ -412,6 +412,19 @@ export const projectsData: Project[] = [
         "price": "2.39",
         "university": "kmutt"
     }
+    ,
+    {
+        "projectId": 103,
+        "image": "atmoz-de-sol",
+        "thumb": "/2025/07/de-sol_project-thumbnail.jpg",
+        "logo": "/2024/08/Logo-Atmoz-De-Sol.png",
+        "project": "แอทโมซ เดอ โซล",
+        "link": "/atmoz-de-sol-thipphawanstation/",
+        "nameTH": "แอทโมซ เดอ โซล",
+        "nameEN": "Atmoz De Sol Thipphawan Station",
+        "price": "1.69",
+        "university": ""
+    }
 ]
 
 export const projectData_HouseCondo25 = [
@@ -472,4 +485,8 @@ export const projectData_promotionQ2 = [
 
 export const projectData_BigMatchBigMove = [
     61, 71, 19, 27, 29, 74, 59, 62, 52, 60, 72, 63, 31, 81, 66, 51
+]
+
+export const projectData_SuperDeals = [
+    52, 60, 72, 17, 103, 66, 81, 51, 79    
 ]
