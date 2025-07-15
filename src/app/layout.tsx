@@ -10,7 +10,7 @@ const GTM_IDS = ['GTM-MM872QW'];
 export const metadata: Metadata = {
   title: 'SUPER DEALS แรงแห่งปี!',
   description: '31 ก.ค. - 6 ส.ค. นี้ ที่บูธ MEGA Bangna โซนหน้า IKEA พบกับโปรงแรงแห่งปี จองน้อย แจกหนัก ผ่อนสบาย กับ 9 คอนโด จาก AssetWise',
-  keywords: 'คอนโดบางนา, คอนโดอ่อนนุช, คอนโดสุขุมวิท, คอนโดลาดกระบัง, คอนโดบางแสน, คอนโดระยอง'
+  keywords: 'คอนโดบางนา, คอนโดอ่อนนุช, คอนโดสุขุมวิท, คอนโดลาดกระบัง, คอนโดบางแสน, คอนโดระยอง',
 }
 
 export default function RootLayout({
@@ -37,11 +37,19 @@ export default function RootLayout({
             }}
           />
         ))}
+        <meta property='og:title' content={metadata.title as string} />
+        <meta property='og:description' content={metadata.description as string} />
+        <meta property='og:url' content='https://assetwise.co.th/superdeals' />
         <meta property="og:image" content={ogImage.src} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:alt" content="AssetWise Super Deals" />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content={metadata.title as string} />
+        <meta name='twitter:description' content={metadata.description as string} />
+        <meta name='twitter:image' content={ogImage.src} />
+        <meta name='twitter:image:alt' content="AssetWise Super Deals" />
       </head>
       <body className={`${dbHeavent.className} ${dbHeavent.variable}`}>
         {GTM_IDS.map((id) => (
