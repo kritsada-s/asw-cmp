@@ -108,8 +108,11 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
   return (
     <div id='projectSelector' className="bg-gradient-to-b from-blue-50 to-white">
       <div className='container px-4 md:px-5 py-10'>
-        <div className='headline text-center text-[22px] md:text-[34px] font-light leading-tight text-neutral-800 mb-5'>
-          Title will show here.
+        <div className='headline text-center font-light leading-tight text-neutral-800'>
+          <h1 className='leading-tight text-neutral-800 mb-2 font-bold text-[50px]'>SUPER DEALS แรงแห่งปี!</h1>
+          <p className='text-neutral-700 font-light text-2xl'>31 ก.ค. - 6 ส.ค. นี้ ที่บูธ MEGA Bangna โซนหน้า IKEA<br/>
+          พบกับโปรงแรงแห่งปี จองน้อย แจกหนัก ผ่อนสบาย<br/>
+          กับ 9 คอนโด จาก AssetWise</p>
         </div>
       </div>
       <div className='container px-4 md:px-5 py-10'>

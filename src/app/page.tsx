@@ -6,8 +6,8 @@ import ProjectSelector from './components/ProjectSelector';
 import RegistrationForm from './components/RegisterForm';
 import { FormData, Project } from './types';
 import Header from './components/Header';
-import Banner from './images/banner_d.jpg';
-import BannerM from './images/banner_m.jpg';
+import Banner from './images/banner_d.webp';
+import BannerM from './images/banner_m.webp';
 import Image from 'next/image';
 import Footer from './components/Footer';
 import Swal from 'sweetalert2'

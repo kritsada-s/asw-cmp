@@ -2,14 +2,15 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { dbHeavent } from './fonts'
 import { Providers } from "./providers";
-import ogImage from './images/move-match_og.jpg';
+import ogImage from './images/superdeal_og.webp';
 import Script from 'next/script';
 
 const GTM_IDS = ['GTM-MM872QW'];
 
 export const metadata: Metadata = {
-  title: 'AssetWise Super Deals',
-  description: 'อยู่เองก็ลงตัว ปล่อยเช่าก็ตอบโจทย์ พร้อมแมทช์ผู้เช่าได้ทันใจ 18 คอนโด ทำเลทอง ดีลแรง พร้อมเสิร์ฟชีวิตใหม่ให้คุณ ลดสูงสุด 1.5 ล้าน* พัก(ช่วย)ผ่อนนาน 2 ปี* ฟรีแพ็คเกจแต่งครบ*',
+  title: 'SUPER DEALS แรงแห่งปี!',
+  description: '31 ก.ค. - 6 ส.ค. นี้ ที่บูธ MEGA Bangna โซนหน้า IKEA พบกับโปรงแรงแห่งปี จองน้อย แจกหนัก ผ่อนสบาย กับ 9 คอนโด จาก AssetWise',
+  keywords: 'คอนโดบางนา, คอนโดอ่อนนุช, คอนโดสุขุมวิท, คอนโดลาดกระบัง, คอนโดบางแสน, คอนโดระยอง'
 }
 
 export default function RootLayout({
