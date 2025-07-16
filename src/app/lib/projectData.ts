@@ -141,7 +141,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-bangna/",
         "nameTH": "แอทโมซ ทรอปิคานา บางนา",
         "nameEN": "Atmoz Tropicana Bangna",
-        "price": "1.49"
+        "price": "1.59"
     },
     {
         "projectId": 59,
@@ -164,7 +164,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-oasis-onnut/",
         "nameTH": "แอทโมซ โอเอซิส อ่อนนุช",
         "nameEN": "Atmoz Oasis Onnut",
-        "price": "1.79"
+        "price": "1.59"
     },
     {
         "projectId": 61,
