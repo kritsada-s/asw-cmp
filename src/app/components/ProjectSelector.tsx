@@ -118,7 +118,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
       <div className='container px-4 md:px-5 py-10'>
         <div className="row-content grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
           {projectData_SuperDeals.map((projectId) => (
-            <ProjectBox key={projectId} project={projectsData.find(p => p.projectId === projectId)} handleProjectSelect={handleProjectSelect}/>
+            <ProjectBox key={projectId} project={projectsData.find(p => p.projectId === projectId)} selectedProject={selectedProject} handleProjectSelect={handleProjectSelect}/>
           ))}
         </div>
       </div>

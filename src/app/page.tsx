@@ -54,11 +54,10 @@ const Home = () => {
 
     if (selectedProject) {
       try {
-        const response = await fetch('https://api.assetwise.co.th/cis/api/Customer/SaveOtherSource', {
+        const response = await fetch('https://assetwise.co.th/api/save-other-source.php', {
           method: 'POST',
           headers: { 
-            'Content-Type': 'application/json',
-            'Authorization': 'Basic YXN3X2Npc19jdXN0b21lcjphc3dfY2lzX2N1c3RvbWVyQDIwMjMh'
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             ...formData,

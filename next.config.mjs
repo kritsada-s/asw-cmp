@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
+    output: 'export', // Re-enable static export for main site
     images: {
       unoptimized: true,
       remotePatterns: [
