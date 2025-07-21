@@ -128,7 +128,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
 
   return (
     <form onSubmit={handleSubmit}>
-      <section id="registerForm" className='py-10'>
+      <section id="registerForm" className='pt-10 pb-5 md:py-10'>
         <div className="container">
           <div className="w-full lg:w-2/3 mx-auto">
           <h3 className='text-white text-[30px] lg:text-[40px] leading-none lg:leading-tight text-center mb-4'>ลงทะเบียน{ selectedProject?.project ? ' '+selectedProject.project : '' }</h3>
