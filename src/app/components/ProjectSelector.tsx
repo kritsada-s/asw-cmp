@@ -151,12 +151,13 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
                 </CustomRadio>  
               )) }
             </RadioGroup>
+            <p className='text-neutral-800 text-[32px] leading-none text-center mt-7'>{selectedGroup?.group_desc}</p>
           </div>
         </div>
         { selectedGroup && <div className='bottom-arrow-pane'></div> }
       </div>
       <div className="project-selector-container" ref={projectsSelectorContainer}>
-          {selectedGroup?.group_key === 'life-near-mo' ? (
+          {selectedGroup?.group_key === 'campus-zone' ? (
             <LifeNearUni 
               selectedGroup={selectedGroup} 
               selectedProject={selectedProject}

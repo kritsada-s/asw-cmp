@@ -16,7 +16,7 @@ function ProjectBox(props: any) {
             <p className='text-[16px] md:text-xl text-neutral-500'>เริ่มต้น {project.price} ลบ.<span className='text-red-700'>*</span></p>
           </div>
           <div className="flex justify-between pt-4 md:pt-0">
-            {/* <Link href={{ pathname:'https://assetwise.co.th/condominium'+project.link, query: { 'utm_source': HouseCondo68_WEB_Direct } }} target='_blank' className='text-[16px] flex items-center gap-1 underline text-neutral-600'>รายละเอียดโครงการ <ExternalLinkIcon size='12' /></Link> */}
+            {/* <Link href={{ pathname:'https://assetwise.co.th/condominium'+project.link, query: { 'utm_source': BIGMAXDEALS_WEB_Direct}} className='text-[16px] flex items-center gap-1 underline text-neutral-600'>รายละเอียดโครงการ <ExternalLinkIcon size='12' /></Link> */}
             <Checkbox isSelected={selectedProject?.projectId === project.projectId} onValueChange={() => handleProjectSelect(project)} radius='none' size='lg' icon={<CheckIconSVG />} classNames={{ wrapper: cn("w-[35px] h-[35px] mr-0 rounded-sm group-data-[selected=true]:bg-green-500"), icon: cn("w-7 h-7") }} />
           </div>
         </div>

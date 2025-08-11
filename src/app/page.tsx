@@ -6,8 +6,8 @@ import ProjectSelector from './components/ProjectSelector';
 import RegistrationForm from './components/RegisterForm';
 import { FormData, Project } from './types';
 import Header from './components/Header';
-import Banner from './images/banner_d.jpg';
-import BannerM from './images/banner_m.jpg';
+import Banner from './images/no-banner_d.png';
+import BannerM from './images/no-banner_m.png';
 import Image from 'next/image';
 import Footer from './components/Footer';
 import Swal from 'sweetalert2'
@@ -17,7 +17,7 @@ const Home = () => {
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [utmSource, setUtmSource] = useState<string>('HouseCondo68_WEB_Direct');
+  const [utmSource, setUtmSource] = useState<string>('BIGMAXDEALS_WEB_Direct');
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -28,7 +28,7 @@ const Home = () => {
     if (utmFromUrl) {
       setUtmSource(`${utmFromUrl}`);
     } else {
-      setUtmSource('HouseCondo68_WEB_Direct');
+      setUtmSource('BIGMAXDEALS_WEB_Direct');
     }
 
     if (location) {

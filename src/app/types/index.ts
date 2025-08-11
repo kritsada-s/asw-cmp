@@ -11,10 +11,11 @@ export interface Project {
     link: string;
     status?: string;
   }
-  
+
   export interface ProjectGroup {
     group_name: string;
     group_key: string;
+    group_desc: string;
     projects_listed: Project[];
   }
   

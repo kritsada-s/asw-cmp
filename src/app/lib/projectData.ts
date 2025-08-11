@@ -156,7 +156,7 @@ export const projectsData: Project[] = [
         "nameTH": "แอทโมซ คาแนล",
         "nameEN": "Atmoz Kanaal Rangsit",
         "price": "1.59",
-        "university": "rsu"
+        "university": "rangsit"
     },
     {
         "projectId": 60,
@@ -260,7 +260,7 @@ export const projectsData: Project[] = [
         "nameTH": "เคฟ เอมบริโอ รังสิต",
         "nameEN": "Kave Embryo Rangsit",
         "price": "1.29",
-        "university": "rsu"
+        "university": "rangsit"
     },
     {
         "projectId": 75,
@@ -339,7 +339,7 @@ export const projectsData: Project[] = [
         "nameTH": "เคฟ ป๊อป ศาลายา",
         "nameEN": "Kave Pop Salaya",
         "price": "1.89",
-        "university": "mu"
+        "university": "salaya"
     },
     {
         "projectId": 90,
@@ -371,7 +371,7 @@ export const projectsData: Project[] = [
         "nameTH": "เคฟ วันเดอร์แลนด์",
         "nameEN": "Kave Wonderland",
         "price": "1.69",
-        "university": "rsu"
+        "university": "rangsit"
     },
     {
         "projectId": 94,
@@ -383,7 +383,7 @@ export const projectsData: Project[] = [
         "nameTH": "โมดิซ อาวองการ์ด",
         "nameEN": "Modiz Avantgard",
         "price": "1.99",
-        "university": "rsu"
+        "university": "rangsit"
     },
     {
         "projectId": 97,
@@ -406,6 +406,7 @@ export const projectsData: Project[] = [
         "logo": "/2023/12/LOGO-PNG.png",
         "project": "เคฟ เพลย์กราวด์ ลาดพร้าว-บดินทรเดชา",
         "link": "/kave-playground/",
+        "university": "bodin"
     },
     {
         "projectId": 99,
@@ -417,7 +418,7 @@ export const projectsData: Project[] = [
         "nameTH": "เคฟ เจเนซิส นครปฐม",
         "nameEN": "Kave Genesis Nakhonpathom",
         "price": "1.79",
-        "university": "mu"
+        "university": "salaya"
     },
     {
         "projectId": 101,
@@ -454,6 +455,7 @@ export const projectsData: Project[] = [
         "link": "/kavalon/",
         "nameTH": "เควาลอน",
         "nameEN": "Kavalon",
+        "university": "rangsit",
         "price": "1.69",
     }
 ]
@@ -462,21 +464,25 @@ export const projectData_BigMaxDeals = [
     {
         "group_name": "Campus Zone",
         "group_key": "campus-zone",
+        "group_desc": "ประตูสู่อนาคต ใกล้โรงเรียน/มหาวิทยาลัย​",
         "projects_listed": [98, 61, 76, 94, 59, 104, 74, 93, 89, 99]
     },
     {
         "group_name": "Urban Zone",
         "group_key": "urban-zone",
+        "group_desc": "ใจกลางเมือง เดินทางง่าย Lifestyle ครบ​​",
         "projects_listed": [17, 31, 29, 75, 27, 71, 19]
     },
     {
         "group_name": "Connecting Zone",
         "group_key": "connecting-zone",
+        "group_desc": "พักผ่อนสบาย เชื่อมเมืองได้ง่าย ใช้ชีวิตลงตัว​​",
         "projects_listed": [52, 72, 60, 63, 49, 103, 62]
     },
     {
         "group_name": "EEC Zone",
         "group_key": "eec-zone",
+        "group_desc": "ใกล้ทะเล ศักยภาพสูง ลงทุนคุ้ม​​",
         "projects_listed": [66, 81, 51, 79]
     }
 ]

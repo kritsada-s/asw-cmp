@@ -7,6 +7,25 @@ interface LifeNearUniProps {
   handleProjectSelect: (project: Project) => void;
 }
 
+const projects_listed_group = [
+  {
+      "group_name": "ม.เกษตรฯ​",
+      "projects": [61, 76]
+  },
+  {
+      "group_name": "ม.รังสิต / ม.กรุงเทพ(รังสิต)",
+      "projects": [59, 74, 93, 94, 104]
+  },
+  {
+      "group_name": "ม.มหิดล ศาลายา​​",
+      "projects": [89, 99]
+  },
+  {
+      "group_name": "โรงเรียนบดินทร์เดชา​​",
+      "projects": [98]
+  }
+]
+
 function LifeNearUni({ selectedGroup, selectedProject, handleProjectSelect }: LifeNearUniProps) {
 
   const uni = [
@@ -16,25 +35,20 @@ function LifeNearUni({ selectedGroup, selectedProject, handleProjectSelect }: Li
       projects: []
     },
     {
-      key: 'rsu',
-      name: 'ม.รังสิต',
+      key: 'rangsit',
+      name: 'ม.รังสิต / ม.กรุงเทพ(รังสิต)​',
       projects: []
     },
     {
-      key: 'mu',
-      name: 'ม.มหิดล ศาลายา',
+      key: 'salaya',
+      name: 'ม.มหิดล ศาลายา​​',
       projects: []
     },
     {
-      key: 'kmitl',
-      name: 'ม.เทคโนโลยีพระจอมเกล้าลาดกระบัง',
+      key: 'bodin',
+      name: 'โรงเรียนบดินทร์เดชา',
       projects: []
-    },
-    {
-      key: 'kmutt',
-      name: 'ม.เทคโนโลยีพระจอมเกล้าธนบุรี',
-      projects: []
-    },
+    }
   ]
 
   // Initialize projectsByUniversity object
