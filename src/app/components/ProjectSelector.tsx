@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { ProjectGroup, Project } from '../types';
-import { projectData_HouseCondo25, projectsData } from '../lib/projectData';
+import { projectData_BigMaxDeals, projectsData } from '../lib/projectData';
 import { Radio, RadioGroup } from "@nextui-org/react";
 import { cn } from '@nextui-org/react';
 import gsap from 'gsap';
@@ -29,9 +29,9 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
   }, []);
 
   const handleGroupChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newGroup = projectData_HouseCondo25.find(group => group.group_name === e.target.value);
+    const newGroup = projectData_BigMaxDeals.find(group => group.group_name === e.target.value);
     if (newGroup) {
-      const projects = projectsData.filter(p => newGroup.projects_listed.includes(p.projectId));
+      const projects = projectsData.filter(p => newGroup.projects_listed.includes(p.projectId || 0));
       setSelectedGroup({...newGroup, projects_listed: projects});
       setSelectedProject(null);
     }
@@ -119,13 +119,14 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
     <div id='projectSelector' className="bg-gradient-to-b from-blue-50 to-white">
       <div className="location-selector-container bg-white relative">
         <div className="container pt-10 px-5 pb-5">
-          <div className="project-selection-title text-center mb-5">
-            <h1 className='text-[28px] md:text-[36px] font-bold leading-tight text-[#0167bc]'>𝗔𝘀𝘀𝗲𝘁𝗪𝗶𝘀𝗲 <br className='md:hidden' />𝗙𝗮𝘀𝘁𝗖𝗼𝗺𝗲 𝗙𝗮𝘀𝘁𝗦𝗲𝗿𝘃𝗲𝗱</h1>
-            <p className="text-neutral-500">มหกรรมบ้านและคอนโดครั้งที่ 47</p>
+          <div className="project-selection-title text-center mb-10 flex flex-col gap-4">
+            <h1 className='text-[28px] md:text-[48px] font-bold leading-tight text-[#0167bc]'>BIG MAX DEALS! ใจใหญ่ให้เต็มแม็กซ์</h1>
+            <p className="text-neutral-900 text-[36px] leading-none font-bold">28 คอนโดใหม่และพร้อมอยู่กับข้อเสนอแบบเต็มแม็กซ์<br/> <span className='text-red-500'>ส่วนลดสูงสุด 1,500,000 บาท*</span> และรับ <span className='text-red-500'>Samsung Galaxy Z Fold 7 ทุกยูนิต*</span></p>
+            <p className="text-neutral-800 text-[24px] leading-none">เลือกทำเลที่ใช่ ฟังก์ชั่นที่ครบ ตอบโจทย์ทุกความคุ้มค่า<br/>กับคอนโดจาก AssetWise เต็มใจให้เต็มแม็กซ์​</p>
           </div>
           <div className="w-full lg:w-2/3 mx-auto">
             <RadioGroup className='flex' value={selectedGroup?.group_key} orientation='horizontal' classNames={{ wrapper: cn("grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4") }}>
-              { projectData_HouseCondo25.map((group) => (
+              { projectData_BigMaxDeals.map((group) => (
                 <CustomRadio 
                   key={group.group_key} 
                   value={group.group_key} 

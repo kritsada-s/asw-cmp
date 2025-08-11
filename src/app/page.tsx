@@ -11,8 +11,6 @@ import BannerM from './images/banner_m.jpg';
 import Image from 'next/image';
 import Footer from './components/Footer';
 import Swal from 'sweetalert2'
-import sp_ads_d from './images/special_unit_ads_desktop.jpg';
-import sp_ads_m from './images/special_unit_ads_mobile.jpg';
 
 const Home = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -106,10 +104,6 @@ const Home = () => {
           {submitError}
         </div>
       )}
-      <div className="container">
-        <Image src={sp_ads_d} width={1440} height={600} alt='' className='w-full hidden md:block h-auto'/>
-        <Image src={sp_ads_m} width={640} height={640} alt='' className='w-full h-auto block md:hidden'/>
-      </div>
       <Footer/>
     </main>
   );

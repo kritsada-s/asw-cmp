@@ -414,25 +414,25 @@ export const projectsData: Project[] = [
     }
 ]
 
-export const projectData_HouseCondo25 = [
+export const projectData_BigMaxDeals = [
     {
-        "group_name": "ชีวิตติดมอ",
-        "group_key": "life-near-mo",
-        "projects_listed": [61, 74, 89, 93, 99, 59, 76, 101, 72, 94]
+        "group_name": "Campus Zone",
+        "group_key": "campus-zone",
+        "projects_listed": []
     },
     {
-        "group_name": "ชีวิตติดเมือง",
-        "group_key": "life-near-city",
-        "projects_listed": [27, 29, 62, 19, 63, 60, 52, 31, 71, 49, 75, 17, 6]
+        "group_name": "Urban Zone",
+        "group_key": "urban-zone",
+        "projects_listed": []
     },
     {
-        "group_name": "ชีวิตติดทะเล",
-        "group_key": "life-near-sea",
-        "projects_listed": [66, 81, 79, 81, 51, 79, 97]
+        "group_name": "Connecting Zone",
+        "group_key": "connecting-zone",
+        "projects_listed": []
     },
     {
-        "group_name": "โครงการบ้าน",
-        "group_key": "housing",
-        "projects_listed": [65, 83, 82, 90, 91, 33]
+        "group_name": "EEC Zone",
+        "group_key": "eec-zone",
+        "projects_listed": []
     }
 ]
