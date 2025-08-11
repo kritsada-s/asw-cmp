@@ -31,7 +31,13 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
   const handleGroupChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newGroup = projectData_BigMaxDeals.find(group => group.group_name === e.target.value);
     if (newGroup) {
-      const projects = projectsData.filter(p => newGroup.projects_listed.includes(p.projectId || 0));
+      const projects = projectsData
+        .filter(p => newGroup.projects_listed.includes(p.projectId || 0))
+        .sort((a, b) => {
+          const aIndex = newGroup.projects_listed.indexOf(a.projectId);
+          const bIndex = newGroup.projects_listed.indexOf(b.projectId);
+          return aIndex - bIndex;
+        });
       setSelectedGroup({...newGroup, projects_listed: projects});
       setSelectedProject(null);
     }
@@ -124,14 +130,20 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
             <p className="text-neutral-900 text-[36px] leading-none font-bold">28 คอนโดใหม่และพร้อมอยู่กับข้อเสนอแบบเต็มแม็กซ์<br/> <span className='text-red-500'>ส่วนลดสูงสุด 1,500,000 บาท*</span> และรับ <span className='text-red-500'>Samsung Galaxy Z Fold 7 ทุกยูนิต*</span></p>
             <p className="text-neutral-800 text-[24px] leading-none">เลือกทำเลที่ใช่ ฟังก์ชั่นที่ครบ ตอบโจทย์ทุกความคุ้มค่า<br/>กับคอนโดจาก AssetWise เต็มใจให้เต็มแม็กซ์​</p>
           </div>
-          <div className="w-full lg:w-2/3 mx-auto">
+          <div className="w-full lg:w-4/5 mx-auto">
             <RadioGroup className='flex' value={selectedGroup?.group_key} orientation='horizontal' classNames={{ wrapper: cn("grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4") }}>
               { projectData_BigMaxDeals.map((group) => (
                 <CustomRadio 
                   key={group.group_key} 
                   value={group.group_key} 
                   onChange={() => {
-                    const projects = projectsData.filter(p => group.projects_listed.includes(p.projectId));
+                    const projects = projectsData
+                      .filter(p => group.projects_listed.includes(p.projectId))
+                      .sort((a, b) => {
+                        const aIndex = group.projects_listed.indexOf(a.projectId);
+                        const bIndex = group.projects_listed.indexOf(b.projectId);
+                        return aIndex - bIndex;
+                      });
                     setSelectedGroup({...group, projects_listed: projects});
                   }}
                 >

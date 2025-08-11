@@ -15,13 +15,14 @@ export const projectsData: Project[] = [
     {
         "projectId": 17,
         "image": "modiz-50.jpg",
-        "thumb": "/2023/03/Modiz-Sukhumvit.jpg",
+        "thumb": "/2025/07/ModizSKV50_thumb_21072025.jpg",
         "logo": "/2023/03/logo_modiz-sukumvit50-rev.png",
         "project": "โมดิซ สุขุมวิท 50",
         "link": "/modiz-sukhumvit50/",
         "nameTH": "โมดิซ สุขุมวิท 50",
         "nameEN": "Modiz Sukhumvit 50",
-        "price": "3.99"
+        "price": "4.29",
+        "status": "โครงการพร้อมอยู่"
     },
     {
         "projectId": 19,
@@ -130,18 +131,20 @@ export const projectsData: Project[] = [
         "link": "/atmoz-serene-sriracha/",
         "nameTH": "แอทโมซ ซีรีน ศรีราชา",
         "nameEN": "Atmoz Serene Sriracha",
-        "price": "1.79"
+        "price": "1.59",
+        "status": "โครงการพร้อมอยู่"
     },
     {
         "projectId": 52,
         "image": "atmoz-tropicana.jpg",
-        "thumb": "/2022/08/atmoz-bangna.jpg",
+        "thumb": "/2025/07/Atmoz_TROPICANA_BANGNA.jpg",
         "logo": "/2023/03/atmoz-tropicana-bangna_new_logo.png",
         "project": "แอทโมซ ทรอปิคานา บางนา",
         "link": "/atmoz-bangna/",
         "nameTH": "แอทโมซ ทรอปิคานา บางนา",
         "nameEN": "Atmoz Tropicana Bangna",
-        "price": "1.69"
+        "price": "1.59",
+        "status": "โครงการพร้อมอยู่"
     },
     {
         "projectId": 59,
@@ -164,7 +167,8 @@ export const projectsData: Project[] = [
         "link": "/atmoz-oasis-onnut/",
         "nameTH": "แอทโมซ โอเอซิส อ่อนนุช",
         "nameEN": "Atmoz Oasis Onnut",
-        "price": "1.79"
+        "price": "1.59",
+        "status": "โครงการพร้อมอยู่"
     },
     {
         "projectId": 61,
@@ -219,7 +223,8 @@ export const projectsData: Project[] = [
         "link": "/kave-univers-bangsaen/",
         "nameTH": "เคฟ ยูนิ.เวิร์ส บางแสน",
         "nameEN": "Kave Universe Bangsaen",
-        "price": "1.89"
+        "price": "1.89",
+        "status": "โครงการพร้อมอยู่"
     },
     {
         "projectId": 71,
@@ -235,14 +240,15 @@ export const projectsData: Project[] = [
     {
         "projectId": 72,
         "image": "atmoz-season.jpg",
-        "thumb": "/2023/07/AtmozSeason.jpg",
+        "thumb": "/2025/07/atmoz-season_thumb_21072025.webp",
         "logo": "/2023/03/atmoz-ladkrabang_logo.png",
         "project": "แอทโมซ ซีซั่น ลาดกระบัง",
         "link": "/atmoz-season-ladkrabang/",
         "nameTH": "แอทโมซ ซีซั่น ลาดกระบัง",
         "nameEN": "Atmoz Season Ladkrabang",
         "price": "1.49",
-        "university": "kmitl"
+        "university": "kmitl",
+        "status": "โครงการพร้อมอยู่"
     },
     {
         "projectId": 74,
@@ -288,7 +294,8 @@ export const projectsData: Project[] = [
         "link": "/atmoz-canvas-rayong/",
         "nameTH": "แอทโมซ แคนวาส ระยอง",
         "nameEN": "Atmoz Canvas Rayong",
-        "price": "1.69"
+        "price": "1.69",
+        "status": "โครงการพร้อมอยู่"
     },
     {
         "projectId": 81,
@@ -299,7 +306,8 @@ export const projectsData: Project[] = [
         "link": "/kave-coco-bangsaen/",
         "nameTH": "เคฟ โคโค่ บางแสน",
         "nameEN": "Kave Coco Bangsaen",
-        "price": "1.79"
+        "price": "1.79",
+        "status": "โครงการพร้อมอยู่"
     },
     {
         "projectId": 82,
@@ -389,6 +397,17 @@ export const projectsData: Project[] = [
         "price": "4.21"
     },
     {
+        "projectId": 98,
+        "nameTH": "เคฟ เพลย์กราวด์",
+        "nameEN": "Kave Playground",
+        "price": "1.69",
+        "image": "kave-playground",
+        "thumb": "/2025/05/kave-playground_thumbnail_05082025.png",
+        "logo": "/2023/12/LOGO-PNG.png",
+        "project": "เคฟ เพลย์กราวด์ ลาดพร้าว-บดินทรเดชา",
+        "link": "/kave-playground/",
+    },
+    {
         "projectId": 99,
         "image": "kave-genesis.jpg",
         "thumb": "/2024/02/Kave-Genesis2.jpg",
@@ -412,27 +431,52 @@ export const projectsData: Project[] = [
         "price": "2.39",
         "university": "kmutt"
     }
+    ,
+    {
+        "projectId": 103,
+        "image": "atmoz-de-sol",
+        "thumb": "/2025/07/de-sol_project-thumbnail.jpg",
+        "logo": "/2024/08/Logo-Atmoz-De-Sol.png",
+        "project": "แอทโมซ เดอ โซล",
+        "link": "/atmoz-de-sol-thipphawanstation/",
+        "nameTH": "แอทโมซ เดอ โซล",
+        "nameEN": "Atmoz De Sol Thipphawan Station",
+        "price": "1.69",
+        "university": "kmitl",
+        "status": "โครงการใหม่"
+    },
+    {
+        "projectId": 104,
+        "image": "kavalon",
+        "thumb": "/2024/08/kavalon_thumb_06082025.webp",
+        "logo": "/2024/08/kavalon-logo_190x100.png",
+        "project": "เควาลอน",
+        "link": "/kavalon/",
+        "nameTH": "เควาลอน",
+        "nameEN": "Kavalon",
+        "price": "1.69",
+    }
 ]
 
 export const projectData_BigMaxDeals = [
     {
         "group_name": "Campus Zone",
         "group_key": "campus-zone",
-        "projects_listed": []
+        "projects_listed": [98, 61, 76, 94, 59, 104, 74, 93, 89, 99]
     },
     {
         "group_name": "Urban Zone",
         "group_key": "urban-zone",
-        "projects_listed": []
+        "projects_listed": [17, 31, 29, 75, 27, 71, 19]
     },
     {
         "group_name": "Connecting Zone",
         "group_key": "connecting-zone",
-        "projects_listed": []
+        "projects_listed": [52, 72, 60, 63, 49, 103, 62]
     },
     {
         "group_name": "EEC Zone",
         "group_key": "eec-zone",
-        "projects_listed": []
+        "projects_listed": [66, 81, 51, 79]
     }
 ]
