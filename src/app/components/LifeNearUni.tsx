@@ -13,11 +13,11 @@ const projects_listed_group = [
       "projects": [61, 76]
   },
   {
-      "group_name": "ม.รังสิต / ม.กรุงเทพ(รังสิต)",
+      "group_name": "ม.รังสิต / ม.กรุงเทพ",
       "projects": [59, 74, 93, 94, 104]
   },
   {
-      "group_name": "ม.มหิดล ศาลายา​​",
+      "group_name": "ม.มหิดล ศาลายา / ม. ศิลปากร (สนามจันทร์)​​",
       "projects": [89, 99]
   },
   {
@@ -36,12 +36,12 @@ function LifeNearUni({ selectedGroup, selectedProject, handleProjectSelect }: Li
     },
     {
       key: 'rangsit',
-      name: 'ม.รังสิต / ม.กรุงเทพ(รังสิต)​',
+      name: 'ม.รังสิต / ม.กรุงเทพ',
       projects: []
     },
     {
       key: 'salaya',
-      name: 'ม.มหิดล ศาลายา​​',
+      name: 'ม.มหิดล ศาลายา / ม. ศิลปากร (สนามจันทร์)​​',
       projects: []
     },
     {

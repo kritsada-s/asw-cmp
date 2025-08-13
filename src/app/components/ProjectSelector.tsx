@@ -62,22 +62,27 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
   };
 
   const CustomRadio = (props: any) => {
-    const {children, ...otherProps} = props;
+    const {children, subtitle, ...otherProps} = props;
     return (
-      <Radio
-        {...otherProps}
-        classNames={{
-          base: cn(
-            "inline-flex m-0 bg-content1 hover:bg-content2 items-center justify-between",
-            "flex-row-reverse max-w-[300px] xl:max-w-full cursor-pointer rounded-lg gap-4 px-2 py-4 md:p-4 border-3 border-neutral-200",
-            "data-[selected=true]:border-green-600 data-[selected=true]:bg-green-500 data-[selected=true]:text-white",
-          ),
-          wrapper: cn("group-data-[selected=true]:border-white"),
-          control: cn("group-data-[selected=true]:bg-white")
-        }}
-      >
-        {children}
-      </Radio>
+      <div className='group-container'>
+        <Radio
+          {...otherProps}
+          classNames={{
+            base: cn(
+              "inline-flex m-0 bg-content1 hover:bg-content2 items-center justify-between",
+              "flex-row-reverse max-w-[300px] xl:max-w-full w-full cursor-pointer rounded-lg gap-4 px-2 py-4 md:p-4 border-3 border-neutral-200",
+              "data-[selected=true]:border-green-600 data-[selected=true]:bg-green-500 data-[selected=true]:text-white",
+            ),
+            wrapper: cn("group-data-[selected=true]:border-white"),
+            control: cn("group-data-[selected=true]:bg-white")
+          }}
+        >
+          {children}
+        </Radio>
+        { !selectedGroup && (
+          <p className='subtitle text-neutral-500 text-[20px] leading-none text-center mt-4'>{subtitle}</p>
+        ) }
+      </div>
     );
   };
 
@@ -126,8 +131,8 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
       <div className="location-selector-container bg-white relative">
         <div className="container pt-10 px-5 pb-5">
           <div className="project-selection-title text-center mb-10 flex flex-col gap-4">
-            <h1 className='text-[28px] md:text-[48px] font-bold leading-tight text-[#0167bc]'>BIG MAX DEALS! ใจใหญ่ให้เต็มแม็กซ์</h1>
-            <p className="text-neutral-900 text-[36px] leading-none font-bold">28 คอนโดใหม่และพร้อมอยู่กับข้อเสนอแบบเต็มแม็กซ์<br/> <span className='text-red-500'>ส่วนลดสูงสุด 1,500,000 บาท*</span> และรับ <span className='text-red-500'>Samsung Galaxy Z Fold 7 ทุกยูนิต*</span></p>
+            <h1 className='text-[28px] md:text-[48px] font-bold leading-tight text-[#0167bc]'>ASSETWISE ใจใหญ่ให้เต็มแม็กซ์</h1>
+            <p className="text-neutral-900 text-[36px] leading-none font-bold">28 คอนโดใหม่และพร้อมอยู่กับข้อเสนอแบบเต็มแม็กซ์<br/> <span className='text-red-500'>ส่วนลดสูงสุด 1,500,000 บาท*</span> และรับ <span className='text-red-500'>Samsung Galaxy Z Fold 7*</span></p>
             <p className="text-neutral-800 text-[24px] leading-none">เลือกทำเลที่ใช่ ฟังก์ชั่นที่ครบ ตอบโจทย์ทุกความคุ้มค่า<br/>กับคอนโดจาก AssetWise เต็มใจให้เต็มแม็กซ์​</p>
           </div>
           <div className="w-full lg:w-4/5 mx-auto">
@@ -136,6 +141,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
                 <CustomRadio 
                   key={group.group_key} 
                   value={group.group_key} 
+                  subtitle={group.group_sub_title}
                   onChange={() => {
                     const projects = projectsData
                       .filter(p => group.projects_listed.includes(p.projectId))
@@ -147,7 +153,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
                     setSelectedGroup({...group, projects_listed: projects});
                   }}
                 >
-                  <h3 className='text-2xl group-data-[selected=true]:text-white'>{group.group_name}</h3>
+                  <h3 className='md:text-2xl text-[22px] font-bold group-data-[selected=true]:text-white'>{group.group_name}</h3>
                 </CustomRadio>  
               )) }
             </RadioGroup>

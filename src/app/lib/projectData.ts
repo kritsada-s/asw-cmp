@@ -465,24 +465,28 @@ export const projectData_BigMaxDeals = [
         "group_name": "Campus Zone",
         "group_key": "campus-zone",
         "group_desc": "ประตูสู่อนาคต ใกล้โรงเรียน/มหาวิทยาลัย​",
+        "group_sub_title": "โซนใกล้โรงเรียน/มหาวิทยาลัย​",
         "projects_listed": [98, 61, 76, 94, 59, 104, 74, 93, 89, 99]
     },
     {
         "group_name": "Urban Zone",
         "group_key": "urban-zone",
         "group_desc": "ใจกลางเมือง เดินทางง่าย Lifestyle ครบ​​",
-        "projects_listed": [17, 31, 29, 75, 27, 71, 19]
+        "group_sub_title": "โซนใจกลางเมือง​​",
+        "projects_listed": [71, 19, 75, 29, 17, 31, 27]
     },
     {
         "group_name": "Connecting Zone",
         "group_key": "connecting-zone",
         "group_desc": "พักผ่อนสบาย เชื่อมเมืองได้ง่าย ใช้ชีวิตลงตัว​​",
+        "group_sub_title": "โซนเชื่อมต่อเมือง​​",
         "projects_listed": [52, 72, 60, 63, 49, 103, 62]
     },
     {
         "group_name": "EEC Zone",
         "group_key": "eec-zone",
         "group_desc": "ใกล้ทะเล ศักยภาพสูง ลงทุนคุ้ม​​",
+        "group_sub_title": "โซนภาคตะวันออก​​​",
         "projects_listed": [66, 81, 51, 79]
     }
 ]

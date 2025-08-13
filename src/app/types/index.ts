@@ -17,6 +17,7 @@ export interface Project {
     group_key: string;
     group_desc: string;
     projects_listed: Project[];
+    group_sub_title: string;
   }
   
   export interface FormData {
