@@ -34,7 +34,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-rh/",
         "nameTH": "แอทโมซ รัชดา-ห้วยขวาง",
         "nameEN": "Atmoz Rachada-Huai Khwang",
-        "price": "2.19",
+        "price": "2.29",
         "status": 2
     },
     {
@@ -178,7 +178,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-oasis-onnut/",
         "nameTH": "แอทโมซ โอเอซิส อ่อนนุช",
         "nameEN": "Atmoz Oasis Onnut",
-        "price": "1.59",
+        "price": "1.69",
         "status": 2
     },
     {
@@ -203,7 +203,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-portrait-srisaman/",
         "nameTH": "แอทโมซ พอร์เทรต ศรีสมาน",
         "nameEN": "Atmoz Portrait Srisaman",
-        "price": "1.59",
+        "price": "1.69",
         "status": 2
     },
     {
@@ -238,7 +238,7 @@ export const projectsData: Project[] = [
         "link": "/kave-univers-bangsaen/",
         "nameTH": "เคฟ ยูนิ.เวิร์ส บางแสน",
         "nameEN": "Kave Universe Bangsaen",
-        "price": "1.89",
+        "price": "1.99",
         "status": 2
     },
     {
@@ -262,7 +262,7 @@ export const projectsData: Project[] = [
         "link": "/atmoz-season-ladkrabang/",
         "nameTH": "แอทโมซ ซีซั่น ลาดกระบัง",
         "nameEN": "Atmoz Season Ladkrabang",
-        "price": "1.49",
+        "price": "1.39",
         "university": "kmitl",
         "status": 2
     },
@@ -288,7 +288,7 @@ export const projectsData: Project[] = [
         "link": "/maroonratchada32/",
         "nameTH": "มารูน รัชดา32",
         "nameEN": "Maroon Rachada32",
-        "price": "2.39",
+        "price": "1.99",
         "status": 2
     },
     {
@@ -359,7 +359,7 @@ export const projectsData: Project[] = [
         "link": "/kave-pop-salaya/",
         "nameTH": "เคฟ ป๊อป ศาลายา",
         "nameEN": "Kave Pop Salaya",
-        "price": "1.89",
+        "price": "1.99",
         "university": "salaya",
         "status": 2
     },
@@ -407,7 +407,7 @@ export const projectsData: Project[] = [
         "link": "/modiz-avantgard/",
         "nameTH": "โมดิซ อาวองการ์ด",
         "nameEN": "Modiz Avantgard",
-        "price": "1.99",
+        "price": "2.19",
         "university": "rangsit",
         "status": 1
     },
@@ -427,7 +427,7 @@ export const projectsData: Project[] = [
         "projectId": 98,
         "nameTH": "เคฟ เพลย์กราวด์",
         "nameEN": "Kave Playground",
-        "price": "1.69",
+        "price": "2.39",
         "image": "kave-playground",
         "thumb": "/2025/05/kave-playground_thumbnail_05082025.png",
         "logo": "/2023/12/LOGO-PNG.png",
