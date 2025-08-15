@@ -9,7 +9,7 @@ export interface Project {
     price?: string;
     university?: string;
     link: string;
-    status?: string;
+    status?: number;
   }
 
   export interface ProjectGroup {

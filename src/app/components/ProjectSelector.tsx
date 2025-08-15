@@ -24,7 +24,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ onSelectProject, sele
     const searchParams = new URLSearchParams(window.location.search);
     const location = searchParams.get('loc') || searchParams.get('location');
     if (location) {
-      console.log('Location from URL:', location);
+      //console.log('Location from URL:', location);
     }
   }, []);
 

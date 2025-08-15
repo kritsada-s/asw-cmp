@@ -6,8 +6,8 @@ import ProjectSelector from './components/ProjectSelector';
 import RegistrationForm from './components/RegisterForm';
 import { FormData, Project } from './types';
 import Header from './components/Header';
-import Banner from './images/no-banner_d.png';
-import BannerM from './images/no-banner_m.png';
+import Banner from './images/banner_d.webp';
+import BannerM from './images/banner_m.webp';
 import Image from 'next/image';
 import Footer from './components/Footer';
 import Swal from 'sweetalert2'
@@ -54,7 +54,7 @@ const Home = () => {
 
     if (selectedProject) {
       try {
-        const response = await fetch('https://node.assetwise.dev/webhook/houseandcondo2025', {
+        const response = await fetch('https://node.assetwise.dev/webhook/bigmaxdeals', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

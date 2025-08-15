@@ -8,6 +8,8 @@ function ProjectBox(props: any) {
   const { project, selectedProject, handleProjectSelect } = props;
     return (
       <div key={project.projectId} className={ `pid-${project.projectId} project-box shadow-md rounded-b-md bg-white flex md:flex-col`}>
+        { project.status === 1 && <div className="status-badge absolute top-2 text-center right-auto -left-2 md:left-auto md:-right-2 bg-gradient-to-tr from-green-700 to-green-500 text-white px-2 md:px-5 py-1">โครงการใหม่</div> }
+        { project.status === 2 && <div className="status-badge absolute top-2 text-center right-auto -left-2 md:left-auto md:-right-2 bg-gradient-to-tr from-orange-500 to-orange-700 text-white px-2 md:px-5 py-1">โครงการพร้อมอยู่</div> }
         <div className='thumbnail w-1/2 md:w-full aspect-[3/4] bg-cover bg-top' style={{ backgroundImage: `url(https://assetwise.co.th/wp-content/uploads/${project.thumb})` }}></div>
         <div className='flex w-auto flex-col md:flex-row justify-center md:justify-between p-4 gap-2'>
           <div className='project-info'>

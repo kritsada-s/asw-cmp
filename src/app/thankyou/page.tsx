@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import BannerM from "../images/no-banner_m.png";
+import BannerM from "../images/banner_m.webp";
 import Image from "next/image";
 import BackButton from "../components/BackButton";
 

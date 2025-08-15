@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { dbHeavent } from './fonts'
 import { Providers } from "./providers";
-import ogImage from './images/og_dev.jpg';
+import ogImage from './images/og.webp';
 import Script from 'next/script';
 
-const GTM_IDS = ['GTM-MM872QW'];
+const GTM_IDS = ['GTM-MM872QW', 'GTM-TBK5MKM5'];
 
 export const metadata: Metadata = {
-  title: 'BIG MAX DEALS! ใจใหญ่ให้เต็มแม็กซ์',
+  title: 'ASSETWISE ใจใหญ่ให้เต็มแม็กซ์',
   description: '28 คอนโดใหม่และพร้อมอยู่กับข้อเสนอแบบเต็มแม็กซ์​ ส่วนลดสูงสุด 1,500,000 บาท* และรับ Samsung Galaxy Z Fold 7 ทุกยูนิต*',
 }
 

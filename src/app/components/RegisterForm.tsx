@@ -58,7 +58,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setInvalidFields({ ...invalidFields, [e.target.name]: false });
     if (name === 'Tel') {
-      console.log(value);
+      //console.log(value);
       
       if (value === "") {
         setPhoneError("กรุณากรอกเบอร์โทรศัพท์");
