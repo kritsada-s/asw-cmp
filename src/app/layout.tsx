@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { dbHeavent } from './fonts'
 import { Providers } from "./providers";
-import ogImage from './images/og_rv1.webp';
 import Script from 'next/script';
 
 const GTM_IDS = ['GTM-MM872QW', 'GTM-TBK5MKM5'];
@@ -36,11 +35,21 @@ export default function RootLayout({
             }}
           />
         ))}
-        <meta property="og:image" content={ogImage.src} />
+        <meta property='og:title' content={String(metadata.title)} />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://assetwise.co.th/bigmaxdeals' />
+        <meta property="og:image" content='https://assetwise.co.th/bigmaxdeals/og_rv1.webp' />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:alt" content={String(metadata.title)} />
+        <meta property="og:description" content={String(metadata.description)} />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:image' content='https://assetwise.co.th/bigmaxdeals/og_rv1.webp' />
+        <meta name='twitter:title' content={String(metadata.title)} />
+        <meta name='twitter:description' content={String(metadata.description)} />
+        {/* Sable Tracking */}
+        <script src="https://cdn.sable.asia/tracking-672b8dd9c38c6d2ad2a8bbdd.js" data-cfasync="false"></script>
       </head>
       <body className={`${dbHeavent.className} ${dbHeavent.variable}`}>
         {GTM_IDS.map((id) => (
