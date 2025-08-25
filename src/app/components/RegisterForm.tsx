@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FormData, Project } from '../types';
 import { Input, Select, SelectItem, Button, Checkbox, cn } from "@nextui-org/react";
 import Link from 'next/link';
+import swal from 'sweetalert2';
 
 interface RegistrationFormProps {
   selectedProject: Project | null;
@@ -15,7 +16,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
     ProjectID: 1,
     ContactChannelID: 21,
     ContactTypeID: 35,
-    RefID: 999,
+    RefID: 20250815,
     Fname: '',
     Lname: '',
     Tel: '',
@@ -90,6 +91,31 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ selectedProject, on
     const requiredFields = ['Fname', 'Lname', 'Tel', 'Email'];
     const newInvalidFields: Record<string, boolean> = {};
     let isValid = true;
+    const blackList = [
+      {
+        "Fname": "Mahchock",
+        "Lname": "Chartmahnorokkram",
+        "Tel": "0891195051",
+        "Email": "ehermahnarokchockchaihere@hotmail.com"
+      }
+    ];
+    const errorSwal = swal.mixin({
+      customClass: {
+        confirmButton: 'bg-ci-blue text-white text-[24px] py-2 px-4 leading-none rounded'
+      }
+    });
+
+    const isBlackList = blackList.some(item => item.Tel === formData.Tel || item.Email === formData.Email);
+    if (isBlackList) {
+      errorSwal.fire({
+        title: 'เกิดข้อผิดพลาด',
+        icon: 'warning',
+        buttonsStyling: false,
+        confirmButtonText: 'ตกลง',
+        //confirmButtonColor: '#0069BD',
+      });
+      return;
+    }
 
     requiredFields.forEach(field => {
       if (!formData[field as keyof FormData]) {

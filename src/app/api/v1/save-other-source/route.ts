@@ -2,9 +2,11 @@ import { NextResponse } from 'next/server'
 
 export async function POST(request: Request) {
   const body = await request.json()
+  const UAT_API_URL = 'https://aswinno.assetwise.co.th/CISUAT/api/Customer/SaveOtherSource'
+  const PROD_API_URL = 'https://api.assetwise.co.th/cis/api/Customer/SaveOtherSource'
 
   try {
-    const response = await fetch('https://api.assetwise.co.th/cis/api/Customer/SaveOtherSource', {
+    const response = await fetch(UAT_API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

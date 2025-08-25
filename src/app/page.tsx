@@ -44,7 +44,7 @@ const Home = () => {
 
   const registerSwal = Swal.mixin({
     customClass: {
-      confirmButton: 'bg-ci-blue text-white text-[24px] py-2 leading-tight'
+      confirmButton: 'bg-ci-blue text-white text-[24px] py-2 px-4 leading-none rounded'
     }
   })
 
@@ -81,7 +81,12 @@ const Home = () => {
       }
 
     } else {
-      registerSwal.fire({ title: 'กรุณาเลือกโครงการ', icon: 'warning', confirmButtonText: 'ตกลง' })
+      registerSwal.fire({ 
+        title: 'กรุณาเลือกโครงการ', 
+        icon: 'warning', 
+        confirmButtonText: 'ตกลง',
+        buttonsStyling: false,
+      })
       setIsSubmitting(false)
     }
   };
