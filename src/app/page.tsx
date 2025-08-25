@@ -6,8 +6,8 @@ import ProjectSelector from './components/ProjectSelector';
 import RegistrationForm from './components/RegisterForm';
 import { FormData, Project } from './types';
 import Header from './components/Header';
-import Banner from './images/banner_d_rv1.webp';
-import BannerM from './images/banner_m_rv1.webp';
+import Banner from './images/asw-bigmaxdeals_banner_rv2-no-date_d.jpg';
+import BannerM from './images/asw-bigmaxdeals_banner_rv2-no-date_m.jpg';
 import Image from 'next/image';
 import Footer from './components/Footer';
 import Swal from 'sweetalert2'

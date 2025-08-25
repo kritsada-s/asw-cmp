@@ -8,7 +8,7 @@ const GTM_IDS = ['GTM-MM872QW', 'GTM-TBK5MKM5'];
 
 export const metadata: Metadata = {
   title: 'ASSETWISE ใจใหญ่ให้เต็มแม็กซ์',
-  description: '28 คอนโดใหม่และพร้อมอยู่กับข้อเสนอแบบเต็มแม็กซ์​ ส่วนลดสูงสุด 1,500,000 บาท* และรับ Samsung Galaxy Z Fold 7 ทุกยูนิต*',
+  description: '28 คอนโดใหม่และพร้อมอยู่กับข้อเสนอแบบเต็มแม็กซ์ ส่วนลดสูงสุด 1,500,000 บาท* และรับ Samsung Galaxy Z Fold 7 ทุกยูนิต*',
 }
 
 export default function RootLayout({
@@ -38,14 +38,14 @@ export default function RootLayout({
         <meta property='og:title' content={String(metadata.title)} />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://assetwise.co.th/bigmaxdeals' />
-        <meta property="og:image" content='https://assetwise.co.th/bigmaxdeals/og_rv1.webp' />
+        <meta property="og:image" content='https://assetwise.co.th/bigmaxdeals/og_rv2.webp' />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:alt" content={String(metadata.title)} />
         <meta property="og:description" content={String(metadata.description)} />
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:image' content='https://assetwise.co.th/bigmaxdeals/og_rv1.webp' />
+        <meta name='twitter:image' content='https://assetwise.co.th/bigmaxdeals/og_rv2.webp' />
         <meta name='twitter:title' content={String(metadata.title)} />
         <meta name='twitter:description' content={String(metadata.description)} />
         {/* Sable Tracking */}
