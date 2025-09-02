@@ -36,6 +36,7 @@ export interface Project {
     utm_medium?: string;
     utm_campaign?: string;
     utm_term?: string;
+    utm_id?: string;
     utm_content?: string;
     PriceInterest: string;
     PurchasePurpose: string;

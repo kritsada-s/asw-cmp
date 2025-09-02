@@ -65,6 +65,7 @@ const Home = () => {
             utm_medium: searchParams.get('utm_medium') || '',
             utm_term: searchParams.get('utm_term') || '',
             utm_content: searchParams.get('utm_content') || '',
+            utm_id: searchParams.get('utm_id') || '',
             Ref: utmSource
           }),
         });

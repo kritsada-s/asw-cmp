@@ -2,11 +2,18 @@ import { NextResponse } from 'next/server'
 
 export async function POST(request: Request) {
   const body = await request.json()
-  const UAT_API_URL = 'https://aswinno.assetwise.co.th/CISUAT/api/Customer/SaveOtherSource'
-  const PROD_API_URL = 'https://api.assetwise.co.th/cis/api/Customer/SaveOtherSource'
+  let CIS_ENDPOINT = '';
+
+  if (window.location.hostname === 'localhost') {
+    CIS_ENDPOINT = 'https://aswinno.assetwise.co.th/CISUAT/api/Customer/SaveOtherSource'
+    console.log('UAT')
+  } else {
+    CIS_ENDPOINT = 'https://api.assetwise.co.th/cis/api/Customer/SaveOtherSource'
+    console.log('PROD')
+  }
 
   try {
-    const response = await fetch(UAT_API_URL, {
+    const response = await fetch(CIS_ENDPOINT, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
